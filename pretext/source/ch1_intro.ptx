@@ -1,123 +1,1439 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction</title>
+<chapter xml:id="ch-getting-started" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Getting Started with R and R-Instat</title>
 
   <introduction>
     <p>
-      This book is a PreTeXt version.
-      This is the skeleton to be filled in.
-      Below are examples with:
-      <ul>
-        <li>a figure</li>
-        <li>a table</li>
-        <li>R code</li>
-        <li>R output</li>
-        <li>math formulae</li>
-        <li>and a STACK question</li>
-      </ul>
+      R-Instat is designed to feel familiar and easy to use, so you can focus on learning statistics.
+      It shares some features with a spreadsheet; for example, you can work with multiple sheets in one data book, use right-click menus, apply filters, enter and edit data, and rename columns.
+      This is intentional, because many users are comfortable in Excel-like environments.
+      If you have some experience with similar software and would like a quick introduction to the software before you dive into the chapter please check <url href="https://ecampus.r-instat.org/mod/page/view.php?id=258">this</url> out for a quick introduction to R-Instat.
+    </p>
+    <p>
+      At the same time, R-Instat draws on the strengths of R.
+      One key feature is how well it handles <em>factors</em>, which are columns of categorical data.
+      A factor column contains a fixed set of categories, such as gender, village, fertiliser level, hair colour, age group, or nationality.
+    </p>
+    <p>
+      Factors help simplify analysis by organising data into meaningful groups.
+      They are central to clear visualisation, efficient data manipulation, and effective statistical modelling.
+    </p>
+    <p>
+      Notice how factors are used as you work through this chapter.
+      Understanding factors&#8212;and knowing how to work with them&#8212;is a core statistical skill that supports good analyses and interpretation.
     </p>
   </introduction>
 
-  <section xml:id="sec-adding-img-tbl">
-    <title>New Section: Adding a Image and Table</title>
+  <section xml:id="sec-getting-started">
+    <title>Getting started</title>
 
     <introduction>
       <p>
-        Here we look at adding an image and a table
+        If you want to follow this activity step by step, we assume R-Instat is already installed.
+        If you need help with installation, look back at the R-Instat preface.
       </p>
     </introduction>
 
-    <subsection xml:id="subsec-img-tbl">
-      <title>Table and Image</title>
+    <subsection xml:id="subsec-importing-cassava-data">
+      <title>Importing the Cassava Data</title>
 
       <p>
-        <xref ref="fig-placeholder"/> gives an example image, and
-        <xref ref="table-placeholder"/> shows an example table.
+        <alert>In this section:</alert> You will import a dataset from a package and learn how R-Instat dialogs are structured.
       </p>
-      <!-- Example Image -->
-      <figure xml:id="fig-placeholder">
-        <caption>Sample Caption</caption>
-        <image source="images/placeholder.jpeg" width="50%">
-          <description>
-            <p>
-              Sample description (in case image does not render)
-            </p>
-          </description>
-        </image>
-      </figure>
-      <!-- Example Table -->
-      <table xml:id="table-placeholder">
-        <title>Sample Table</title>
 
-        <tabular halign="left">
-          <row header="yes">
-            <cell>Column 1</cell>
-            <cell>Column 2</cell>
-            <cell>Column 3</cell>
-          </row>
+      <p>
+        <ul>
+          <li><p>Start R-Instat.</p></li>
+        </ul>
+      </p>
 
-          <row>
-            <cell>Value 1</cell>
-            <cell>Value 2</cell>
-            <cell>Value 3</cell>
-          </row>
-        </tabular>
-      </table>
+      <p>The starting screen is shown in Fig. 1.</p>
+
+      <p>
+        <ul>
+          <li><p>Choose the 3rd option <alert><em>Import from Library</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <p>This opens an R-Instat dialog.</p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-01">
+          <caption>R-Instat Start Screen</caption>
+          <image source="images/ch1/image39.png" width="45%">
+            <description><p>R-Instat Start Screen</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-02">
+          <caption>Import from Library</caption>
+          <image source="images/ch1/image38.png" width="45%">
+            <description><p>Import from Library dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>Take a moment to examine the dialog before pressing <alert><em>Ok</em></alert>.</p>
+
+      <aside>
+        <p><em>It has two option buttons at the top. Many R-Instat dialogs use this structure for related tasks. Here, the buttons represent different data libraries.</em></p>
+        <p><em>There are five buttons at the bottom of the dialog. These are on every dialog.</em></p>
+        <p><em>Notice also that the Ok button is disabled. It is automatically enabled when R-Instat considers the dialog is completed fully enough for its task.</em></p>
+      </aside>
+
+      <aside>
+        <p>
+          If you are an R-fan, you may have noticed, and been encouraged by the last button, which says <alert><em>To Script</em></alert>.
+          Each dialog produces an R-script, that usually remains hidden.
+          But it is available if you are interested.
+          We return to this in Chapter xxx.
+        </p>
+      </aside>
+
+      <aside>
+        <p><em>Every dialog also has the ordinary Help button. A few, including this one, have a second button, called R-Help.</em></p>
+      </aside>
+
+      <p>This is also currently disabled as no data set has yet been selected.</p>
+
+      <p>
+        <ul>
+          <li><p>Click on the down-arrow in the <alert><em>From Package</em></alert> control, Fig. 2.</p></li>
+        </ul>
+      </p>
+
+      <p>You will see a list of R packages, each containing example datasets.</p>
+
+      <aside>
+        <p>
+          The R statistical system has a basic core plus many additional packages.
+          These packages are written in R and together provide powerful tools for statistics and data science.
+        </p>
+      </aside>
+
+      <p>
+        <ul>
+          <li><p>Go down to the package called <alert><em>gosset</em></alert>, then click on the 2nd example, called <alert><em>cassava</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        <ul>
+          <li><p>The <alert><em>R-Help</em></alert> button is now enabled, so choose it.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        The resulting information about the dataset is provided by the gosset package, is in Fig. 3.
+        This opens in a new R-Instat window.
+        The data are from 2 countries, and the study is of 13 varieties of cassava.
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Close the help window.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Back in the dialog, press <alert><em>Ok</em></alert> to import the data.</p></li>
+        </ul>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-03">
+          <caption>About the Cassava data</caption>
+          <image source="images/ch1/image45.png" width="45%">
+            <description><p>About the Cassava data</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-04">
+          <caption>The Cassava data</caption>
+          <image source="images/ch1/image42.png" width="45%">
+            <description><p>The Cassava data</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        You have now seen that it is easy to get data from the library.
+        We encourage you to explore, there are many interesting datasets, large and small for you to explore and practice with.
+      </p>
     </subsection>
   </section>
-  <!-- Example R Code -->
-  <section xml:id="sec-r-code-output">
-    <title>R Code and Output</title>
 
+  <section xml:id="sec-becoming-data-detective">
+    <title>Becoming a data detective</title>
+
+    <introduction>
     <p>
-      Here is example R code and output.
+      <alert>In this section</alert>: You begin the data-detective work by identifying important grouping variables, converting them to factors, and checking whether their levels make sense. This is an important stage of data tidying.
     </p>
 
-    <program language="r">
-      <code>
-      # Sample R code
-      x &lt;- c(1, 2, 3, 4, 5)
-      mean(x)
-      </code>
-    </program>
-    <pre>
-    ## [1] 3
-    </pre>
+    <p>This exploration of the data helps you:</p>
+
+    <p>
+      <ul>
+        <li><p>understand the structure of the dataset, and shapes your analysis;</p></li>
+        <li><p>identify messy sections that need attention before analysis;</p></li>
+        <li><p>spot possible errors in the data; and</p></li>
+        <li><p>learn what the dataset contains so you can plan the analysis properly.</p></li>
+      </ul>
+    </p>
+
+    <p>
+      At the bottom of Fig. 4, we see that the data frame has 1,000 rows and 27 columns.
+      We begin with the columns, because their names and types tell us how the data are organised.
+    </p>
+
+    <p>
+      In R, and therefore in R-Instat, every column must have a name.
+      Unlike a spreadsheet, these names sit in a special header row, so the data start in row 1, Fig. 4.
+    </p>
+
+    <p>
+      Some column names are followed by a type label.
+      Most here have C, meaning character (or text), while age, which has nothing, is numeric.
+    </p>
+
+    <p>
+      Factor columns are marked with F and ordered factors with OF.
+      There are none yet, but several character columns clearly contain categories.
+      We start by converting the 3 option columns, country, and gender to factors, because they are natural grouping variables for later analysis.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Go anywhere into the <alert><em>second variable</em></alert> and <alert><em>right-click</em></alert>. Look at the menu, Fig. 5. It has some common options for your data.</p></li>
+        <li><p>Choose <alert><em>Convert to Factor</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>The column name is now followed by F instead of C.</p>
+
+    <p>
+      <ul>
+        <li><p>Now go to the top of the next 4 columns, Fig. 6. <alert><em>Mark them</em></alert> all, then <alert><em>right-click</em></alert> again,</p></li>
+        <li><p>Choose <alert><em>Convert to Factor</em></alert> again.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-05">
+        <caption>Right-click &gt; Convert to Factor</caption>
+        <image source="images/ch1/image43.png" width="45%">
+          <description><p>Right-click menu showing Convert to Factor</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-06">
+        <caption>Right-click &gt; Convert to Factor</caption>
+        <image source="images/ch1/image62.png" width="45%">
+          <description><p>Right-click menu showing Convert to Factor</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>Check that all five of these columns now have an F after the name.</p>
+
+    <p>Your first action as data detective is to check for typing errors in the factor levels.</p>
+
+    <p>
+      <ul>
+        <li><p>Return to the first factor variable, <alert><em>option_a</em></alert> and <alert><em>right-click</em></alert> again.</p></li>
+        <li><p>This time choose the <alert><em>Levels/Labels</em></alert> option</p></li>
+      </ul>
+    </p>
+
+    <p>
+      The summary shows 13 levels, which matches the data description in Fig. 8.
+      That matters because a typing error during data entry would create an extra level and is an error you need to correct before analysis.
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-07">
+        <caption>Right-click &gt; Levels/Labels</caption>
+        <image source="images/ch1/image47.png" width="45%">
+          <description><p>Right-click menu showing Levels/Labels</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-08">
+        <caption>Levels/Labels dialog</caption>
+        <image source="images/ch1/image48.png" width="45%">
+          <description><p>Levels/Labels dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      On the left of the Levels/Labels dialog is the data selector.
+      This shows the data that is available to you.
+      There are 27 variables in the data frame, but here you just see 5 of them.
+      That&#8217;s because this dialog only works with factors.
+    </p>
+
+    <p>
+      On the right, you see the factor called option_a has been selected for you, because that variable was active when you used the right-click.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Choose the second variable. Either <alert><em>double-click</em></alert> on it, or <alert><em>select it</em></alert> and press the <alert><em>Add</em></alert> button.</p></li>
+        <li><p>Check the results, also 13 levels. Then repeat with the third and check again.</p></li>
+        <li><p>Now use the country factor, Fig. 9.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-09">
+        <caption>Levels/ Labels dialog</caption>
+        <image source="images/ch1/image51.png" width="45%">
+          <description><p>Levels/Labels dialog for country</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-10">
+        <caption>Levels/ Labels dialog</caption>
+        <image source="images/ch1/image46.png" width="45%">
+          <description><p>Levels/Labels dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      This shows, as expected, just the two countries and adds the information that there were 600 respondents from Nigeria and 400 from Cameroon.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Try also <alert><em>gender</em></alert> see Fig. 10.</p></li>
+      </ul>
+    </p>
+
+    <p>This confirms just 2 levels with 462 male respondents and 538 female, Fig. xxx.</p>
+
+    <p>
+      <ul>
+        <li><p>Before you close the dialog click on the Help button.</p></li>
+      </ul>
+    </p>
+
+    <aside>
+      <p>
+        This opens R-Instat&#8217;s internal help system to the page about the dialog you are on.
+        If you are unsure about what a dialog is for or how to use it use the help system for insight.
+        You can navigate to other help pages from within this system using the menu on the left-hand side (Fig. 11).
+      </p>
+    </aside>
+
+    <figure xml:id="fig-ch1-11">
+      <caption>Help Page</caption>
+      <image source="images/ch1/image59.png" width="80%">
+        <description><p>Help Page</p></description>
+      </image>
+    </figure>
+
+    <p>Each help page has:</p>
+
+    <p>
+      <ul>
+        <li><p>a reproducible example of how to use the dialog.</p></li>
+        <li><p>Explanations of the options on the dialog and how to use them. This example includes a description of hwo to edit the labels from within the dialog.</p></li>
+      </ul>
+    </p>
+
+    <p>
+      You do not need to be online to use the Help, it is contained within R-Instat.
+      (Please note the Help system is extensive but is still in progress, so some pages are incomplete.)
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Click on <alert><em>Close</em></alert> to return to the data</p></li>
+      </ul>
+    </p>
+    </introduction>
+
+    <subsection xml:id="subsec-deepening-detective-work">
+      <title>Deepening your detective work</title>
+
+      <p>
+        <alert>In this section:</alert> You use visual and tabular summaries to inspect the data more broadly, identify missing values, and spot variables that need more tidying. You combine more understanding of the data with learning more about R-Instat.
+      </p>
+
+      <p>Now the main grouping variables are factors; the next step is to inspect the dataset more systematically.</p>
+
+      <p>
+        <ul>
+          <li><p>Mark the two variables after age. Right-click and choose <alert><em>Convert to Factor</em></alert> again, Fig. 11.</p></li>
+        </ul>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-12">
+          <caption>Right-click &gt; Convert to Factor</caption>
+          <image source="images/ch1/image50.png" width="45%">
+            <description><p>Right-click menu showing Convert to Factor</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-13">
+          <caption>Describe &gt; One Variable &gt; Visualise Data</caption>
+          <image source="images/ch1/image53.png" width="45%">
+            <description><p>Describe menu showing One Variable &gt; Visualise Data</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        <ul>
+          <li><p>This time, use the <alert><em>Describe Menu</em></alert> and the first sub-menu, called <alert><em>One Variable</em></alert>.</p></li>
+          <li><p>Use the first dialog, called <alert><em>Visualise Data</em></alert>, Fig. 14.</p></li>
+        </ul>
+      </p>
+
+      <p>The Visualise dialog opens, Fig.14.</p>
+
+      <p>
+        <ul>
+          <li><p>The Ok button in this dialog is already enabled. So, try it without adjusting it.</p></li>
+        </ul>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-14">
+          <caption>Visualise Data dialog</caption>
+          <image source="images/ch1/image58.png" width="45%">
+            <description><p>Visualise Data dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-15">
+          <caption>Visualise data graph</caption>
+          <image source="images/ch1/image55.png" width="45%">
+            <description><p>Visualise data graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>This is the first dialog to produce results in the Output window, Fig. 15.</p>
+
+      <p>This output gives a quick visual overview of the dataset. From it note:</p>
+
+      <p>
+        <ol>
+          <li><p>There is confirmation that the data has 1000 rows, or respondents.</p></li>
+          <li><p>The grey areas indicate missing values.</p></li>
+          <li><p>The factor variables are shown in green. The last one has missing values. Probably we only measured that variable in the second country, namely Cameroon.</p></li>
+          <li><p>There is only one numeric variable, which is the age. It is an integer, so the ages are just given as whole years.</p></li>
+          <li><p>The remaining variables are still of character type, and some are measured in only one of the two countries.</p></li>
+          <li><p>The last two variables have scattered missing values, with more in Cameroon than Nigeria.</p></li>
+        </ol>
+      </p>
+
+      <p>Now for another dialog.</p>
+
+      <p>
+        <ul>
+          <li><p>Return to the <alert><em>Describe &gt; One Variable</em></alert> menu. Choose the second dialog, called <alert><em>Summarise.</em></alert></p></li>
+        </ul>
+      </p>
+
+      <p>Pause a little to study this dialog, Fig. 16.</p>
+
+      <aside>
+        <p><em>There are 3 buttons at the top. We stick with the first, called Default.</em></p>
+        <p><em>There is the data selector on the left. This shows all the variables that could be summarised.</em></p>
+        <p><em>There is a multiple receiver on the right, because we can summarise many variables at the same time.</em></p>
+        <p><em>The Ok (and To Script) at the bottom are currently disabled. You can't proceed until you have said which columns to summarise.</em></p>
+      </aside>
+
+      <p>
+        Let&#8217;s summarise all the columns.
+        This is easy to do by using the down-arrow next to <alert><em>Add</em></alert> in the data selector, Fig. 16.
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Use the down arrow and <alert><em>Add All</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        This is a simple dialog with just one additional option: <alert><em>Maximum Factor Levels</em></alert> <alert><em>Shown</em></alert>.
+        The default value is 12.
+        But we have already seen, in Fig. 8, that some factors have more levels.
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Use the up-arrow on the <alert><em>Factor Level</em></alert> checkbox control and make it <alert><em>15</em></alert>. That should be enough.</p></li>
+          <li><p>Then press <alert><em>Ok</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-16">
+          <caption>One Variable Summarise</caption>
+          <image source="images/ch1/image57.png" width="45%">
+            <description><p>One Variable Summarise dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-17">
+          <caption>The Summary</caption>
+          <image source="images/ch1/image56.png" width="45%">
+            <description><p>The Summary output</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>The results in Fig. 17 are hard to read at first.</p>
+
+      <p>There are 3 solutions:</p>
+
+      <p>
+        <ol>
+          <li><p>Make the output window wider.</p></li>
+          <li><p>If your mouse has a wheel, then make the text smaller.</p></li>
+          <li><p>Maximise the output window:</p></li>
+        </ol>
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Click on the word <alert><em>Maximise</em></alert>, towards at the top left, within the Output window, Fig. 17.</p></li>
+        </ul>
+      </p>
+
+      <figure xml:id="fig-ch1-18">
+        <caption>The Maximised Output</caption>
+        <image source="images/ch1/image60.png" width="80%">
+          <description><p>The Maximised Output</p></description>
+        </image>
+      </figure>
+
+      <p>Once the display is easier to read, the summary tells us several useful things about the data.</p>
+
+      <p>There are variables of three different types in the data, Numeric (just the age column), factor and character.</p>
+
+      <p>
+        <ol>
+          <li><p>Numeric columns are summarised with the mean, median etc.</p></li>
+          <li><p>Factor columns are summarised with the frequencies. Those are the same as we saw earlier, via the right-click menu, e.g. Fig. 8.</p></li>
+          <li><p>Character columns are not really summarised at all.</p></li>
+        </ol>
+      </p>
+
+      <p>
+        Next, look at the results in more detail.
+        An initial result is that our Factor limit of 15 seems ok for all factors, except one.
+        The factor called consumptionform has more than 15 levels.
+        Note, this variable name &#8220;consumptionform&#8221; is not allowed to have any spaces as an R column name.
+        (If you would like to improve the name, then it could be consumption.form or consumption_form. Use the right-click menu to change the name.)
+      </p>
+
+      <p>
+        <ul>
+          <li><p>Close the Maximised window.</p></li>
+        </ul>
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-improving-summaries">
+      <title>Improving Summaries</title>
+
+      <p>
+        <alert>In this section:</alert> You return to a dialog, adjust the settings, and produce output that is easier to interpret. The goal is to move from generating summaries to understanding what they show and refining them when needed.
+      </p>
+
+      <p>To reopen a dialog, you can use the menu again or use the toolbar, Fig. 19.</p>
+
+      <figure xml:id="fig-ch1-19">
+        <caption>The Toolbar Menu</caption>
+        <image source="images/ch1/image61.png" width="80%">
+          <description><p>The Toolbar Menu</p></description>
+        </image>
+      </figure>
+
+      <p>
+        <ul>
+          <li><p>Click on the 4th icon in the toolbar. (It looks a bit like a dialog.)</p></li>
+          <li><p>The dialog is as you left it. Right-click in the receiver and press <alert><em>Clear</em></alert>, Fig. 20 (or select all the variables and delete them.)</p></li>
+          <li><p>Choose just <alert><em>age</em></alert>, to see the results in detail for a numeric variable.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        This gives six numeric summaries.
+        Producing them is easy but interpreting them matters more.
+        Here, they show that respondents range from 18 to 79 years old, with a typical age around 37.5 years.
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-20">
+          <caption>One Variable Summarise dialog</caption>
+          <image source="images/ch1/image27.png" width="45%">
+            <description><p>One Variable Summarise dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-21">
+          <caption>The Age Summaries</caption>
+          <image source="images/ch1/image63.png" width="45%">
+            <description><p>The Age Summaries</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>Practice again with a better summary of the <alert><em>consumptionform</em></alert> variable.</p>
+
+      <p>
+        <ul>
+          <li><p>Use the toolbar to return again to the dialog.</p></li>
+          <li><p>Remove the age variable and choose <alert><em>consumptionform</em></alert>.</p></li>
+          <li><p>Change the number of factor levels to <alert><em>25</em></alert>, Fig. 22. Press <alert><em>Ok</em></alert>.</p></li>
+        </ul>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-22">
+          <caption>One Variable Summarise dialog</caption>
+          <image source="images/ch1/image34.png" width="45%">
+            <description><p>One Variable Summarise dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-23">
+          <caption>consumptionform summaries</caption>
+          <image source="images/ch1/image49.png" width="45%">
+            <description><p>consumptionform summaries</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>The results, in Fig. 23 show that:</p>
+
+      <p>
+        <ol>
+          <li><p>12 respondents have cassava for breakfast, lunch and dinner.</p></li>
+          <li><p>2 have cassava for lunch, dinner and breakfast</p></li>
+          <li><p>1 has cassava for breakfast, dinner and lunch</p></li>
+        </ol>
+      </p>
+
+      <p>
+        This shows that <em>consumptionform</em> needs cleaning, because multiple levels appear to represent the same response in different word orders.
+        Finding these small problems is what being a data detective is all about, fixing them will make you analysis clear and meaningful.
+      </p>
+
+      <p>
+        Another useful summary is provided by the skim package.
+        This broad overview of all variable but is especially useful for examining character variables.
+      </p>
+
+      <p>
+        <ul>
+          <li><p><alert><em>Return</em></alert> yet again to the dialog.</p></li>
+          <li><p>Use the middle, <alert><em>skim</em></alert> button at the top.</p></li>
+          <li><p><alert><em>Add All</em></alert> the variables again, Fig. 24. Then press <alert><em>Ok</em></alert>.</p></li>
+          <li><p>Then click on the maximize in the output window.</p></li>
+        </ul>
+      </p>
+
+      <p>This closes the data window, Fig. 25, so the whole screen is for the results.</p>
+
+      <p>This summary shows:</p>
+
+      <p>
+        <ol>
+          <li><p>The id variable has 1000 unique values. This confirms it is different for each responded making it a useful identifier.</p></li>
+          <li><p>The last two-character variables have hundreds of levels, so they will need a closer look before they can be used reliably.</p></li>
+        </ol>
+      </p>
+
+      <sidebyside>
+        <figure xml:id="fig-ch1-24">
+          <caption>One Variable Summarise &gt; Skim</caption>
+          <image source="images/ch1/image40.png" width="45%">
+            <description><p>One Variable Summarise &gt; Skim</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch1-25">
+          <caption>Skim Summary</caption>
+          <image source="images/ch1/image54.png" width="45%">
+            <description><p>Skim Summary</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>Now close the maximise window and return to the 2-window display.</p>
+    </subsection>
   </section>
 
-  <section xml:id="sec-maths-time">
-    <title>maths-time</title>
+  <section xml:id="sec-exploring-data-graphs">
+    <title>Exploring Data with Graphs</title>
 
     <p>
-      Here we can write a formula in text
-      <md>
-        1 + 1 = 2
-      </md>.
-      Or as a new row:
-      <md>
-        <mrow>
-        2 + 2 = 4
-      </mrow>
-      </md>
+      <alert>In this section:</alert> You will add graphs to the data-detective work. Graphs make patterns and problems easier to see, and they often reveal issues that tables alone can hide. For more on graphs also checkout our resources <url href="https://ecampus.r-instat.org/mod/page/view.php?id=254">here</url>.
     </p>
-    <!-- Example STACK Question -->
+
     <p>
-      The following illustrates embedding a STACK question.
+      So far, we have examined the data mainly through tables and summaries.
+      We now add graphs, both to learn another part of R-Instat and to deepen the data-detective work.
     </p>
 
-    <exercise>
-      <title>STACK integration question</title>
+    <p>
+      <ul>
+        <li><p>The <alert><em>Describe &gt; One Variable</em></alert> menu again. This time the third dialog, called <alert><em>graph</em></alert>.</p></li>
+        <li><p>Click the down arrow next to <alert><em>Add</em></alert>, and choose <alert><em>Add All</em></alert>.</p></li>
+      </ul>
+    </p>
 
-      <introduction>
-        <p>
-          A test question.
-          (2025-08-15: you may need to ask for a <q>new</q> question to make
-          this render.)
-        </p>
-      </introduction>
-      <!-- A @label is required, becomes a filename in output -->
-      <stack label="stack-integration" source="stack/01_integration_with_feedback.xml"/>
-    </exercise>
+    <p>
+      Notice that there is a <alert><em>Graph Options</em></alert> button.
+      This is common too and leads to a sub-dialog with more detailed options, such as graph types.
+      This is an example where the sub dialog can add flexibility, but it is not often necessary in this dialog, so we wait and show sub-dialogs later.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Then click <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-26">
+        <caption>One Variable Graph</caption>
+        <image source="images/ch1/image35.png" width="45%">
+          <description><p>One Variable Graph dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-27">
+        <caption>The Graph</caption>
+        <image source="images/ch1/image41.png" width="45%">
+          <description><p>The Graph</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>This dialog, Fig. 26, is similar to Summarise, this is intentional as we want you to quickly feel familiar with the dialogs.</p>
+
+    <p>The results are in the output window, Fig. 27. R&#8217;s graphs are wonderful and this is an initial hint.</p>
+
+    <p>
+      You learn that the default graph produces a boxplot for a numeric variable, and a bar chart for factor and character variables.
+      These are useful representations of these data types.
+    </p>
+
+    <p>The graphs confirm the same problem areas: the last two variables and <em>consumptionform</em> definitely need closer inspection.</p>
+
+    <p>
+      <ul>
+        <li><p>Use the toolbar to return to the graph dialog again.</p></li>
+        <li><p>Press the <alert><em>Reset</em></alert> button.</p></li>
+        <li><p>Choose just the <alert><em>age</em></alert> variable and press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>This is a nice opportunity to show an additional graphics window. This interactive view allows you to see a graph with summary numbers.</p>
+
+    <p>
+      <ul>
+        <li><p>Press the down arrow on the toolbar, next to the graph icon, Fig. 29. Choose the option called <alert><em>plotly</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-28">
+        <caption>One Variable Graph</caption>
+        <image source="images/ch1/image52.png" width="45%">
+          <description><p>One Variable Graph dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-29">
+        <caption>The Graph</caption>
+        <image source="images/ch1/image1.png" width="45%">
+          <description><p>The Graph</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>This initially looks just the same, Fig. 30.</p>
+
+    <p>
+      <ul>
+        <li><p>But hover near the graph, then it also includes the summary values Fig. 31.</p></li>
+      </ul>
+    </p>
+
+    <p>This makes it much easier to explore the summaries that make up the boxplot. Most are the same as given earlier, in Fig. 21.</p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-30">
+        <caption>The Plotly View</caption>
+        <image source="images/ch1/image3.png" width="45%">
+          <description><p>The Plotly View</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-31">
+        <caption>The Plotly View</caption>
+        <image source="images/ch1/image13.png" width="45%">
+          <description><p>The Plotly View</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+  </section>
+
+  <section xml:id="sec-factor-menu">
+    <title>Factor Menu</title>
+
+    <p>
+      <alert>In this section:</alert> You simplify the treatment variables so patterns are easier to see and compare. This shows how data-detective work often leads directly to tidying and restructuring data.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Right-click in option_a, and choose <alert><em>Levels/Labels</em></alert> (as in Fig. 8).</p></li>
+      </ul>
+    </p>
+
+    <p>Examine the result in Fig. 32.</p>
+
+    <p>
+      <ol marker="a">
+        <li><p>The levels for option_a are in the same order that they appear in the data.</p></li>
+        <li><p>The frequencies are very different, but there seem to be &#8220;groups&#8221;, for example multiple 37s.</p></li>
+      </ol>
+    </p>
+
+    <p>We would also like to compare with the other 2 columns, but that would be easier if the order of the levels were roughly the same.</p>
+
+    <p>
+      <ul>
+        <li><p>Use <alert><em>Prepare &gt; Factor &gt; Reorder</em></alert></p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-32">
+        <caption>Labels/Levels dialog</caption>
+        <image source="images/ch1/image31.png" width="45%">
+          <description><p>Labels/Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-33">
+        <caption>Prepare &gt; Column Factor &gt; Reorder Levels</caption>
+        <image source="images/ch1/image16.png" width="45%">
+          <description><p>Prepare &gt; Column Factor &gt; Reorder Levels menu</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>This menu includes many ways to reorder factors. This flexibility with factors allows you to manipulate them to see what they reveal about your data.</p>
+
+    <p>In this case we reorder the treatment factors by frequency, making them easier to compare.</p>
+
+    <p>
+      <ul>
+        <li><p>There are many options for re-ordering. Choose the <alert><em>Property button</em></alert> at the top.</p></li>
+        <li><p>Select option_a, then choose the <alert><em>Frequency button</em></alert>, and in <alert><em>Descending order</em></alert>, Fig. 34.</p></li>
+        <li><p>Click on the <alert><em>Store As</em></alert> down arrow and choose to save into option_a, Fig. 35.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-34">
+        <caption>Reorder Levels dialog</caption>
+        <image source="images/ch1/image28.png" width="45%">
+          <description><p>Reorder Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-35">
+        <caption>Reorder Levels dialog</caption>
+        <image source="images/ch1/image2.png" width="45%">
+          <description><p>Reorder Levels dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      <ul>
+        <li><p>Use the toolbar to return to this dialog and repeat for option_b.</p></li>
+        <li><p>Then again for option_c.</p></li>
+        <li><p><alert><em>Right-click again</em></alert> to look at the <alert><em>Levels and Labels</em></alert> for option_a. The blocks of similar frequencies are now clear, Fig. 36.</p></li>
+        <li><p>Change to examine option_b and option_c in the dialog.</p></li>
+      </ul>
+    </p>
+
+    <p>As data detectives, we now ask whether this pattern reflects real differences in the trials rather than random variation.</p>
+
+    <p>The next column specifies the country and maybe Nigeria and Cameroon use different varieties.</p>
+
+    <p>
+      <ul>
+        <li><p>Close the Levels/Labels dialog. Right-click anywhere and choose <alert><em>Filter Rows</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>
+      Notice that this dialog has two sub-dialogs associated Define New Filter and Filter from Factor.
+      Define New filter allows you to build filters for any type of variable but in this case Filter from Factor is the easy choice.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Choose the <alert><em>Filter from Factors</em></alert>.</p></li>
+        <li><p>In the sub-dialog select <alert><em>country</em></alert>, Fig. 37. Then press <alert><em>Return</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-36">
+        <caption>Labels/ Levels dialog</caption>
+        <image source="images/ch1/image18.png" width="45%">
+          <description><p>Labels/Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-37">
+        <caption>Filter From Factor sub-dialog</caption>
+        <image source="images/ch1/image4.png" width="45%">
+          <description><p>Filter From Factor sub-dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>This has prepared 2 filters but not yet applied them.</p>
+
+    <p>
+      <ul>
+        <li><p>Back in the main dialog, select <alert><em>Cameroon</em></alert>, Fig. 38 and press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>Now examine the data to see what has happened.</p>
+
+    <p>
+      <ol marker="a">
+        <li><p>The left-most column is coloured red. That indicates a filter is in operation.</p></li>
+        <li><p>The filtered data start in row 601</p></li>
+        <li><p>From the bottom of Fig. 39 you see you have 400 rows.</p></li>
+      </ol>
+    </p>
+
+    <p>This all ties with what you expected, so continue:</p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-38">
+        <caption>Filter dialog</caption>
+        <image source="images/ch1/image17.png" width="45%">
+          <description><p>Filter dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-39">
+        <caption>The Filtered Data</caption>
+        <image source="images/ch1/image9.png" width="45%">
+          <description><p>The Filtered Data</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      <ul>
+        <li><p>Right-click again in variable option_a, Fig. 39 and choose <alert><em>Levels/Labels</em></alert> again.</p></li>
+      </ul>
+    </p>
+
+    <p>The main result is that the trial in Cameroon used 8 varieties and replicated them equally.</p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-40">
+        <caption>Labels/ Levels dialog</caption>
+        <image source="images/ch1/image5.png" width="45%">
+          <description><p>Labels/Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-41">
+        <caption>Right-click &gt; Remove Current Filter</caption>
+        <image source="images/ch1/image44.png" width="45%">
+          <description><p>Right-click menu showing Remove Current Filter</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      Because the levels are now ordered by overall frequency, we can compare countries more easily.
+      The first five varieties appear in both countries, five were only in Nigeria and three were only in Cameroon.
+      So, 10 varieties were used in Nigeria
+    </p>
+
+    <p>This indicates that the trials are sufficiently different that it would be interesting to examine each country individually.</p>
+
+    <p>This is easy to do by using a filter to produce a subset of the data for each country, You will then have 3 data frames, the countries together, Nigeria and Cameroon,</p>
+
+    <p>To split the data:</p>
+
+    <p>
+      <ul>
+        <li><p>Right-click and choose <alert><em>Remove Current Filter</em></alert>, Fig. 41.</p></li>
+        <li><p>Right-click again and choose <alert><em>Filter Rows</em></alert>.</p></li>
+        <li><p>This time choose to apply as a subset, and call it <alert><em>Cameroon</em></alert>, Fig. 42. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>This produces a second data frame for the Cameroon data.</p>
+
+    <p>
+      <ul>
+        <li><p>Return to the main cassava data frame</p></li>
+        <li><p>Then repeat the right-click <alert><em>Filter Rows</em></alert> dialog to also make a subset called <alert><em>Nigeria</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-42">
+        <caption>Filter dialog &gt; Subset</caption>
+        <image source="images/ch1/image15.png" width="45%">
+          <description><p>Filter dialog &gt; Subset</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-43">
+        <caption>The Nigeria subset data</caption>
+        <image source="images/ch1/image7.png" width="45%">
+          <description><p>The Nigeria subset data</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>There are now three data frames. As with a spreadsheet it is nice to know that R and R-Instat can easily work with multiple sheets.</p>
+  </section>
+
+  <section xml:id="sec-housekeeping">
+    <title>Housekeeping</title>
+
+    <p>
+      <alert>In this section:</alert> We remove unused levels and empty columns from the factor columns in the Cameroon subset. So, the data frame is easier to work with, and slightly smaller. For more on tidying a dataset, and getting it ready for analysis please check out our resources on the <url href="https://ecampus.r-instat.org/mod/page/view.php?id=229">Prepare Menu</url>.
+    </p>
+
+    <p>The 3-treatment factor each still have 13 levels, though they only involve 8 varieties.</p>
+
+    <p>
+      <ul>
+        <li><p>Go to the <alert><em>Cameroon</em></alert> data frame.</p></li>
+      </ul>
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Open <alert><em>Prepare &gt; Factor &gt; Unused Levels</em></alert> from the menu.</p></li>
+        <li><p>Check that the Cameroon data frame is selected. Then <alert><em>Add</em></alert> option_a to the <alert><em>Factor Selected</em></alert>,</p></li>
+        <li><p>The <alert><em>Unused Levels</em></alert> box will then go green and tell you how many levels will be removed.</p></li>
+        <li><p>This time use the down arrow on the <alert><em>Ok</em></alert> button to select <alert><em>Ok &amp; Keep</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>Ok &amp; Keep applies the changes to the data frame but keeps the dialog open. This is useful when you are making changes to multiple columns as you are here.</p>
+
+    <p>
+      <ul>
+        <li><p>Next time select option _b as your factor, Press <alert><em>Ok &amp; Keep</em></alert> again.</p></li>
+        <li><p>Finally select option_c and press <alert><em>Ok</em></alert> to apply the changes and close the dialog.</p></li>
+      </ul>
+    </p>
+
+    <figure xml:id="fig-ch1-44">
+      <caption>Remove Unused Levels dialog</caption>
+      <image source="images/ch1/image12.png" width="60%">
+        <description><p>Remove Unused Levels dialog</p></description>
+      </image>
+    </figure>
+
+    <p>Four measurements, on the smoothness and mouldability of the cassava varieties, were not taken in Cameroon. Hence those columns are empty.</p>
+
+    <p>
+      <ul>
+        <li><p>Use <alert><em>Prepare &gt; Data Frame &gt; Delete Columns/Rows</em></alert>, Fig. 45.</p></li>
+      </ul>
+    </p>
+
+    <p>This menu includes many items from the right-click menu. If you don&#8217;t like using right-clicks, you can use this menu instead.</p>
+
+    <p>
+      <ul>
+        <li><p>In the dialog, press the <alert><em>Empty</em></alert> button at the top and click on <alert><em>Column</em></alert>. Then press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-45">
+        <caption>Prepare &gt; Data Frame &gt; Delete Columns/Rows</caption>
+        <image source="images/ch1/image11.png" width="45%">
+          <description><p>Prepare &gt; Data Frame &gt; Delete Columns/Rows menu</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-46">
+        <caption>Delete Columns or Rows</caption>
+        <image source="images/ch1/image6.png" width="45%">
+          <description><p>Delete Columns or Rows dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>The Cameroon data frame now has 23 columns and is easier to analyse.</p>
+  </section>
+
+  <section xml:id="sec-saving-exporting">
+    <title>Saving and Exporting</title>
+
+    <p>
+      <alert>In this section:</alert> We save the cleaned data in a form you can use later and export it in a form you can share.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Use <alert><em>File &gt; Save As &gt; Save Data As</em></alert>, Fig. 47.</p></li>
+        <li><p>You get the usual <alert><em>Save Data File</em></alert> dialog. Move to your working directory, give a filename.</p></li>
+        <li><p>Press <alert><em>Save</em></alert>, Fig. 48.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-47">
+        <caption>File &gt; Save As &gt; Save Data As</caption>
+        <image source="images/ch1/image8.png" width="45%">
+          <description><p>File &gt; Save As &gt; Save Data As menu</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-48">
+        <caption>Save Data File dialog</caption>
+        <image source="images/ch1/image10.png" width="45%">
+          <description><p>Save Data File dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>Although it says Save in Fig. 48 it isn&#8217;t saved quite yet.</p>
+
+    <p>
+      <ul>
+        <li><p>Return to the R-Instat <alert><em>Save As</em></alert> dialog, Fig. 49. Just press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>You can also export the data, as shown in the File Menu in Fig. 50.</p>
+
+    <p>
+      <ul>
+        <li><p>Use <alert><em>File &gt; Export &gt; Export Dataset</em></alert>. Put all three data frames into the receiver.</p></li>
+        <li><p>Press the down arrow on your file-types, Fig. 50 to confirm you can export many ways.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-49">
+        <caption>Save Data As dialog</caption>
+        <image source="images/ch1/image24.png" width="45%">
+          <description><p>Save Data As dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-50">
+        <caption>Export Datasets dialog</caption>
+        <image source="images/ch1/image37.png" width="45%">
+          <description><p>Export Datasets dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>However, this will save as 3 separate files.</p>
+
+    <p>
+      <ul>
+        <li><p>Click the checkbox to <alert><em>Save</em></alert> as <alert><em>Single File</em></alert>. Now the default is <alert><em>Excel</em></alert> which we want.</p></li>
+        <li><p>Press <alert><em>Browse</em></alert> and choose where to save. Click <alert><em>Save</em></alert> and then <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <figure xml:id="fig-ch1-51">
+      <caption>Export Data File dialog</caption>
+      <image source="images/ch1/image26.png" width="60%">
+        <description><p>Export Data File dialog</p></description>
+      </image>
+    </figure>
+
+    <p>You now have the set of 3 data frames saved, both as a single R databook file (with extension RDS), and as a single Excel workbook.</p>
+
+    <p>The Excel version is useful if you would like to continue with Excel, or share the tidied data with others, who may use other tools than R.</p>
+
+    <p>The R version is usually more convenient if you plan to continue in R-Instat, because it preserves factor information. Excel treats factors as ordinary text columns. You would also use this to share your data with an R user.</p>
+
+    <p>Now, why not save the improved version of your data.</p>
+
+    <p>
+      <ul>
+        <li><p>Just click on the diskette icon (3rd icon) in the toolbar. Or use <alert><em>File &gt; Save</em></alert>.</p></li>
+      </ul>
+    </p>
+  </section>
+
+  <section xml:id="sec-rescue-missing-variables">
+    <title>Rescue missing variables</title>
+
+    <p>
+      <alert>In this section:</alert> You do one more round of data-detective work on the Nigeria data to uncover a hidden structure. This shows how careful inspection can reveal aspects that are not obvious initially.
+    </p>
+
+    <p>
+      <ul>
+        <li><p>Move to the Nigeria data frame.</p></li>
+        <li><p>Right-click in the option_a variable and use <alert><em>Levels/Labels</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>The Nigeria data need one more bit of detective work. The frequencies in option_a are not balanced, so we look for a hidden structure that may explain the pattern.</p>
+
+    <p>Maybe the data come from 2 separate trials, with different varieties and probably of the same size.</p>
+
+    <p>
+      <ul>
+        <li><p>Scroll down to about halfway and examine the id variable.</p></li>
+      </ul>
+    </p>
+
+    <p>The id variable is a text column with two parts. Around row 300, the first part changes from Osun to Benue, which suggests the Nigeria data may combine two separate trials.</p>
+
+    <p>Fortunately, R is also adept at handling text (or character) columns.</p>
+
+    <p>
+      <ul>
+        <li><p>Use <alert><em>Prepare &gt; Column: Text &gt; Split</em></alert>, Fig. 52.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-52">
+        <caption>Labels/Levels dialog</caption>
+        <image source="images/ch1/image21.png" width="45%">
+          <description><p>Labels/Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-53">
+        <caption>Prepare &gt; Column: Text &gt; Split</caption>
+        <image source="images/ch1/image36.png" width="45%">
+          <description><p>Prepare &gt; Column: Text &gt; Split menu</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      <ul>
+        <li><p>Choose <alert><em>id</em></alert>, then to split by a <alert><em>hyphen</em></alert>, Fig. 54. Call the new columns <alert><em>trial</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <p>There are now 29 columns and the new column, called trial, Fig. 55, distinguishes between them.</p>
+
+    <p>
+      <ul>
+        <li><p>Right-click and make the new trial variable, into a <alert><em>factor</em></alert>.</p></li>
+        <li><p>Right-click again and use <alert><em>Filter Rows</em></alert>, Fig. 55.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-54">
+        <caption>Split Text Column dialog</caption>
+        <image source="images/ch1/image20.png" width="45%">
+          <description><p>Split Text Column dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-55">
+        <caption>Right-click &gt; Filter Rows</caption>
+        <image source="images/ch1/image25.png" width="45%">
+          <description><p>Right-click menu showing Filter Rows</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>This time we define a single filter. So:</p>
+
+    <p>
+      <ul>
+        <li><p>Press <alert><em>Define New Filter</em></alert>.</p></li>
+        <li><p>In the sub-dialog choose the trial variable. Select <alert><em>Osun</em></alert>, Fig. 56.</p></li>
+        <li><p>Press <alert><em>Add Condition</em></alert>. Then Press <alert><em>Return</em></alert>.</p></li>
+        <li><p>This returns to the main Filter dialog. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-56">
+        <caption>Define New Filter sub-dialog</caption>
+        <image source="images/ch1/image29.png" width="45%">
+          <description><p>Define New Filter sub-dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-57">
+        <caption>Filter dialog</caption>
+        <image source="images/ch1/image23.png" width="45%">
+          <description><p>Filter dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>The red, left-hand column confirms a filter is in operation, and there are now 300 active rows.</p>
+
+    <p>
+      <ul>
+        <li><p>Right-click in the option_a column and choose <alert><em>Levels/Labels</em></alert> again</p></li>
+      </ul>
+    </p>
+
+    <p>The results show the Osun trial used 8 cassava varieties, and 37 or 38 farmers used each variety.</p>
+
+    <p>Your data is improved, so:</p>
+
+    <p>
+      <ul>
+        <li><p>Use the diskette icon on the toolbar, or <alert><em>File &gt; Save</em></alert>, Fig. 59 to save.</p></li>
+      </ul>
+    </p>
+
+    <sidebyside>
+      <figure xml:id="fig-ch1-58">
+        <caption>Labels/Levels dialog</caption>
+        <image source="images/ch1/image30.png" width="45%">
+          <description><p>Labels/Levels dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch1-59">
+        <caption>File &gt; Save</caption>
+        <image source="images/ch1/image22.png" width="45%">
+          <description><p>File &gt; Save menu</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+  </section>
+
+  <section xml:id="sec-more-help-resources">
+    <title>More R-Instat Help and Resources</title>
+
+    <figure xml:id="fig-ch1-60">
+      <caption>Labels/Levels dialog</caption>
+      <image source="images/ch1/image14.png" width="45%">
+        <description><p>Labels/Levels dialog</p></description>
+      </image>
+    </figure>
+
+    <p>The Help menu gives access to broader sections of the internal help file, including a statistical glossary and the R-Instat Resources site.</p>
+
+    <p>The Resources site is an online webpage with a range of tutorials for learning more about R-Instat and good statistical practice. Many activities include both videos and written follow-along documents, so you can choose the format that works best for you.</p>
+  </section>
+
+  <section xml:id="sec-multipage-dataset">
+    <title>A Multipage Dataset</title>
+
+    <p>We believe that using a broad range of real data is central to good statistics teaching, and R-Instat connects you to many options.</p>
+
+    <p>
+      Fig. 60, shows the Data section of the help file.
+      This outlines the different sources of data that are available through R-Instat.
+      Many datasets are included within the program and can be accessed through the library.
+      However, R-Instat also points you towards larger external datasets when you are ready to work with more complex examples.
+    </p>
+
+    <p>One option is UNICEF&#8217;s Multiple Indicator Cluster Surveys. The help file links to guidance on accessing these data, including a video tutorial. Here, we briefly show an example using data from Pakistan.</p>
+
+    <figure xml:id="fig-ch1-61">
+      <caption>MICS Data Set</caption>
+      <image source="images/ch1/image33.png" width="80%">
+        <description><p>MICS Data Set</p></description>
+      </image>
+    </figure>
+
+    <p>You can see that this is a large dataset. The page (or sheet) in Fig. 61 has 418 columns and 42,408 rows, and the full databook contains eight different sheets.</p>
+
+    <p>
+      This highlights a major advantage of R-Instat&#8217;s databook system: multiple related data frames can be kept together in one databook.
+      This makes it possible to explore a study at different levels.
+      In this example, some pages contain household-level information, while others contain individual-level information for members of those households.
+      All the pages of a databook remain connected.
+    </p>
+  </section>
+
+  <section xml:id="sec-reflections">
+    <title>Reflections</title>
+
+    <p>
+      This chapter has introduced more than a set of R-Instat tools.
+      It has introduced a way of working with real data.
+      The central habit should be asking: <em>What is this data telling me, and does it make sense?</em>
+    </p>
+
+    <p>
+      That is why we have called this data-detective work.
+      Real data rarely arrives perfectly ready for analysis.
+      Column types may need changing, factor levels may reveal unexpected patterns, labels may be unclear, and some variables may need cleaning before they can be used with confidence.
+      These are not distractions from statistics. They are part of doing statistics well.
+    </p>
+
+    <p>
+      Factors are central to that process.
+      They show how data can be organised into meaningful groups.
+      They make the data easier to summarise, compare, reorder, filter, and subset.
+      Factors also help expose problems.
+      Extra or unexpected levels may reveal typing errors, inconsistent responses, or hidden structure in the data.
+    </p>
+
+    <p>Data cleaning and data analysis are closely connected. Cleaning is not a chore to complete before the &#8220;real&#8221; statistics begins. It is often through cleaning that you understand the data better.</p>
+
+    <p>
+      The wider message is that good statistical work depends on curiosity and care.
+      Real datasets are rarely perfect, and they often need to be explored from more than one angle.
+      R-Instat is designed to support that process: it helps you look at the data, notice problems, make improvements, and keep track of the different versions or subsets you create.
+    </p>
+
+    <p>
+      There is more to learn, and you do not need to learn it all at once.
+      The R-Instat Help system, <url href="https://ecampus.r-instat.org/mod/page/view.php?id=212">Moodle</url> site (including: introductory tutorials and videos) provide further guidance when you want more detail.
+      The aim of this chapter has been to give you a practical starting point and start building confidence in your ability to handle the data problems you meet.
+    </p>
+  </section>
+
+  <section xml:id="sec-places-for-discussions">
+    <title>Places for discussions</title>
+
+    <p>Data discussion site: <url href="https://github.com/PreTeXtBooks/lsrdata/issues/1">https://github.com/PreTeXtBooks/lsrdata/issues/1</url></p>
+
+    <p>Chapter discussion site: <url href="https://github.com/PreTeXtBooks/lsrinstat/issues">https://github.com/PreTeXtBooks/lsrinstat/issues</url></p>
+  </section>
+
+  <section xml:id="sec-feedback-reporting-bugs">
+    <title>Feedback and reporting bugs</title>
+
+    <p>
+      R-Instat is still under active development with many improvements and new features planned for future versions.
+      We appreciate feedback you can have to help us improve R-Instat.
+      There are several ways you can provide your feedback:
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            For general feedback you can contact us via email at:
+          </p>
+          <p>
+            <url href="mailto:rinstat@africanmathsinitiative.net">R-Instat@AfricanMathsInitiative.net</url>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Our <url href="https://github.com/africanmathsinitiative/R-Instat/issues">issues page</url> on our <url href="https://github.com/africanmathsinitiative/R-Instat/">GitHub</url> account can be used to report specific bugs or suggestions and this is the most direct way to contact the development team.
+            Note that our issues page is publicly visible to anyone.
+            It can be accessed here: <url href="https://github.com/africanmathsinitiative/R-Instat/issues">https://github.com/africanmathsinitiative/R-Instat/issues</url>.
+            Click the green <alert>New Issue</alert> button on the right side to send your message.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>When reporting a bug or problem, it&#8217;s most helpful to us if you can be as specific as possible and detail how to reproduce the bug, pasting the R code from the log file and attaching data if possible.</p>
+
+    <p>R-Instat Team, African Data Initiative</p>
   </section>
 </chapter>
