@@ -26,6 +26,9 @@
     <!-- Introduction chapter -->
     <xi:include href="./ch1_intro.ptx" />
 
+    <!-- Working with real data -->
+    <xi:include href="./ch2_working_with_data.ptx" />
+
     <!-- Additional chapters will be added here as the book develops -->
 
     <!-- This chapter contains a wide variety of elements to  -->

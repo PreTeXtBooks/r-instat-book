@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-real-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Getting Started with R and R-Instat</title>
+
+  <introduction>
+    <p>This chapter develops practical skills for working confidently with real data. Through experimental and survey examples, we inspect, check, correct, reshape, label, transform, and explore data using pivot tables and graphs.</p>
+    <p>Data is at the centre of data science. Too often, teaching starts with tools and methods, so real data can feel like a shock. Real datasets are often messy, unevenly structured, and full of decisions. We begin, as in Chapter 1, with the data and the practical work they require.</p>
+    <p>Chapter 1 introduced the habits; Chapter 2 practises them in new situations. The examples are specific, but the skills are general. As you work through them, focus not only on which buttons to press, but on the wider habits: looking carefully, checking what the software produces, correcting problems, and choosing displays that help you understand the data. Throughout the chapter, factors provide much of the structure that makes the exploration possible.</p>
+  </introduction>
+
+  <section xml:id="sec-ch2-an-example-of-experimental-data">
+    <title>An example of experimental data</title>
+    <introduction>
+    <p><alert>In this section</alert>: We introduce experimental data through a bamboo trial, using it to show how R-Instat supports data import, checking, correction and early exploration.</p>
+    <p>As in chapter 1,</p>
+    <p><ul>
+        <li><p>Start R-Instat and select <alert><em>Import from Library</em></alert>.</p></li>
+        <li><p>Click on the <alert><em>down-arrow</em></alert> in the <alert><em>From Package</em></alert> control, Fig. 1.</p></li>
+        <li><p>Go up to the package called <alert><em>agridat</em></alert>,</p></li>
+        <li><p>This package provides many datasets. Scroll down to one called <alert><em>jayaraman bamboo</em></alert>, Fig. 1.</p></li>
+        <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-01">
+        <caption>Import from Library dialog</caption>
+        <image source="images/ch2/image81.png" width="45%">
+          <description><p>Import from Library dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-02">
+        <caption>The bamboo data</caption>
+        <image source="images/ch2/image80.png" width="45%">
+          <description><p>The bamboo data</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>As usual, start by looking at the data. There are 216 rows and 5 variables. Four of the variables are factors. They give information on the layout of the trial. That’s in the variables loc, block and tree. Then the treatments are the different families of bamboo.</p>
+    <p>Look at the data in a pivot table.</p>
+    <aside>
+      <p>Pivot tables/charts are a great way to look at and analyse your data in a spreadsheet. If you use a spreadsheet with your data, and don’t use pivot tables, then you missing their best feature.</p>
+      <p>We hope you are pleasantly surprised that R also has pivot tables.</p>
+      <p>We have more materials on pivot tables <url href="https://ecampus.r-instat.org/mod/page/view.php?id=240">here</url>.</p>
+    </aside>
+    <p><ul>
+        <li><p>Use <alert><em>Describe &gt; Two/Three Variables &gt; Pivot Table</em></alert>, Fig. 3.</p></li>
+        <li><p>Put the 3 variables <alert><em>loc</em></alert>, <alert><em>bloc</em></alert> and <alert><em>family</em></alert> into the rows.</p></li>
+        <li><p>Click in the second (column) receiver and put <alert><em>tree</em></alert>.</p></li>
+        <li><p>Click the variable checkbox and include the <alert><em>heights</em></alert>, Fig 4.</p></li>
+        <li><p>Press <alert><em>Ok</em></alert>. Then click on <alert><em>Maximise</em></alert> in the Output Window</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-03">
+        <caption><alert>Describe &gt; Two/Three Variables &gt; Pivot Table</alert></caption>
+        <image source="images/ch2/image74.png" width="45%">
+          <description><p><alert>Describe &gt; Two/Three Variables &gt; Pivot Table</alert></p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-04">
+        <caption>The Pivot Table dialog</caption>
+        <image source="images/ch2/image73.png" width="45%">
+          <description><p>The Pivot Table dialog</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>Fig. 5 is a convenient layout to continue exploring the heights.</p>
+    <p><ul>
+        <li><p>Click the down-arrow in the top left corner, Fig. 5 and change <alert><em>Table</em></alert> to <alert><em>Heatmap</em></alert>.</p></li>
+    </ul></p>
+    <p>The data now go from white for low values, to red for large values. This helps to show the pattern and to spot outliers.</p>
+      <figure xml:id="fig-ch2-05">
+        <caption>Heatmap</caption>
+        <image source="images/ch2/image13.png" width="70%">
+          <description><p>Heatmap</p></description>
+        </image>
+      </figure>
+    <p>As a data detective, have you yet noticed anything odd about the data? The tree numbers are given as T1, T2, T3, T4 and T6. There is no T5.</p>
+    <p>We have included all the factors in the pivot table. So, we should be examining individual data values. But are we?</p>
+    <p><ul>
+        <li><p>Click on the <alert><em>down arrow by Average</em></alert>, Fig. 7, and change it to <alert><em>Count</em></alert>.</p></li>
+    </ul></p>
+    <p>The result is clear. The good news is that the error is consistent, i.e. the frequency of T4 is always 2, for every site, block and family. This is clearly a mistake and should be easy to correct?</p>
+    <p><ul>
+        <li><p>Close the window to return to the data</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-06">
+        <caption>Change Average to Count</caption>
+        <image source="images/ch2/image92.png" width="45%">
+          <description><p>Change Average to Count</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-07">
+        <caption>By Count</caption>
+        <image source="images/ch2/image84.png" width="45%">
+          <description><p>By Count</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>Returning to the data, the error is clear, Fig. 9. There are duplicate T4 values, the second of which should be changed into T5. Of course, R has everything you need to correct this.</p>
+    </introduction>
+    <subsection xml:id="subsec-ch2-correcting-the-data">
+      <title>Correcting the data</title>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Check Data &gt; Duplicate Rows</em></alert>, Fig 10</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-08">
+          <caption>The duplicate values</caption>
+          <image source="images/ch2/image87.png" width="45%">
+            <description><p>The duplicate values</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-09">
+          <caption><alert>Prepare &gt; Check Data &gt; Duplicate Rows</alert></caption>
+          <image source="images/ch2/image78.png" width="45%">
+            <description><p><alert>Prepare &gt; Check Data &gt; Duplicate Rows</alert></p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Include <alert><em>all the factors</em></alert>. Then use the third radio button to get the <alert><em>index number</em></alert> of each duplicate, Fig. 11. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>This produces a new variable, called dup, that is 2 in each row where T4 is to be changed into T5.</p>
+      <p><ul>
+          <li><p>So, right click and choose the option to <alert><em>Filter rows</em></alert>, Fig 12.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-10">
+          <caption>Duplicate Rows dialog</caption>
+          <image source="images/ch2/image95.png" width="45%">
+            <description><p>Duplicate Rows dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-11">
+          <caption>Right-click &gt; Filter Rows</caption>
+          <image source="images/ch2/image83.png" width="45%">
+            <description><p>Right-click &gt; Filter Rows</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>In the filter dialog press the <alert><em>Define New Filter</em></alert> button.</p></li>
+          <li><p>In the sub-dialog, <alert><em>select dup</em></alert>. Choose the <alert><em>==</em></alert> condition and add <alert><em>2</em></alert>. Fig 13.</p></li>
+          <li><p>Press <alert><em>Add Condition</em></alert>, then <alert><em>Return</em></alert>.</p></li>
+          <li><p>Back in the main Filter dialog press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>Now look carefully at the filtered data, Fig. 14.</p>
+      <p>The left-hand column is now coloured red, to indicate a filter is applied. At the bottom, there are stated to be 36 filtered rows. That is 1 in 6 of the 216 rows overall, so as expected.</p>
+      <p><ul>
+          <li><p>Now <alert><em>right-click</em></alert> to (temporarily) make the <alert><em>Tree variable</em></alert> of <alert><em>character type</em></alert>, Fig. 14.</p></li>
+      </ul></p>
+      <p>We often make character columns into factors. This time we go "the other way" because it is easier to add the missing T5 to a character column than a factor column. Then we can switch it back to a factor where its complete levels are recognised correctly.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-12">
+          <caption>Filter dialog and sub-dialog</caption>
+          <image source="images/ch2/image90.png" width="45%">
+            <description><p>Filter dialog and sub-dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-13">
+          <caption>The filtered data Right-click &gt; Convert to Character</caption>
+          <image source="images/ch2/image85.png" width="45%">
+            <description><p>The filtered data Right-click &gt; Convert to Character</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Data Frame &gt; Replace Values</em></alert>, Fig. 15.</p></li>
+          <li><p>Select the variable <alert><em>tree</em></alert>. For the <alert><em>old Value, put T4</em></alert>. In the New section choose the Value button and put <alert><em>T5</em></alert>. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>Now we have T5 in the data, Fig. 16! Just a couple of tidying steps are needed now, to finish the correction.</p>
+      <p><ul>
+          <li><p>Right-click anywhere and use the option <alert><em>Remove Current Filter</em></alert>, Fig. 17.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-14">
+          <caption>Replace Values dialog</caption>
+          <image source="images/ch2/image97.png" width="45%">
+            <description><p>Replace Values dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-15">
+          <caption>Right-click &gt; Remove Current Filter</caption>
+          <image source="images/ch2/image86.png" width="45%">
+            <description><p>Right-click &gt; Remove Current Filter</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Right-click from within the tree column and <alert><em>Convert to Factor</em></alert>.</p></li>
+          <li><p>Then check, by <alert><em>right-clicking in the tree column</em></alert> again and choosing <alert><em>Levels/Labels</em></alert>, Fig. 17.</p></li>
+      </ul></p>
+      <p>The results show there are now 6 levels and also that each has 36 replicates. This is, as we would expect, given the simple design of this trial.</p>
+      <p>Delete the extra column, called dup, as it is no longer needed.</p>
+      <p><ul>
+          <li><p>Right-click in the name <alert><em>dup</em></alert> and choose <alert><em>Delete Column(s)</em></alert>. Answer <alert><em>Yes</em></alert> to the confirming question.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-16">
+          <caption>Right-click &gt; Levels/Labels</caption>
+          <image source="images/ch2/image91.png" width="45%">
+            <description><p>Right-click &gt; Levels/Labels</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-17">
+          <caption>Levels/Labels dialog</caption>
+          <image source="images/ch2/image96.png" width="45%">
+            <description><p>Levels/Labels dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Phew! Now quickly check all the factor columns. An easy way is via the Summarise dialog.</p>
+    </subsection>
+    <subsection xml:id="subsec-ch2-examine-the-corrected-data">
+      <title>Examine the corrected data</title>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>. Use the <alert><em>Add</em></alert> down, button, and <alert><em>Add All</em></alert>, Fig. 19.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-18">
+          <caption>One Variable Summarise dialog</caption>
+          <image source="images/ch2/image93.png" width="45%">
+            <description><p>One Variable Summarise dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-19">
+          <caption>The Summary</caption>
+          <image source="images/ch2/image61.png" width="45%">
+            <description><p>The Summary</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This summary gives a nice view of the trial’s layout. It was equally split over two locations, each of which were divided into 3 blocks. The tree and family factors look sensible, and the heights of the trees range from 14 to 212.</p>
+      <p>Now we still want to show the heights in a pivot table. Last time we were distracted by the omission of T5.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>Pivot Table</em></alert> dialog. This is just as you left it, Fig, 21, so simply press <alert><em>Ok</em></alert>.</p></li>
+          <li><p>Click on <alert><em>Maximise</em></alert>.</p></li>
+          <li><p>Before continuing, change the summary to <alert><em>Count</em></alert> once more to confirm that each combination now occurs only once, Fig. 22.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-20">
+          <caption>Pivot Table dialog</caption>
+          <image source="images/ch2/image67.png" width="45%">
+            <description><p>Pivot Table dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-21">
+          <caption>The Count</caption>
+          <image source="images/ch2/image65.png" width="45%">
+            <description><p>The Count</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This confirms that you are looking at individual data values, and the trial is nicely balanced.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>average heights</em></alert> and to a <alert><em>Heatmap</em></alert>, Fig. 23.</p></li>
+      </ul></p>
+      <p>Examine the data briefly. For example, all the really high trees are in the second location, but some there remain very low. And that includes the smallest tree with a height of 14, (as noted in the Summarise results in Fig. 20).</p>
+        <figure xml:id="fig-ch2-22">
+          <caption>The heatmap</caption>
+          <image source="images/ch2/image75.png" width="70%">
+            <description><p>The heatmap</p></description>
+          </image>
+        </figure>
+      <p>Close the window once you have finished.</p>
+      <p><ul>
+          <li><p>Use <alert><em>File &gt; Save As &gt; Save Data As</em></alert> and save a copy of your corrected data file.</p></li>
+      </ul></p>
+      <p><ul>
+          <li><p>Use <alert><em>File &gt; Close Data Book</em></alert> and confirm <alert><em>Yes</em></alert>.</p></li>
+      </ul></p>
+      <p><em>The bamboo data have now been checked, corrected and saved, ready for later analysis. This example is more than a correction exercise. It shows a common workflow: start by looking at the data, use a table or graph to reveal structure, check anything that looks odd, make a careful correction, and then check again.</em></p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch2-a-survey-on-maths-anxiety">
+    <title>A survey on maths anxiety</title>
+    <introduction>
+    <p><alert>In this section:</alert> You turn from an experiment to a survey. A small maths anxiety dataset introduces ordered factors and the practical issue of handling long column names. The MICS example in Chapter 1 showed why names, labels, and types matter in larger datasets. Here we apply the same idea on a smaller survey: the full questions are useful as labels, but shorter names make the data easier to work with.</p>
+    <p><ul>
+        <li><p><alert><em>File &gt;</em></alert> <alert><em>Import from Library</em></alert>.</p></li>
+        <li><p>Choose the <alert><em>likert</em></alert> package, Fig. 25, and select the <alert><em>mass</em></alert> dataset. Fig. 25.</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-23">
+        <caption>Import from Library dialog</caption>
+        <image source="images/ch2/image66.png" width="45%">
+          <description><p>Import from Library dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-24">
+        <caption>The Maths Dataset</caption>
+        <image source="images/ch2/image69.png" width="45%">
+          <description><p>The Maths Dataset</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>These data are from a small survey, where 20 respondents gave their views on maths.</p>
+    <p>There are 14 questions in the survey, and each gives the result on a 5-point scale. In R these are each Ordered Factors, going from Strongly Disagree to Strongly Agree. There is therefore an (O.F) after the variable names, in Fig. 26.</p>
+    <p>The column names are also quite long, because they double as the questions.</p>
+    </introduction>
+    <subsection xml:id="subsec-ch2-entering-data">
+      <title>Entering Data</title>
+      <p>R-Instat is not primarily a data-entry system, but small additions and corrections can be made directly. Here we add your own responses to the survey.</p>
+      <p>Start by adding an extra row to the data.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Data Frame &gt; Insert Columns/Rows</em></alert>, Fig. 27.</p></li>
+          <li><p>Press the <alert><em>Insert Rows</em></alert> button Fig. 28.</p></li>
+      </ul></p>
+      <p>By default, this is set up to add one row at the bottom of the data set. You can choose to add more rows and place them in a specific place. But in our case the default is fine.</p>
+      <p><ul>
+          <li><p>Press <alert><em>Ok</em></alert>, Fig. 30.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-25">
+          <caption>Prepare &gt; Data Frame &gt; Insert Columns/Rows</caption>
+          <image source="images/ch2/image68.png" width="45%">
+            <description><p>Prepare &gt; Data Frame &gt; Insert Columns/Rows</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-26">
+          <caption>Insert Columns/Rows</caption>
+          <image source="images/ch2/image71.png" width="45%">
+            <description><p>Insert Columns/Rows</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This makes a 21<sup>st</sup> row, currently filled with all missing values.</p>
+      <p><ul>
+          <li><p>Right-click in the <alert><em>NA</em></alert> in the <alert><em>Gender</em></alert> column and choose <alert><em>Edit Cell</em></alert>, Fig. 29.</p></li>
+          <li><p>Click the down arrow on <alert><em>New Value</em></alert> and select the level. For us it was <alert><em>Female</em></alert>. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-27">
+          <caption>Right-click &gt; Edit Cell</caption>
+          <image source="images/ch2/image70.png" width="45%">
+            <description><p>Right-click &gt; Edit Cell</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-28">
+          <caption>Edit Cell dialog</caption>
+          <image source="images/ch2/image72.png" width="45%">
+            <description><p>Edit Cell dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Repeat for the first question, “I find math interesting”, Fig 31. We chose “<alert><em>Strongly Agree</em></alert>”!</p></li>
+          <li><p>Repeat again for the second question “I get uptight during math tests”, Fig. 32. We chose “<alert><em>Strongly Agree</em></alert>”.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-29">
+          <caption>Edit Cell dialog</caption>
+          <image source="images/ch2/image32.png" width="45%">
+            <description><p>Edit Cell dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-30">
+          <caption>Edit Cell dialog</caption>
+          <image source="images/ch2/image18.png" width="45%">
+            <description><p>Edit Cell dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Click on the 6<sup>th</sup> toolbar icon ; this shows the output.</p></li>
+      </ul></p>
+      <p>Now the whole R-Instat window shows the data.</p>
+      <p><ul>
+          <li><p><alert><em>Enlarge</em></alert> the variables in turn, Fig. 33, to <alert><em>show each question</em></alert> in full.</p></li>
+          <li><p>Complete the answers to each question.</p></li>
+          <li><p>Either click on icon again, or use the <alert><em>curly arrow</em></alert>, to return to the 2 windows.</p></li>
+          <li><p>Use <alert><em>File &gt; Save As &gt; File Save Data As</em></alert>, Fig. 24, and save your copy of these data.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch2-31">
+          <caption>: The Expanded Data View</caption>
+          <image source="images/ch2/image19.png" width="70%">
+            <description><p>: The Expanded Data View</p></description>
+          </image>
+        </figure>
+      <p><em>This short exercise shows how R-Instat can be used to add and edit data directly. Notice that you could only enter one of the 5 levels of the factor. And you chose rather than typed them. Had they not been defined as factors, you would have had to type – and then it is easy to make mistakes.</em></p>
+      <aside>
+        <p>Data are often entered into spreadsheets. We often find data there are often typed, and then arrive with many errors. It is easy to set up a template so categorical data can be entered easily, just as we did above. We strongly suggest that time be devoted to setting up a suitable template, whenever a spreadsheet is used for data entry.</p>
+      </aside>
+    </subsection>
+    <subsection xml:id="subsec-ch2-changing-the-column-names">
+      <title>Changing the column names</title>
+      <p><em>The top row of each data frame shows the column names and data types. These names are part of the data structure: they appear at the top of each data frame and in the data selector in every dialog. Tidying data therefore includes checking the names and editing them when needed. R has strong tools for naming and renaming columns, and these underlie the Rename dialog used in R-Instat.</em></p>
+      <p>In this dataset, the column names contain the full survey questions. This information should be retained, but the questions are too long to work well as column names. We therefore store them as variable labels instead, and substitute short, meaningful names. This is consistent with the names and questions in the MICS survey, described in Chapter xxx.</p>
+      <p>So, as usual, we have some data tidying to do, before analysing the data.</p>
+      <p><ul>
+          <li><p><alert><em>Right-click</em></alert> in the data, and choose the first option, to <alert><em>Rename Column</em></alert>.</p></li>
+          <li><p>Choose the <alert><em>Multiple</em></alert> button at the top. Click the checkbox to include <alert><em>variable labels</em></alert>.</p></li>
+          <li><p>Select the whole <alert><em>New Name</em></alert> column by clicking on its name, Then, press <alert><em>&lt;ctrl&gt;C</em></alert> to copy to the clipboard.</p></li>
+          <li><p>Click on the top of the <alert><em>Label</em></alert> column and press <alert><em>&lt;ctrl&gt;V</em></alert> to paste into the labels, Fig. 35</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-32">
+          <caption>Output Icon</caption>
+          <image source="images/ch2/image10.png" width="45%">
+            <description><p>Output Icon</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-33">
+          <caption>Rename Columns dialog</caption>
+          <image source="images/ch2/image9.png" width="45%">
+            <description><p>Rename Columns dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>For the next step it is convenient to use the column metadata view of the data.</p>
+      <p><ul>
+          <li><p>Click the down arrow next to the data icon. Choose to <alert><em>Swap Data with the Column Metadata</em></alert>, Fig. 36.</p></li>
+          <li><p>The metadata shows the (long) names are now also copied into the variable labels.</p></li>
+          <li><p>Make the <alert><em>names column</em></alert> quite wide, and the labels <alert><em>column</em></alert> very wide, Fig. 37.</p></li>
+      </ul></p>
+      <p>We change the column names here, rather than in a dialog. We describe in detail for the first name, because care is useful here:</p>
+      <p><ul>
+          <li><p><alert><em>Double-click</em></alert> in the first long name, to edit it. Then press <alert><em>&lt;ctrl&gt; A</em></alert> to mark the whole name.</p></li>
+          <li><p>Type <alert><em>interesting</em></alert> as the new name. Then press <alert><em>&lt;Enter&gt;</em></alert> or click on the next name.</p></li>
+          <li><p>Repeat for each name, i.e. <alert><em>double-click to edit</em></alert>, then <alert><em>&lt;ctrl&gt; A</em></alert> to change the whole name, then type the new name.</p></li>
+      </ul></p>
+      <p>If you get an error message telling you it is not a valid name, check that you haven’t put a space in there somewhere. Spaces are not allowed in names. If you want to use two words, then separate them with an underscore, or a dot.)</p>
+      <p><ul>
+          <li><p>The second question could be named <alert><em>uptight</em></alert> and the third could become <alert><em>future</em></alert>, Fig. 37.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-34">
+          <caption>Swap Data with Column Metadata</caption>
+          <image source="images/ch2/image5.png" width="45%">
+            <description><p>Swap Data with Column Metadata</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-35">
+          <caption>Column Metadata</caption>
+          <image source="images/ch2/image21.png" width="45%">
+            <description><p>Column Metadata</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Finally, we can also improve the new variable labels. The questions currently have a dot between each word, because spaces are not allowed in a column name. But they are fine in a label so we get rid of all the dots.</p>
+      <p><ul>
+          <li><p>Return, via the toolbar, to the <alert><em>Rename</em></alert> dialog. Press the final top option, <alert><em>Label With</em></alert>.</p></li>
+          <li><p>Choose <alert><em>Edit</em></alert>. Then the final option in the drop down, namely <alert><em>Contains All</em></alert>, Fig. 38.</p></li>
+          <li><p>Then Replace <alert><em>dot</em></alert>, by <alert><em>&lt;space&gt;</em></alert>, Fig. 38. Then <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch2-36">
+          <caption>Rename Columns dialog</caption>
+          <image source="images/ch2/image11.png" width="70%">
+            <description><p>Rename Columns dialog</p></description>
+          </image>
+        </figure>
+      <p><em>This is not just housekeeping. In R-Instat, column names and types are part of the structure of the data. Clear, consistent names make later analysis easier, especially when a study has several related data frames or sheets.</em></p>
+    </subsection>
+    <subsection xml:id="subsec-ch2-positive-and-negative-questions">
+      <title>Positive and negative questions</title>
+      <p>Six of the 14 questions, e.g. “I find maths interesting”, are positive. The other 8 are negative. We split the variables into two sets.</p>
+      <p><ul>
+          <li><p>Right-click and choose <alert><em>Select Columns</em></alert>. Choose <alert><em>Define New Selection</em></alert></p></li>
+          <li><p>In the sub-dialog Add <alert><em>gender</em></alert>, and the 6 positive variables, namely <alert><em>interesting, future, life, more, favorite</em></alert> and <alert><em>enjoy</em></alert>, Fig. 39. Check 7 variables are selected.</p></li>
+          <li><p>Press <alert><em>Add Condition</em></alert> and call the select <alert><em>positive</em></alert>. Then press <alert><em>Return</em></alert> and <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch2-37">
+          <caption>Columns Selection dialog</caption>
+          <image source="images/ch2/image22.png" width="70%">
+            <description><p>Columns Selection dialog</p></description>
+          </image>
+        </figure>
+      <p>Examine the data. The column names are now red to confirm a select is being used. The bottom-line states that you are now using 7 out of the 15 variables.</p>
+      <p>Earlier, e.g. Fig. 14, when a filter was used, the left row was red. So, a select is for a temporary subset of the columns, just as a filter is for a temporary subset of the rows.</p>
+      <p><ul>
+          <li><p>Right-click and use <alert><em>Select Columns</em></alert> again.</p></li>
+          <li><p>Repeat as above for the 8 negative variables. So, <alert><em>Define New Select</em></alert></p></li>
+          <li><p>In the sub-dialog <alert><em>Add gender</em></alert>, then, <alert><em>uptight, blank, to confused</em></alert>. Check you have 9 variables.</p></li>
+          <li><p><alert><em>Add Condition</em></alert>. Call the select <alert><em>negative</em></alert>, then <alert><em>Return</em></alert> and <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The resulting subset is in Fig. 40. The preparation is now done and we move to the analysis.</p>
+      <aside>
+        <p>It is even easier to apply a Select in a spreadsheet. Mark the columns you don’t want to show, then right click and choose Hide from the menu. The main difference in R-Instat is that a Select is kept as an Object. Hence you can make multiple selects and apply them, when needed. We give an example in Fig. 43, below.</p>
+      </aside>
+    </subsection>
+    <subsection xml:id="subsec-ch2-a-likert-graph">
+      <title>A Likert graph</title>
+      <p><ul>
+          <li><p>We start with the positive variables. <alert><em>Right-click</em></alert> and <alert><em>Select Columns</em></alert> again, Fig. 42.</p></li>
+          <li><p>Add the select called <alert><em>positive</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-38">
+          <caption>Negative Selection</caption>
+          <image source="images/ch2/image8.png" width="45%">
+            <description><p>Negative Selection</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-39">
+          <caption>Column Selection dialog</caption>
+          <image source="images/ch2/image6.png" width="45%">
+            <description><p>Column Selection dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Fig. 44 shows the 7 variables in the positive select.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; Two/Three Variables &gt; More Likert</em></alert>. <alert><em>Add all</em></alert> the variables, <alert><em>except</em></alert> <alert><em>Gender</em></alert>, into the receiver, Fig 42.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>, then <alert><em>Maximise</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-40">
+          <caption>More Likert Graph dialog</caption>
+          <image source="images/ch2/image7.png" width="45%">
+            <description><p>More Likert Graph dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-41">
+          <caption>Likert Graph</caption>
+          <image source="images/ch2/image15.png" width="45%">
+            <description><p>Likert Graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The results are in Fig. 43. We see that Likert graphs are basically bar charts. Compared to ordinary bar charts (in R) they are “on their side”.</p>
+      <p>At the bottom of the chart we see there is a zero in the middle. The values on the x-axis are positive percentages each side.</p>
+      <p>Bar charts in R also summarise the data, and chart the summaries. For example, the data in the column called i<alert><em>nteresting</em></alert> in Fig. 43 shows 7 Strongly Agrees out of 21, and 2 Strongly Disagrees. Those are presented as 33% and 10% in the top bar-chart in Fig. 43.</p>
+      <p>One detail we like is in the third graph, on the question “Maths relates to my life”. Just one person Strongly disagreed and the number in that (very narrow) box is omitted. The value is easy to find, if needed, because the Disagreed is 19% and the Negative total is 24%. The missing value is therefore 5%.</p>
+      <p>It would be good to split the results by gender – though the percentages will then be based on an even smaller sample.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Click in the <alert><em>Facet</em></alert> receiver and Add <alert><em>Gender</em></alert>.</p></li>
+          <li><p>Check the <alert><em>Legend</em></alert> checkbox as well and choose <alert><em>Bottom</em></alert> for the legend position. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-42">
+          <caption>Likert Graph</caption>
+          <image source="images/ch2/image2.png" width="45%">
+            <description><p>Likert Graph</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-43">
+          <caption>Likert Graph Comparing Male and Female</caption>
+          <image source="images/ch2/image16.png" width="45%">
+            <description><p>Likert Graph Comparing Male and Female</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The graph in Fig. 44 is impressive. That’s because R is really impressive, and the graphs are excellent.</p>
+      <p>But, as a new results detective, you could do better. The main reason for Fig. 44 is to compare males and females. This is quite tricky with the layout in Fig. 44.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Press the down arrow at the bottom right, where it says <alert><em>Facet Wrap</em></alert> and select <alert><em>Facet Col</em></alert> instead. Press <alert><em>Ok</em></alert>, and <alert><em>Maximise</em></alert>.</p></li>
+      </ul></p>
+      <p>That layout in Fig. 45 makes the comparisons much easier. One result is that men were more enthusiastic than the women about maths, at least on the positive questions.</p>
+      <p>Next, look at the results for the negative questions. Changing a filter, or a select, is needed so often, that it can be done from within each dialog.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>Likert</em></alert> dialog and press the <alert><em>Data Options</em></alert> button.</p></li>
+          <li><p>At the top, choose columns, and change the select to negative, Fig. 46. Press <alert><em>Return</em></alert>.</p></li>
+          <li><p>Then simply press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-44">
+          <caption>More Likert Graph dialog</caption>
+          <image source="images/ch2/image12.png" width="45%">
+            <description><p>More Likert Graph dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-45">
+          <caption>Likert Graph dialog</caption>
+          <image source="images/ch2/image3.png" width="45%">
+            <description><p>Likert Graph dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>One conclusion from here, though just for the small sample, is that the enthusiasm for maths is confirmed as being more for the men compared to the women.</p>
+      <p>If you are so far used to tables having just numbers, (and maybe being dull) while graphs are pictures, and fun, then these Figures might make you wonder what they are?</p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch2-another-set-of-experimental-data">
+    <title>Another set of experimental data</title>
+    <introduction>
+    <p><alert>In this section:</alert> You return to experimental data through an incomplete block trial. We use pivot tables and heatmaps to explore the design and compare varieties across locations. Turning the yield column into a rectangular display makes patterns, gaps and unusual values easier to see.</p>
+    <p><ul>
+        <li><p>Use <alert><em>Import from Library</em></alert>.</p></li>
+        <li><p>Go back to the <alert><em>agridat</em></alert> package and choose the <alert><em>cochran.bib</em></alert> data. Press <alert><em>Ok</em></alert>.</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-46">
+        <caption>Import from Library dialog</caption>
+        <image source="images/ch2/image14.png" width="45%">
+          <description><p>Import from Library dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-47">
+        
+        <image source="images/ch2/image24.png" width="45%">
+          <description><p>image24.png</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>The data come from 13 blocks, B01 to B13, which we will refer to as locations. There are also 13 genotypes, G01 to G13, which we will refer to as varieties. In Fig. 49 there are 52 rows, because just 4 of the varieties were used at each location. There was just one measurement, namely the corn (maize) yield in pounds per plot. (A pound is an old UK unit, and is about half a kg.)</p>
+    <p>A pivot table shows the design. It gives a nice visual sense of the structure of the experiment.</p>
+    <p><ul>
+        <li><p>Use <alert><em>Describe &gt; Two/Three Variables &gt; Pivot Table.</em></alert></p></li>
+        <li><p>Make <alert><em>loc</em></alert> the row factor, <alert><em>gen</em></alert> the column factor and press <alert><em>Ok</em></alert>.</p></li>
+    </ul></p>
+      <figure xml:id="fig-ch2-48">
+        <caption>Pivot Table of Layout</caption>
+        <image source="images/ch2/image56.png" width="70%">
+          <description><p>Pivot Table of Layout</p></description>
+        </image>
+      </figure>
+    <p>This shows that each location had 4 varieties, for example B01 grew varieties 3,6,9 and 11. Similarly, each variety was grown in 4 locations, so G01 was in locations 7,9, 11 and 12.</p>
+    <p><ul>
+        <li><p>In the pivot-table, Fig. 50, click the down-arrow that has Count and select <alert><em>Average</em></alert>. Use the <alert><em>yield</em></alert> column.</p></li>
+        <li><p>Choose <alert><em>Row Heatmap</em></alert> instead of Table, Fig. 51.</p></li>
+    </ul></p>
+      <figure xml:id="fig-ch2-49">
+        <caption>Row Heatmap</caption>
+        <image source="images/ch2/image64.png" width="70%">
+          <description><p>Row Heatmap</p></description>
+        </image>
+      </figure>
+    <p>Now dark red indicates the highest (best) yield in that location and the lowest yield remains without colour.</p>
+    <p>The results show:</p>
+    <p><ul>
+        <li><p>that genotype 1, in the first column, was the best (darkest red) in 3 of its 4 locations. The exception was location B12, where the yield of 31.90 was 3<sup>rd</sup> best there.</p></li>
+        <li><p>Similarly, in the last column in Fig. 51, before the totals, variety 13 was the best (darkest red) in 3 of its 4 locations. Its yield, of 26.6, was also the 2<sup>nd</sup> highest in the 4<sup>th</sup> location, namely <alert><em>B03</em></alert>.</p></li>
+        <li><p>The bottom row in Fig. 51 also shows varieties G01 and G13 have the highest mean yields.</p></li>
+    </ul></p>
+    <p>One of the best features of pivot tables is how quickly and easily you can make changes and move things around.</p>
+    <p><ul>
+        <li><p>Change the <alert><em>Row Heatmap</em></alert> above, to just <alert><em>heatmap</em></alert>, Fig. 52.</p></li>
+    </ul></p>
+    <p>Now look for the highest and lowest yields overall, see Fig. 52. This is the darkest red and is 41.1, from genotype 13 at location 12. That’s the only yield of over 40.</p>
+      <figure xml:id="fig-ch2-50">
+        <caption>Heatmap</caption>
+        <image source="images/ch2/image31.png" width="70%">
+          <description><p>Heatmap</p></description>
+        </image>
+      </figure>
+    <p><em>This trial shows how this pivot tables and heatmap has revealed both the experimental design and the strongest and weakest variety-location combinations—patterns that are difficult to see in a long column of data.</em></p>
+    </introduction>
+    <subsection xml:id="subsec-ch2-using-a-transformed-variable">
+      <title>Using a transformed variable</title>
+      <p><em>It is often useful to transform data before analysis. The new variables may be used alongside the original values, or sometimes instead of them. In this example, we transform the yields into ranks: each yield is replaced by its position from lowest to highest. This gives a different view of relative performance. The wider point is that transformations are useful because they can reveal patterns, put values onto a more useful scale, or provide another way to compare the same data.</em></p>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Column: Numeric &gt; Transform</em></alert>.</p></li>
+          <li><p>Press the third button at the top, called <alert><em>Rank</em></alert>. Select the <alert><em>yield</em></alert> variable. Call the new column <alert><em>ranks</em></alert>, Fig. 53, and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-51">
+          <caption>Transform yields to ranks</caption>
+          <image source="images/ch2/image38.png" width="30%">
+            <description><p>Transform yields to ranks</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-52">
+          <caption>Rank 1</caption>
+          <image source="images/ch2/image29.png" width="30%">
+            <description><p>Rank 1</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-53">
+          <caption>Rank 52</caption>
+          <image source="images/ch2/image45.png" width="30%">
+            <description><p>Rank 52</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This produces a new variable, Fig. 56. This shows, for example, that row 9, with rank 1, has the lowest yield. That’s <alert><em>16.2, for genotype 10 in location B03</em></alert>. The highest yield, with rank 52, Fig. 55 is in row 48. It is <alert><em>the 41.1 for genotype 13 in location B12</em></alert>.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>Pivot Table</em></alert> dialog</p></li>
+          <li><p>Tick the <alert><em>Variable</em></alert> checkbox and add <alert><em>ranks</em></alert>.</p></li>
+          <li><p>Change the <alert><em>Table/Chart</em></alert> to <alert><em>heatmap</em></alert>, Fig. 56. Press <alert><em>Ok</em></alert>.</p></li>
+          <li><p>Then, press <alert><em>Maximise</em></alert>.</p></li>
+      </ul></p>
+      <p>The resulting heatmap is in Fig. 57</p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-54">
+          <caption>Pivot Table dialog</caption>
+          <image source="images/ch2/image48.png" width="45%">
+            <description><p>Pivot Table dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-55">
+          <caption>Pivot Table Heatmap Layout</caption>
+          <image source="images/ch2/image39.png" width="45%">
+            <description><p>Pivot Table Heatmap Layout</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+    </subsection>
+    <subsection xml:id="subsec-ch2-reversing-the-ranks">
+      <title>Reversing the Ranks</title>
+      <p>These ranks go from 1 to 52, with the largest yield having the highest rank. Suppose you prefer the reverse, so the best is in first place, i.e. with a rank of 1</p>
+      <aside>
+        <p>The transform dialog is special because it includes an option to show the R command before running it, and allows you to edit it. This is a way to access some of the greater flexibility of R within the safety of the dialog.</p>
+      </aside>
+      <p><ul>
+          <li><p>Return to the <alert><em>Transform</em></alert> dialog. Click on <alert><em>Preview</em></alert>.</p></li>
+      </ul></p>
+      <p><em>You now see your first R command, namely rank(yield). All R-Instat dialogs generate R commands, but Transform has a Preview window where you can also see and edit the command.</em></p>
+      <p><ul>
+          <li><p>Click the <alert><em>Edit checkbox</em></alert> and <alert><em>add a minus</em></alert>, in front of yield. (R doesn’t mind spaces, so we added some; they are optional).</p></li>
+          <li><p>Call the new column <alert><em>ranks1</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-56">
+          <caption>Editing the code</caption>
+          <image source="images/ch2/image34.png" width="45%">
+            <description><p>Editing the code</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-57">
+          <caption>The reversed ranks</caption>
+          <image source="images/ch2/image27.png" width="45%">
+            <description><p>The reversed ranks</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The ranks1 column now has the ranks in the opposite order, Fig. 59.</p>
+      <p><em>The ranks show that G01 and G13 perform better overall, but in different ways. All four G01 yields receive relatively high ranks, while G13 combines several very high ranks with one low rank of 12. G01 is therefore the more consistent performer, whereas G13 shows greater variation between locations. The original yields are still needed to show the size of these differences.</em></p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch2-graphs-and-summaries">
+    <title>Graphs and summaries</title>
+    <introduction>
+    <p><alert>In this section</alert>: Anscombe’s Quartet is a famous example of why graphs matter: its four datasets are very different but have identical summary statistics. It shows why numerical summaries should not be used alone. Here the aim is not simply to reproduce famous graphs. It is to practise using R-Instat to question numerical summaries, build graphs step by step, and decide whether the display supports the analysis; while showing a little of the power of R’s Grammar of Graphics system through ggplot2.</p>
+    <p><ul>
+        <li><p>Use <alert><em>File &gt; Close Data Book</em></alert></p></li>
+    </ul></p>
+    <p>Then:</p>
+    <p><ul>
+        <li><p>Use <alert><em>File &gt; Import from Library</em></alert>, from the usual front screen.</p></li>
+        <li><p>You may be in the <alert><em>datasets</em></alert> package. If not press <alert><em>Reset</em></alert>.</p></li>
+        <li><p>Select the <alert><em>anscombequartet</em></alert> file Fig. 60.</p></li>
+        <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+    </ul></p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-58">
+        <caption>Import from Library dialog</caption>
+        <image source="images/ch2/image23.png" width="45%">
+          <description><p>Import from Library dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-59">
+        <caption>anscombequartet data</caption>
+        <image source="images/ch2/image20.png" width="45%">
+          <description><p>anscombequartet data</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    <p>As usual, start by looking at the data. There are 8 variables each with 11 observations. From the column names we assume they are to be considered as 4 pairs, with y1, x1, etc.</p>
+    <p><ul>
+        <li><p>Use Describe <alert><em>One Variable &gt; Graph</em></alert>. <alert><em>Add All</em></alert> Variables, Fig. 62, and press <alert><em>Ok</em></alert>.</p></li>
+    </ul></p>
+    <p>The results are in Fig. 63. The first 3 boxplots look the same. Looking back at the data, Fig. 61, shows that the 3 variables (x1, x2 x3) are identical.</p>
+    <p>Then x4 has just 2 values. It is always 8 except for a 19. And y3 and y4 each have one large value, namely 12.74 and 12.5. The 12.5 in y4 is on the same row as the 19 in x4. But the 12.74 in y3 is not on the same row as the largest value in x3.</p>
+    <sidebyside>
+      <figure xml:id="fig-ch2-60">
+        <caption>One Variable Graph dialog</caption>
+        <image source="images/ch2/image60.png" width="45%">
+          <description><p>One Variable Graph dialog</p></description>
+        </image>
+      </figure>
+      <figure xml:id="fig-ch2-61">
+        <caption>The One Variable Graph</caption>
+        <image source="images/ch2/image43.png" width="45%">
+          <description><p>The One Variable Graph</p></description>
+        </image>
+      </figure>
+    </sidebyside>
+    </introduction>
+    <subsection xml:id="subsec-ch2-a-scatterplot">
+      <title>A scatterplot</title>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; Graphs &gt; Scatterplot</em></alert></p></li>
+          <li><p>Add the variable <alert><em>y1</em></alert> into the top receiver. Then <alert><em>x1</em></alert> into the x receiver.</p></li>
+          <li><p>With just 11 points, make the points larger, by <alert><em>checking the size box</em></alert> and <alert><em>changing it to 3</em></alert>, Fig. 64.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-62">
+          <caption>Point Plot dialog</caption>
+          <image source="images/ch2/image33.png" width="45%">
+            <description><p>Point Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-63">
+          <caption>The Scatter Plot</caption>
+          <image source="images/ch2/image40.png" width="45%">
+            <description><p>The Scatter Plot</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>It looks sensible to add a line. So:</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>scatterplot (also called point plot) dialog</em></alert>.</p></li>
+          <li><p>Check <alert><em>the Line of Best Fit checkbox</em></alert>, and also the With <alert><em>Standard Error checkbox</em></alert>.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The graph in Fig. 66 looks better, but it would be nice to include the equation of the line.</p>
+      <p><ul>
+          <li><p>Return to the dialog.</p></li>
+      </ul></p>
+      <p><em>The equation option is not available from the main dialog. R-Instat tries to keep the main dialogs as simple and uncluttered as possible. There are more options from the sub-dialogs</em>.</p>
+      <p><ul>
+          <li><p>So, press the <alert><em>Plot Options</em></alert> button.</p></li>
+      </ul></p>
+      <p><ul>
+          <li><p>Choose the <alert><em>Layers</em></alert> <alert><em>Tab</em></alert>, Fig. 67</p></li>
+      </ul></p>
+      <p>Now reflect on the information in Fig. 67. In ggplot terms, your current graph has 2 layers. In the grammar of graphics, layers use geoms, or geometric shapes.</p>
+      <p>The first layer is the 11 points, and that’s the geom_point, in Fig. 67.</p>
+      <p>The second layer is the fitted line, plus the shaded area. And that is geom_smooth in Fig. 67. Your task is to add a 3<sup>rd</sup> layer, containing the equation of the line.</p>
+      <p><ul>
+          <li><p>Click on <alert><em>Add</em></alert> in Fig. 67.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-64">
+          <caption>Scatterplot with Line of Best Fit</caption>
+          <image source="images/ch2/image26.png" width="45%">
+            <description><p>Scatterplot with Line of Best Fit</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-65">
+          <caption>Plot Options sub-dialog</caption>
+          <image source="images/ch2/image25.png" width="45%">
+            <description><p>Plot Options sub-dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Click on <alert><em>Add</em></alert> to open the <alert><em>Layer Options</em></alert>. Fig. 68. Press the down-arrow for the type of layer.</p></li>
+          <li><p>Choose <alert><em>stat_regline_equation</em></alert>. Then press <alert><em>Return</em></alert>.</p></li>
+          <li><p>You are back in the <alert><em>Layer Tab</em></alert> and see you now have 3 layers. Press <alert><em>Return</em></alert> again. Then <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-66">
+          <caption>Layer Options sub-dialog</caption>
+          <image source="images/ch2/image30.png" width="45%">
+            <description><p>Layer Options sub-dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-67">
+          <caption>Scatterplot with the equation</caption>
+          <image source="images/ch2/image28.png" width="45%">
+            <description><p>Scatterplot with the equation</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>You now see the fitted line is y1 = 3 + 0.5x1. So, the slope is a half!</p>
+      <p>This seems a very small change in the graph for all that effort. But remember our main aim, here, is for you to master the R ggplot2 graphics system. You have just used the most complicated set of dialogs in R-Instat, by far.</p>
+      <p>We hope you are happy so far, because we now propose to add the correlation, as a 4<sup>th</sup> layer.</p>
+      <p><ul>
+          <li><p>Back to the dialog. Then <alert><em>Plot Options</em></alert> again. Now <alert><em>Add</em></alert> again on the <alert><em>Layer Tab</em></alert>.</p></li>
+          <li><p>Then down arrow again in the Layer options, and choose <alert><em>stat_cor</em></alert>. Then <alert><em>Return</em></alert>.</p></li>
+          <li><p>In Fig. 70 you now have 4 layers. Press <alert><em>Return</em></alert> and then <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>It worked, Fig. 71. The fourth layer has been added, but the equation and correlation overlap and are difficult to read.</p>
+      <p>One easy solution is to delete the less important summary. Do you prefer correlation or regression?</p>
+      <p>Let’s try to do better. Could we move the correlation down in the graph, in Fig. 71, to say where y = 10?</p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-68">
+          <caption>Plot Options sub-dialog</caption>
+          <image source="images/ch2/image17.png" width="45%">
+            <description><p>Plot Options sub-dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-69">
+          <caption>Scatterplot with additional layers</caption>
+          <image source="images/ch2/image55.png" width="45%">
+            <description><p>Scatterplot with additional layers</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Return to the dialog. Press <alert><em>Plot Options</em></alert> again, choose the <alert><em>stat_cor</em></alert> layer and, this time, press <alert><em>Edit</em></alert>.</p></li>
+          <li><p>Now notice that each <alert><em>Layer Option</em></alert> has 2 tabs. Press on the 2nd, <alert><em>Layer Parameters</em></alert>, Fig. 73.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-70">
+          <caption>Plot Options sub-dialog</caption>
+          <image source="images/ch2/image54.png" width="45%">
+            <description><p>Plot Options sub-dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-71">
+          <caption>Layer Options sub-dialog</caption>
+          <image source="images/ch2/image52.png" width="45%">
+            <description><p>Layer Options sub-dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Wow, that’s a lot of options for just this layer! The <alert><em>label.y</em></alert> sounds sensible to try.</p></li>
+          <li><p>Click this option and make it 10. Then <alert><em>Return</em></alert> and <alert><em>Return</em></alert> again and <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The resulting graph, Fig. 75, shows it worked! The correlation is 0.82, and the small p-value provides strong evidence that the slope is not zero Fig. 75, assuming the linear model is appropriate.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-72">
+          <caption>Adding label.y</caption>
+          <image source="images/ch2/image62.png" width="45%">
+            <description><p>Adding label.y</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-73">
+          <caption>The Resulting graph</caption>
+          <image source="images/ch2/image53.png" width="45%">
+            <description><p>The Resulting graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+    </subsection>
+    <subsection xml:id="subsec-ch2-more-scatterplots">
+      <title>More scatterplots</title>
+      <p>Now, for the “payoff” with these data.</p>
+      <p><ul>
+          <li><p>Return to the dialog and choose <alert><em>y2</em></alert>, instead of <alert><em>y1</em></alert>. Then Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The result, in Fig. 76, shows the value of this very clever set of data. With the second set, as soon as you see the data, you know that fitting a straight line is a ridiculous summary. But notice also that the summary statistics, both the equation, and the correlation are identical to the first set.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Choose <alert><em>y3</em></alert> this time, and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-74">
+          <caption>Scatterplot for y2</caption>
+          <image source="images/ch2/image58.png" width="45%">
+            <description><p>Scatterplot for y2</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-75">
+          <caption>Scatterplot for y3</caption>
+          <image source="images/ch2/image59.png" width="45%">
+            <description><p>Scatterplot for y3</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Same model and again ridiculous. You now understand the large 12.74 value we mentioned earlier. These data are in a perfect straight line, except for an obvious outlier.</p>
+      <p><ul>
+          <li><p>Back again for the 4<sup>th</sup> set. Use <alert><em>y4</em></alert>.</p></li>
+          <li><p>This time the x’s are also different, so change to <alert><em>x4</em></alert> as well, Fig. 78. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-76">
+          <caption>Point Plot dialog</caption>
+          <image source="images/ch2/image57.png" width="45%">
+            <description><p>Point Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-77">
+          <caption>Scatterplot with y4 and x4</caption>
+          <image source="images/ch2/image89.png" width="45%">
+            <description><p>Scatterplot with y4 and x4</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This time it is obvious you should not be using regression at all. Without the single outlying point at x=19, all the remaining x-values are 8, so a regression line cannot be estimated.</p>
+    </subsection>
+    <subsection xml:id="subsec-ch2-multiple-plots">
+      <title>Multiple plots</title>
+      <p>One more step would be useful. It would be nice to put the 4 graphs together in a single figure. There is a Combine Graphs dialog, but we can do better.</p>
+      <p>First change the shape of the data – bringing in a factor column – of course!</p>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Data Reshape &gt; Stack (Pivot Longer).</em></alert></p></li>
+          <li><p>Add all the columns, Fig. 80 and tick the checkbox to <alert><em>Stack multiple column sets</em></alert>.</p></li>
+          <li><p>Change the <alert><em>Factor Variable</em></alert> to be called <alert><em>set</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+          <li><p>Right-click on the set column and <alert><em>Convert to Factor</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-78">
+          <caption>Stack dialog</caption>
+          <image source="images/ch2/image50.png" width="45%">
+            <description><p>Stack dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-79">
+          <caption>The stacked data</caption>
+          <image source="images/ch2/image49.png" width="45%">
+            <description><p>The stacked data</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The 4 sets of data, in Fig. 81, are now one below the other. So, there are now 44 rows of data.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>Scatterplot</em></alert> dialog. Proceed carefully now!</p></li>
+      </ul></p>
+      <p><em>Note the data Frame (top left) is coloured red. This indicated that you should check which data frame you are working on, as the one selected in the dialog is not the one you are looking at in the data window</em>.</p>
+      <p><ul>
+          <li><p>Use the <alert><em>down-arrow</em></alert> and move to the new data frame, Fig. 82</p></li>
+      </ul></p>
+      <p><ul>
+          <li><p>Put <alert><em>y1</em></alert> into the top control and <alert><em>x1</em></alert> into the x variable.</p></li>
+          <li><p>Then click on the <alert><em>Facet By</em></alert> box and add the <alert><em>set</em></alert> variable. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-80">
+          <caption>Point Plot dialog</caption>
+          <image source="images/ch2/image41.png" width="45%">
+            <description><p>Point Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-81">
+          <caption>The resulting graphs</caption>
+          <image source="images/ch2/image36.png" width="45%">
+            <description><p>The resulting graphs</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The resulting 4 graphs are in Fig. 83. They combine the graphs, by default they have the same x-axis and y-axis for each graph. So, the axis labels are only at the bottom and left of the set of graphs in this case there is no need for them anywhere else.</p>
+      <p>Now you have the set factor in the data, you may wonder if it fits anywhere else in the dialog?</p>
+      <p><ul>
+          <li><p>Return to the dialog. Delete the <alert><em>set</em></alert> factor from the Facet control and put it in the <alert><em>By Variable</em></alert> instead. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-82">
+          <caption>The Graph without facets</caption>
+          <image source="images/ch2/image47.png" width="45%">
+            <description><p>The Graph without facets</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-83">
+          <caption>The graph by variable and faceted</caption>
+          <image source="images/ch2/image44.png" width="45%">
+            <description><p>The graph by variable and faceted</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Putting the <alert><em>set</em></alert> factor in this position creates a single graph with all sets together but adds colour to distinguish each of the sets. It has also separated the 4 equations nicely. However, the 4 correlations are all together, because you specified earlier, they should be where y = 10. Luckily, they are the same each time so this is fine.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Put the <alert><em>set</em></alert> factor back as a facet and keep it in the <alert><em>By Variable</em></alert> too.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The resulting graphs are nicely in colour. But the different position of the regression equation, which was fine in Fig. 83, is a problem with the facets, and particularly with the last graph.</p>
+      <p>Fortunately, you know how to correct this. Also, the legend is no longer needed in Fig. 85.</p>
+      <p><ul>
+          <li><p>Return to the dialog and to <alert><em>Plot Options</em></alert>.</p></li>
+          <li><p>Edit the <alert><em>stat_regline_equation</em></alert> layer, to change the <alert><em>Label y</em></alert> layer to <alert><em>12.5</em></alert>.</p></li>
+          <li><p>Return to the main dialog.</p></li>
+          <li><p>Check on the <alert><em>Legend</em></alert> checkbox, to set it to <alert><em>None</em></alert>, Fig. 86. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-84">
+          <caption>Point Plot dialog</caption>
+          <image source="images/ch2/image63.png" width="45%">
+            <description><p>Point Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-85">
+          <caption>Improved look of the graph</caption>
+          <image source="images/ch2/image51.png" width="45%">
+            <description><p>Improved look of the graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><em>This example combines two of R’s greatest strengths: factors and (ggplot) graphs. The factor identified the four groups in the data, while ggplot2 uses it for the facets.</em></p>
+    </subsection>
+    <subsection xml:id="subsec-ch2-tables-and-graphs-are-similar">
+      <title>Tables and graphs are similar</title>
+      <p><alert>In this section</alert>: You have seen both tables and graphs. Now we consider them together. Faceted graphs can be understood like tables, with factors defining the cells and margins providing overall views.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>scatterplot</em></alert> dialog. Press <alert><em>Reset</em></alert>.</p></li>
+          <li><p>Add the Y and X to the first 2 controls and put <alert><em>set</em></alert> as the <alert><em>By variable</em></alert>.</p></li>
+          <li><p>Tick to <alert><em>include the line of best fit</em></alert> and the <alert><em>Standard Error</em></alert> too.</p></li>
+          <li><p>Include <alert><em>set</em></alert> in the <alert><em>Facet By</em></alert>, Fig. 88. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-86">
+          <caption>Scatter Plot dialog</caption>
+          <image source="images/ch2/image46.png" width="45%">
+            <description><p>Scatter Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-87">
+          <caption>The resulting graph</caption>
+          <image source="images/ch2/image35.png" width="45%">
+            <description><p>The resulting graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Figure 89 shows the four graphs in a two-by-two arrangement. Although it looks like a two-way table, it is a one-way display because its four cells are defined by the four levels of a single factor: <alert><em>set</em></alert>.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Tick on the <alert><em>Legend</em></alert>, to omit it.</p></li>
+          <li><p>Use the down arrow by <alert><em>Facet wrap</em></alert> and use <alert><em>Facet Column + O</em></alert>. (O is for overall), Fig. 90.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-88">
+          <caption>Scatter Plot dialog</caption>
+          <image source="images/ch2/image79.png" width="45%">
+            <description><p>Scatter Plot dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-89">
+          <caption>Resulting graph</caption>
+          <image source="images/ch2/image37.png" width="45%">
+            <description><p>Resulting graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The <alert><em>all</em></alert> panel on the right of Fig. 91 plays the same role as a total column in an ordinary table.</p>
+      <p>Most tables used in data analysis are rectangular and are indexed by two factors—one defining the rows and the other the columns. Our current display is a one-way table because its four graphs are defined by the four levels of the single factor <alert><em>set</em></alert>.</p>
+      <p>The four datasets have properties that allow us to replace this four-level factor with two factors, each with two levels:</p>
+      <p><ul>
+          <li><p><alert>Suitability for a straight line:</alert> Fitting a straight line is sensible for sets 1 and 3, although the outlier in set 3 would first have to be removed. In contrast, set 2 follows a curved pattern, while nearly all the x-values in set 4 are identical. We call this factor <alert><em>linear</em></alert>.</p></li>
+          <li><p><alert>Presence of an outlier:</alert> Sets 3 and 4 each have an obvious outlier, while sets 1 and 2 do not. We call this factor <alert><em>simple</em></alert>.</p></li>
+      </ul></p>
+      <p>By reorganising the four datasets according to these shared properties, the two new factors can define the rows and columns of a two-way table of graphs.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Prepare &gt; Column: Factor &gt; Recode Factor</em></alert>. Add <alert><em>set</em></alert>.</p></li>
+          <li><p>In the <alert><em>New Label</em></alert> column make 1 and 2 into <alert><em>linear</em></alert>. Then 3 and 4 into <alert><em>outlier</em></alert>, Fig. 92.</p></li>
+          <li><p>Call the new column name <alert><em>linear</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>This adds a new factor, called <alert><em>linear</em></alert> to your data.</p>
+      <p><ul>
+          <li><p>Return to the dialog. This time label levels 1 and 3 as <alert><em>simple</em></alert> and 2 and 4 as <alert><em>not</em></alert>.</p></li>
+          <li><p>Call the new column <alert><em>simple</em></alert>, Fig. 93. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>Check that both factors have two levels, with 22 observations at each level.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-90">
+          <caption>Recode Factor dialog</caption>
+          <image source="images/ch2/image42.png" width="45%">
+            <description><p>Recode Factor dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-91">
+          <caption>Recode Factor dialog</caption>
+          <image source="images/ch2/image76.png" width="45%">
+            <description><p>Recode Factor dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Right-click in the new <alert><em>linear</em></alert> column and use <alert><em>Levels/Labels</em></alert>. Check it has just 2 levels.</p></li>
+          <li><p>Close and repeat with the new <alert><em>simple</em></alert> column, Fig. 94.</p></li>
+      </ul></p>
+      <p>Correct any recoding errors before continuing.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>scatterplot</em></alert> dialog.</p></li>
+      </ul></p>
+      <p>We would like to use both new factors as facets. However, the main dialog only allows one.</p>
+      <p><ul>
+          <li><p>Press <alert><em>Plot Options</em></alert>. On the <alert><em>Facet</em></alert> tab you now see you can include both factors.</p></li>
+          <li><p>Add the two new 2-level factors, Fig. 95. Also check <alert><em>margins</em></alert> are ticked.</p></li>
+          <li><p>Press <alert><em>Return</em></alert> then <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch2-92">
+          <caption>Levels/Labels dialog</caption>
+          <image source="images/ch2/image82.png" width="45%">
+            <description><p>Levels/Labels dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch2-93">
+          <caption>The Scatter Plot dialog</caption>
+          <image source="images/ch2/image94.png" width="45%">
+            <description><p>The Scatter Plot dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The results are in Fig. 96.</p>
+      <p>You now see a two-way table of graphs indexed by two factors. Adding the margins is like adding an additional level to each factor, so there are 9 cells in the resulting table.</p>
+        <figure xml:id="fig-ch2-94">
+          <caption>The resulting graph</caption>
+          <image source="images/ch2/image88.png" width="70%">
+            <description><p>The resulting graph</p></description>
+          </image>
+        </figure>
+      <p>The resulting display is a two-way table of graphs, defined by the factors <alert><em>linear</em></alert> and <alert><em>simple</em></alert>. Each factor has two levels, giving four main graphs in a two-by-two arrangement. Adding margins creates an extra row for the 2 levels of <alert><em>linear</em></alert>, and a column for each level of <alert><em>simple.</em></alert> The bottom-right cell shows the overall graph. So, there are nine cells in total.</p>
+      <p><em>This has shown the main graph dialog can handle a single faceting factor. Plot Options allows us to use two factors. This raises a further question, namely is that the limit or can ggplot2 extend the same table-like structure to three or more factors? The answer is yes, but it needs more than the dialogs. Chapter 3 goes beyond the standard dialogs, and extends the graphs through the underlying ggplot2 commands.</em></p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch2-reflections">
+    <title>Reflections</title>
+    <p>The examples in this chapter were different, but the underlying steps are the same as in Chapter 1: looking carefully at data is an important part of data analysis. The datasets were chosen as practice cases to demonstrate general skills and typical preliminary steps that readers can transfer to their own data.</p>
+    <p>Factors and graphics are two closely connected strengths of R. Factors describe structure in the data. Graphs then use that structure through colour, grouping, facets, and comparisons. Together, they help make complex patterns easier to organise, explore, understand, and present.</p>
+    <p>Data preparation or tidying is part of analysis, not a separate chore. Users often arrive ready to analyse their data, only to discover that they first need to check, correct, rename, recode, transform, or reshape it. This process is important in its own right and has the added benefit that it helps to understand the data well enough to carry out a sound analysis. The Prepare menu in R-Instat makes much of this essential work accessible.</p>
+    <p>Column names and data types are part of data preparation. This is often new for spreadsheet users. In R-Instat, column names have pride of place in a special row, and the column type is shown with the name. Names and types are therefore not cosmetic details; they are part of the data structure.</p>
+    <p>Consistent names, labels, and types matter even more in large studies with multiple sheets or data frames. They make it easier to move between related data frames, compare them, reshape them, and analyse them together.</p>
+    <p>Many projects benefit from keeping more than one version of the data for different tasks. In the Anscombe example, the original wide data frame was retained while a second, longer data frame was created for faceted graphics. R-Instat’s databook structure makes it easy to work with multip,le data frames, while keeping each one simple and suited to its purpose.</p>
+    <p>R’s richness presents a challenge for menu-driven software. Including every option would make the menus unmanageable, so R-Instat focuses on making key areas, including data preparation and graphics, comprehensive and practical. Even so, there are times when more flexibility is useful. The glimpse of your first R command, in this chapter, showed that commands do not have to be intimidating.</p>
+    <p>The menus and dialogs are not intended to replace R commands and scripts. They allow users to accomplish substantial work before needing to view or edit R code. Chapter 3 builds on</p>
+    <p>this idea and shows that commands, and even scripts, can often be used quite simply when you do not have to write them from scratch.</p>
+  </section>
+
+</chapter>

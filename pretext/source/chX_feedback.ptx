@@ -1,0 +1,42 @@
+  <section xml:id="sec-places-for-discussions">
+    <title>Places for discussions</title>
+
+    <p>Data discussion site: <url href="https://github.com/PreTeXtBooks/lsrdata/issues/1">https://github.com/PreTeXtBooks/lsrdata/issues/1</url></p>
+
+    <p>Chapter discussion site: <url href="https://github.com/PreTeXtBooks/lsrinstat/issues">https://github.com/PreTeXtBooks/lsrinstat/issues</url></p>
+  </section>
+
+  <section xml:id="sec-feedback-reporting-bugs">
+    <title>Feedback and reporting bugs</title>
+
+    <p>
+      R-Instat is still under active development with many improvements and new features planned for future versions.
+      We appreciate feedback you can have to help us improve R-Instat.
+      There are several ways you can provide your feedback:
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            For general feedback you can contact us via email at:
+          </p>
+          <p>
+            <url href="mailto:rinstat@africanmathsinitiative.net">R-Instat@AfricanMathsInitiative.net</url>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Our <url href="https://github.com/africanmathsinitiative/R-Instat/issues">issues page</url> on our <url href="https://github.com/africanmathsinitiative/R-Instat/">GitHub</url> account can be used to report specific bugs or suggestions and this is the most direct way to contact the development team.
+            Note that our issues page is publicly visible to anyone.
+            It can be accessed here: <url href="https://github.com/africanmathsinitiative/R-Instat/issues">https://github.com/africanmathsinitiative/R-Instat/issues</url>.
+            Click the green <alert>New Issue</alert> button on the right side to send your message.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>When reporting a bug or problem, it&#8217;s most helpful to us if you can be as specific as possible and detail how to reproduce the bug, pasting the R code from the log file and attaching data if possible.</p>
+
+    <p>R-Instat Team, African Data Initiative</p>
+  </section>
