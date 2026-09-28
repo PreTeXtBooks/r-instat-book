@@ -29,6 +29,9 @@
     <!-- Working with real data -->
     <xi:include href="./ch2_working_with_data.ptx" />
 
+    <!-- From dialogs to R commands and scripts -->
+    <xi:include href="./ch3_scripts_and_commands.ptx" />
+
     <!-- Additional chapters will be added here as the book develops -->
 
     <!-- This chapter contains a wide variety of elements to  -->

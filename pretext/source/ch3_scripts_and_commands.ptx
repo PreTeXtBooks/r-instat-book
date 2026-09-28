@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-scripts-and-commands" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>R with R-Instat</title>
+
+  <introduction>
+    <p>You do not need to learn to write scripts from scratch to start using them. You can start by learning to inspect, run, and adapt the commands and scripts that R-Instat or others provide. This makes the transition from menus and dialogs to commands and scripts approachable.</p>
+    <p>The chapter follows a gradual route. First, you use R-Instat’s “halfway dialogs” to build commands with clearly labelled buttons. The function names are provided by the keys, and the parameters can be shown when needed. Next, you view and run a script that R-Instat creates from an ordinary dialog. Finally, you use a script from the R-Instat script library, the partner to the data library used in the first two chapters.</p>
+    <p>The aim is to learn to read scripts and make small, purposeful changes to produces what you need. This is similar to returning to a dialog and adjusting the options. The difference is that here you work directly with the command or script. The code is less intimidating when you do not have to write it yourself.</p>
+  </introduction>
+
+  <section xml:id="sec-ch3-part-1-halfway-dialogs-using-r-commands">
+    <title>Part 1: Halfway dialogs — using R commands</title>
+    <subsection xml:id="subsec-ch3-the-calculator-a-halfway-dialog">
+      <title>The calculator — a halfway dialog</title>
+      <p>The calculator is a halfway dialog. It lets you build commands using keyboard buttons, giving much more flexibility while still providing structure and support. You can build R commands without needing to remember the R words.</p>
+      <aside>
+        <p>The calculator buttons represent R functions. By selecting and combining these functions, you can use a much wider range of R’s capabilities. The calculator provides a bridge between using ordinary dialogs and working with R code. For more on the calculator please check out the material <url href="https://ecampus.r-instat.org/mod/page/view.php?id=212">here</url>.</p>
+      </aside>
+      <p>We start with the same experimental data used in Chapter 2.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Import from Library</em></alert>.</p></li>
+          <li><p>Go to the <alert><em>agridat</em></alert> package and choose the <alert><em>cochran.bib</em></alert> data, Fig. 1. Press <alert><em>Ok</em></alert>.</p></li>
+          <li><p>Use <alert><em>Prepare &gt; Calculator</em></alert>, Fig. 2.</p></li>
+      </ul></p>
+      <p>You may be pleasantly surprised that it looks like a phone calculator.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-01">
+          <caption>Import from Library dialog</caption>
+          <image source="images/ch3/image21.png" width="45%">
+            <description><p>Import from Library dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-02">
+          <caption>The Calculator</caption>
+          <image source="images/ch3/image27.png" width="45%">
+            <description><p>The Calculator</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Start with the transformation of yield from pounds to kilograms.</p>
+      <p><ul>
+          <li><p>Add the <alert><em>yield</em></alert> column. Then, from the keyboard<alert><em>, press the divide key (/) then press the 2.2 keys</em></alert> in turn.</p></li>
+          <li><p>Press <alert><em>Try</em></alert>, Fig. 2. Type <alert><em>yield1</em></alert> as the result to be stored. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>So, although it looks like a simple calculator, it is designed for columns rather than just numbers. It is a column calculator.</p>
+      <p>The yield1 column is given to 3 decimal places. Rounding to one place would be useful.</p>
+      <p><ul>
+          <li><p>Return to the calculator. Press <alert><em>Clear</em></alert>. Press the down arrow where it says <alert><em>Basic</em></alert> and choose the <alert><em>Maths</em></alert> keyboard, Fig. 3.</p></li>
+          <li><p>Press the <alert><em>round</em></alert> key. Add the <alert><em>yield1</em></alert> column and change the <alert><em>0 to 1</em></alert> after the <alert><em>comma</em></alert>.</p></li>
+          <li><p>Press <alert><em>Try</em></alert> to check</p></li>
+          <li><p>Press the down arrow by <alert><em>Store</em></alert> and put the result back into the <alert><em>yield1</em></alert> column. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-03">
+          <caption>Changing Keyboards in the Calculator</caption>
+          <image source="images/ch3/image25.png" width="45%">
+            <description><p>Changing Keyboards in the Calculator</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-04">
+          <caption>The Maths Keyboard</caption>
+          <image source="images/ch3/image45.png" width="45%">
+            <description><p>The Maths Keyboard</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Once you become used to the calculator, you can combine steps into one, as follows.</p>
+      <p><ul>
+          <li><p>Return to the calculator. Press <alert><em>Clear</em></alert>. Press the <alert><em>round key</em></alert> again.</p></li>
+          <li><p>This time add <alert><em>yield</em></alert>, then <alert><em>/ 2.2</em></alert>. Then change <alert><em>0 to 1</em></alert> after the comma. Press <alert><em>Try</em></alert>, Fig. 5.</p></li>
+          <li><p><alert><em>Save back into yield1</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>Next, get the ranks.</p>
+      <p><ul>
+          <li><p>Return to the <alert><em>calculator</em></alert> and press <alert><em>Clear</em></alert>. Move to the <alert><em>Transform keyboard</em></alert>, Fig. 6.</p></li>
+          <li><p>Press the <alert><em>rank</em></alert> key, then include the <alert><em>yield</em></alert> column and press <alert><em>Try</em></alert>.</p></li>
+          <li><p>Call the result <alert><em>rank</em></alert>, Fig. 6, then press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-05">
+          <caption>The Maths Keyboard</caption>
+          <image source="images/ch3/image31.png" width="45%">
+            <description><p>The Maths Keyboard</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-06">
+          <caption>The Transform Keybord</caption>
+          <image source="images/ch3/image30.png" width="45%">
+            <description><p>The Transform Keybord</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>We forgot, the ranks are needed “the other way round”. Easily solved:</p>
+      <p><ul>
+          <li><p>Return to the calculator. Add minus, <alert><em>(-)</em></alert> in front of yield. Press <alert><em>Try</em></alert> to check.</p></li>
+          <li><p>Call it <alert><em>rank1</em></alert>, Fig. 7, and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>With the ranks, the calculator has reproduced the result from the <alert><em>Prepare &gt; Column: Numeric &gt; Transform</em></alert> dialog used in Chapter 2. The difference is that you have seen the R function, rank, from the start.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-07">
+          <caption>Getting Ranks with the Transform Keyboard</caption>
+          <image source="images/ch3/image26.png" width="45%">
+            <description><p>Getting Ranks with the Transform Keyboard</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-08">
+          <caption>The Data with the Ranks</caption>
+          <image source="images/ch3/image40.png" width="45%">
+            <description><p>The Data with the Ranks</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+    </subsection>
+    <subsection xml:id="subsec-ch3-a-simple-calculator">
+      <title>A simple calculator</title>
+      <p>If an expression has no columns, the calculator behaves like an ordinary calculator. This short aside introduces a few rules to keep in mind when using the calculator and when reading or changing the command.</p>
+      <p><ul>
+          <li><p>Return to the calculator and press <alert><em>Clear</em></alert>. Return to the <alert><em>Basic</em></alert> calculator keyboard.</p></li>
+          <li><p>Use the keyboard to put <alert><em>57 * 61</em></alert> into the expression. Then press <alert><em>Try</em></alert>, Fig. 9.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch3-09">
+          <caption>The Basic Calculator</caption>
+          <image source="images/ch3/image49.png" width="70%">
+            <description><p>The Basic Calculator</p></description>
+          </image>
+        </figure>
+      <p>A few examples show how R reads expressions:</p>
+      <p><ul>
+          <li><p>Press <alert><em>Clear</em></alert>, then <alert><em>1 + 2 * 4</em></alert>, and Press <alert><em>Try</em></alert> to get the answer <alert><em>9</em></alert>.</p></li>
+          <li><p>Press <alert><em>Clear</em></alert>, then (<alert><em>1 + 2) * 4</em></alert>, and Press <alert><em>Try</em></alert> to get the answer <alert><em>12</em></alert>.</p></li>
+      </ul></p>
+      <p>Notice that these are not the same. R follows standard mathematical rules so make sure you are thinking about this when you type in your commands.</p>
+      <p>You can also use powers and functions:</p>
+      <p><ul>
+          <li><p>Press <alert><em>Clear</em></alert>, then <alert><em>225 ^ 0.5</em></alert> and <alert><em>Try</em></alert> to give <alert><em>15</em></alert>.</p></li>
+      </ul></p>
+      <p>The use of the square root should be familiar, from the previous section. So:</p>
+      <p><ul>
+          <li><p>Move to the <alert><em>Maths</em></alert> keyboard. Press <alert><em>Clear</em></alert>.</p></li>
+          <li><p>Hover over the <alert><em>square root</em></alert> button, Fig. 10.</p></li>
+      </ul></p>
+      <p><em>You have a one-line tooltip, with every key. This has an example to remind you what it does.</em></p>
+      <p><ul>
+          <li><p>Press the <alert><em>sqrt</em></alert> button, click the main keyboard, to add <alert><em>225</em></alert> and press <alert><em>Try</em></alert> again.</p></li>
+      </ul></p>
+      <p><em>If you need more help than the tooltip on what a keyboard provides, then you could click the Help button. We provide a help page for each keyboard. If that is not enough, then there is a second (more advanced) help available on each halfway dialog</em>:</p>
+      <p><ul>
+          <li><p>Press <alert><em>Clear</em></alert>, then the <alert><em>logit</em></alert> key. Add <alert><em>yield</em></alert> and press <alert><em>Try</em></alert>, Fig 11.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-10">
+          <caption>The tooltips</caption>
+          <image source="images/ch3/image48.png" width="45%">
+            <description><p>The tooltips</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-11">
+          <caption>Math Calculator logit button</caption>
+          <image source="images/ch3/image38.png" width="45%">
+            <description><p>Math Calculator logit button</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>It worked but may not be sensible. If you are unsure about a function, check the command to see which package it belongs to. Then use the R Help to find out more about the function from the package documentation.</p>
+      <p>In this case the command has car:: at the start. This tells you that the logit key is a function from the R package called car.</p>
+      <p><ul>
+          <li><p>Click the down arrow by the R Help key, Fig. 12.</p></li>
+      </ul></p>
+      <p>This shows that four different R packages, including car, are used to provide the maths keys.</p>
+      <p><ul>
+          <li><p>Click on car and you get to the whole documentation for the R car package. Go to logit, Fig. 13.</p></li>
+      </ul></p>
+      <p>You now see this function assumes the data are percentages. It is therefore not sensible for the yield data.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-12">
+          <caption>The Calculator Maths Keyboard</caption>
+          <image source="images/ch3/image51.png" width="45%">
+            <description><p>The Calculator Maths Keyboard</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-13">
+          <caption>The R Documentation</caption>
+          <image source="images/ch3/image33.png" width="45%">
+            <description><p>The R Documentation</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+    </subsection>
+    <subsection xml:id="subsec-ch3-is-there-a-down-side-to-the-halfway-dialogs">
+      <title>Is there a down-side to the halfway dialogs?</title>
+      <p>All R-Instat dialogs build R commands. In ordinary dialogs Ok is only enabled when the dialog can generate a correct R command. In a halfway dialog, you click and type to produce the R command, but they are not guaranteed to be correct.</p>
+      <p>That’s why we include a Try button and suggest you use it, before pressing Ok. If it gives a result that looks sensible then proceed to press Ok.</p>
+      <p>Make a mistake to show what happens.</p>
+      <p><ul>
+          <li><p>Close the Help page. Return to the calculator and the Basic keyboard. Press <alert><em>Clear</em></alert>.</p></li>
+          <li><p>Press or type <alert><em>(15 – 10))</em></alert> (so with an extra bracket) and press <alert><em>Try</em></alert></p></li>
+          <li><p>It goes red. Press the 3 little points at the end of the Try control, Fig. 14.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-14">
+          <caption>An Error?</caption>
+          <image source="images/ch3/image32.png" width="45%">
+            <description><p>An Error?</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-15">
+          <caption>The Calculations</caption>
+          <image source="images/ch3/image47.png" width="45%">
+            <description><p>The Calculations</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The message is clear this time, but that is not always the case. Whether the message is clear or not, look carefully at what was typed. The correction is usually easy to make.</p>
+      <p><ul>
+          <li><p>Delete the extra bracket and use Try again. Confirm it gives 5 as the answer.</p></li>
+      </ul></p>
+      <p>A trickier (hopefully rarer) problem is when an error is still an Ok formula, but the answer is wrong.</p>
+      <p><ul>
+          <li><p>Press <alert><em>Clear</em></alert>, then click (<alert><em>15 - - 10</em></alert>). (So, minus (-) repeated twice this time.) Then press <alert><em>Try</em></alert>, Fig. 15.</p></li>
+      </ul></p>
+      <p>R accepts this and returns 25. Mathematically, that is correct: 15 - (-10) is the same as 15 + 10. But it may not be the answer you expected, because you probably meant to enter just one minus sign.</p>
+      <p>This is an important lesson for all work with computers. Machines are powerful because they do the work quickly and accurately, but they do not know what you intend. You are the thinker, and the judge of the work. Always keep a rough estimate in mind, or a sense of what the answer should look like. The machine can calculate, but you must decide whether the result makes sense.</p>
+      <p>With that warning in mind, we return to data columns and use another calculator keyboard to reach more statistical functions.</p>
+    </subsection>
+    <subsection xml:id="subsec-ch3-a-mean-task-the-summary-keyboard">
+      <title>A mean task – The Summary Keyboard</title>
+      <p>Next, we introduce the summary keyboard. This has buttons for all the main summary statistics, like mean and maximum. This produces single values that are usually displayed with the Try feature or in the output window.</p>
+      <p><ul>
+          <li><p>Back to the calculator. Press <alert><em>Clear</em></alert>, then choose the <alert><em>Summary</em></alert> keyboard, Fig. 16.</p></li>
+          <li><p>Press <alert><em>mean</em></alert>, then add yield1 (the yields in kg), and press <alert><em>Try</em></alert>.</p></li>
+      </ul></p>
+      <p>You get a single value, as you expected.</p>
+      <p><ul>
+          <li><p>Untick <alert><em>Store Result</em></alert> and Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>Now the mean is displayed in the Output window.</p>
+      <p><ul>
+          <li><p>Return to the calculator. Tick <alert><em>Store Result</em></alert></p></li>
+      </ul></p>
+      <p><ul>
+          <li><p>Type <alert><em>mean</em></alert> instead of calc and then <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>This produces a new column, with the mean repeated in each row, Fig. 17.</p>
+      <aside>
+        <p>In a data frame all columns are the same length. It is sometimes convenient to include the mean, as is done here. Another option is the Store Scalar checkbox in the dialog. This is like the memories in an ordinary calculator. This then stores the single values as ancillary information, associated with the data frame.</p>
+      </aside>
+      <p>Remember that you are the judge of the results, so check that 13.53 is a sensible result. In yield1 we see both 9 and 15.8, so our value of 13.53 is roughly in the middle. It seems sensible.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-16">
+          <caption>The Summary Keyboard</caption>
+          <image source="images/ch3/image37.png" width="45%">
+            <description><p>The Summary Keyboard</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-17">
+          <caption>The Data with the Mean</caption>
+          <image source="images/ch3/image46.png" width="45%">
+            <description><p>The Data with the Mean</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>An R expert now suggests using a trimmed mean. A trimmed mean leaves out a specified proportion from the top and bottom of the data before calculating the mean. This is useful when outliers may be skewing the result. Can the calculator do this?</p>
+      <p><ul>
+          <li><p>Return to the calculator and press <alert><em>Clear</em></alert>. Check the <alert><em>Show Parameters</em></alert> checkbox.</p></li>
+      </ul></p>
+      <p>The Show Parameters option displays the full command. It looks more complicated, but this is where the extra flexibility is found. The button gives the command, and the parameters allow you to define how it is applied.</p>
+      <p><ul>
+          <li><p>After the Show Parameters is checked, press the <alert><em>mean key</em></alert> and you now find <alert><em>trim</em></alert> is there!</p></li>
+          <li><p>Change the <alert><em>0 to 0.1</em></alert> and press <alert><em>Try</em></alert>.</p></li>
+      </ul></p>
+      <p>It works and gives 13.66. But what is it?</p>
+      <p>With 0.1 you are leaving off the top 10% (that’s the top 5 values) and the bottom 10% of the data. Then R gives the mean of the remaining middle 80% of the data.</p>
+      <p><ul>
+          <li><p>Change <alert><em>0.1 to 0.2</em></alert> and press Try again. This gives the mean of the middle 60% as 13.74.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch3-18">
+          <caption>Show Parameters</caption>
+          <image source="images/ch3/image44.png" width="70%">
+            <description><p>Show Parameters</p></description>
+          </image>
+        </figure>
+      <p>You can now reply to the R expert: you understand the trimmed mean and have seen one way it is implemented in R.</p>
+      <p>This is a useful keyboard so keep exploring it. The R-Help down arrow shows we used 6 different R packages to give these summary functions.</p>
+      <p>We will return to the ranks below. Before that, it is worth checking whether any yields are identical. This matters because ties affect ranks.</p>
+      <p><ul>
+          <li><p><alert><em>Untick the parameter checkbox</em></alert>. Press <alert><em>Clear</em></alert>, then use the <alert><em>distinct key</em></alert> and <alert><em>add yield</em></alert>. Press <alert><em>Try</em></alert>.</p></li>
+      </ul></p>
+      <p>You can see from the result in the try box that the there are 46 distinct values, Fig. 19. There are 52 rows of data, so some yields must be identical. In other words, there are some ties in the original data.</p>
+      <p>Now try the same command on yield1, the yields converted to kilograms and rounded.</p>
+      <p><ul>
+          <li><p>Add <alert><em>1</em></alert> to the word yield. Press <alert><em>Try</em></alert> again.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch3-19">
+          <caption>The Distinct Key</caption>
+          <image source="images/ch3/image50.png" width="70%">
+            <description><p>The Distinct Key</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-20">
+          <caption>The Distinct Key with yield1</caption>
+          <image source="images/ch3/image43.png" width="70%">
+            <description><p>The Distinct Key with yield1</p></description>
+          </image>
+        </figure>
+      <p>There are even more ties now. The Try box result only shows 41 values. This is because rounding has made some slightly different values look the same. Fig. 17 shows one example, where yield1 is 9.0 in both rows 2 and 6, while the original yield values are slightly different.</p>
+      <p>This is a useful data detective lesson. Rounding may make values easier to read, but it can also change the data in ways that matter for later analysis. It is therefore important to be mindful of which type of data is best for each purpose. This exercise has demonstrated that the original yield column is a better choice for calculating the ranks in the next section.</p>
+    </subsection>
+    <subsection xml:id="subsec-ch3-ranks-within-groups">
+      <title>Ranks within groups</title>
+      <p>Ranks can be calculated for the whole dataset, but sometimes comparisons should be made within groups. In this trial, yields may differ between locations, so a variety may be the best within a low-yielding location even if it does not rank highly overall.</p>
+      <p>Here, each location has four varieties, so we calculate ranks separately within each location. This is a grouped transformation: the same calculation is repeated within each level of a factor. In R, the ave function can do this, and R-Instat lets us build the command through the calculator.</p>
+      <p>We build up to this slowly. The first ave examples show what the function does. The final example ranks the yields separately within each location.</p>
+      <p><ul>
+          <li><p>Move to the <alert><em>Functions</em></alert> keyboard and press <alert><em>Clear</em></alert>.</p></li>
+      </ul></p>
+      <p>We build up to this slowly. The top row, Fig. 21, contains four ave keys. The first two show what ave does; the fourth is the useful one for the grouped ranks.</p>
+      <p><ul>
+          <li><p>Use the first <alert><em>ave</em></alert> key. Add the <alert><em>yield</em></alert> variable, and press <alert><em>Try</em></alert>, Fig. 21.</p></li>
+      </ul></p>
+      <p>This first ave key gives the mean, but it returns a full column with the mean repeated in every row. This is different from the ordinary mean button, which showed one value in Try and only became a column when you stored the result.</p>
+      <p><ul>
+          <li><p>Call the column <alert><em>mean2</em></alert> and <alert><em>press Ok</em></alert>.</p></li>
+          <li><p>Return to the dialog and press <alert><em>Clear</em></alert>. Now use the <alert><em>ave_fun</em></alert> key. Press <alert><em>minus (-)</em></alert> then add the <alert><em>yield</em></alert>, and press <alert><em>Try</em></alert>, Fig. 22.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-21">
+          <caption>The Function Keyboard</caption>
+          <image source="images/ch3/image14.png" width="45%">
+            <description><p>The Function Keyboard</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-22">
+          <caption>The ave_fun button</caption>
+          <image source="images/ch3/image18.png" width="45%">
+            <description><p>The ave_fun button</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>As expected, the result in Try is now -29.78 repeated down the column.</p>
+      <p>Now examine the expression in Fig. 22. It is using mean as the function inside ave. That function can be changed:</p>
+      <p><ul>
+          <li><p>Change mean to <alert><em>rank</em></alert> in the expression and press <alert><em>Try</em></alert>.</p></li>
+      </ul></p>
+      <p>This produces the same reversed ranks as rank1 earlier.</p>
+      <p><ul>
+          <li><p>Call the new column <alert><em>rank2</em></alert>, Fig. 23 and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-23">
+          <caption>ave_fun button with the rank</caption>
+          <image source="images/ch3/image15.png" width="45%">
+            <description><p>ave_fun button with the rank</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-24">
+          <caption>ave_both button with the rank</caption>
+          <image source="images/ch3/image36.png" width="45%">
+            <description><p>ave_both button with the rank</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The useful step comes now. We add a factor to rank separately within each location.</p>
+      <p><ul>
+          <li><p>Return to the dialog. Press <alert><em>Clear</em></alert>, then the <alert><em>ave_both</em></alert> button.</p></li>
+      </ul></p>
+      <p>The ave_both key looks similar to ave_fun, but it includes an extra place for a factor. The factor tells R where the groups are.</p>
+      <p><ul>
+          <li><p>Press the <alert><em>minus (-),</em></alert> then add <alert><em>yield</em></alert>. After the comma <alert><em>add the loc</em></alert> factor.</p></li>
+          <li><p>Change the mean to <alert><em>rank</em></alert>, and press <alert><em>Try</em></alert>, Fig.24</p></li>
+      </ul></p>
+      <p>You have now produced ranks within each location. They run from 1 to 4 because there are 4 varieties in each location. Within each level of loc, the highest yield has rank 1.</p>
+      <p><ul>
+          <li><p>Call the column <alert><em>rank_loc</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>This is the payoff: ave has applied the rank function separately within each level of a factor.</p>
+    </subsection>
+    <subsection xml:id="subsec-ch3-the-pivot-table">
+      <title>The pivot table</title>
+      <p>Now, examine the grouped ranks.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; Two/Three Variables &gt; Pivot Table</em></alert></p></li>
+          <li><p>Add <alert><em>loc</em></alert> as the row factor. Click in <alert><em>Column Factor</em></alert> and add <alert><em>gen</em></alert>.</p></li>
+          <li><p>Tick the <alert><em>Variable</em></alert> checkbox and add <alert><em>rank_loc</em></alert></p></li>
+          <li><p>Tick the <alert><em>table/chart</em></alert> down arrow and choose <alert><em>Heatmap</em></alert>. Press <alert><em>Ok</em></alert>. Then <alert><em>Maximise</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-25">
+          <caption>The Pivot Table dialog</caption>
+          <image source="images/ch3/image17.png" width="45%">
+            <description><p>The Pivot Table dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-26">
+          <caption>The Heatmap</caption>
+          <image source="images/ch3/image39.png" width="45%">
+            <description><p>The Heatmap</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Remember that rank 1 is best, and it is shown in white. In Fig. 26, G13 has 3 firsts and a second, while variety G01 has a mean rank of 1.5. These look like the best varieties. Variety G03, with a mean rank of 2, is next.</p>
+      <p>In this study the yields were measured, so we can compare.</p>
+      <p><ul>
+          <li><p>Click the down arrow on <alert><em>rank_loc</em></alert> and choose <alert><em>yield1</em></alert> (kgs) instead, Fig. 27.</p></li>
+      </ul></p>
+      <p>This time dark red is good rather than white because a higher yield is better. We again see that Varieties G01 and G13 stand out. The order is reversed between these two varieties, with G13 having a slightly lower mean than G01. Note there is only B12 where they can be compared directly, and here, G13 has the higher yield.</p>
+        <figure xml:id="fig-ch3-27">
+          <caption>The Heatmap</caption>
+          <image source="images/ch3/image28.png" width="70%">
+            <description><p>The Heatmap</p></description>
+          </image>
+        </figure>
+      <p>The yields also permit the locations to be compared, and B03 has low yields. The ranks in Fig. 17 do not, as each location has a mean of 2.5. This comparison would also be possible with the ordinary ranks.</p>
+      <p>This example is the main reason for introducing ave here: it moves from a simple transformation to a grouped calculation, while still using the calculator interface.</p>
+      <p>You may wish to save the data, as we are moving to a different dataset.</p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch3-part-2-scripts-from-dialogs">
+    <title>Part 2: Scripts from dialogs</title>
+    <introduction>
+    <p><alert>In this section</alert>: Part 1 showed that R-Instat can help you build R commands without writing them from scratch. Part 2 takes the next step: using the R scripts that every dialog generates behind the scenes. These can be inspected and edited via the <alert><em>To Script</em></alert> button.</p>
+    </introduction>
+    <subsection xml:id="subsec-ch3-a-3-way-table-chart">
+      <title>A 3-way table/chart</title>
+      <p>We begin with a clear goal: to produce a bar chart arranged by three treatment factors. The graph dialog can produce a useful starting point, but it is limited to two faceting factors. Rather than starting from scratch in R, we use the dialog first, send its command to the script window, and then make a small edit.</p>
+      <p><ul>
+          <li><p><alert><em>File &gt; Import From Library &gt; agridat package &gt; the archbold apple data</em></alert>, Fig. 28. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>These are yield data from an experiment to compare Golden Delicious and Redspur Delicious apples. The trees were also at 3 different spacing levels and from 4 different rootstocks. There were 5 blocks, making the 120 rows, Fig. 29.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-28">
+          <caption>Importing the archbold apple data</caption>
+          <image source="images/ch3/image20.png" width="45%">
+            <description><p>Importing the archbold apple data</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-29">
+          <caption>The Data and the Right-click menu</caption>
+          <image source="images/ch3/image22.png" width="45%">
+            <description><p>The Data and the Right-click menu</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p><alert><em>Right-click</em></alert> in the <alert><em>spacing</em></alert> column and <alert><em>Convert to Factor.</em></alert></p></li>
+      </ul></p>
+      <p>Now we would like a bar chart using all the 3 treatment factors. This is not a trivial challenge. Chapter 2, Fig. 47, showed 2 factors is the limit with the R-instat dialog.</p>
+      <p>We therefore start with the barchart dialog, and then tweak the resulting script.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; Graphs &gt; Barchart</em></alert>. Press the <alert><em>Value button</em></alert> at the top.</p></li>
+          <li><p>Add <alert><em>yield</em></alert> as the Y variable and <alert><em>rep</em></alert> as the X, add <alert><em>rep</em></alert> again as the Fill factor.</p></li>
+          <li><p><alert><em>Tick the Labels</em></alert> checkbox.</p></li>
+          <li><p>Press the <alert><em>Plot Options</em></alert> button, Fig. 30. <alert><em>Tick to include</em></alert> Facets.</p></li>
+          <li><p>Add <alert>spacing</alert> as the 1st factor and <alert><em>gen</em></alert> as the 2<sup>nd</sup>.</p></li>
+          <li><p>Press <alert><em>Return</em></alert>. Press <alert><em>Ok</em></alert>, then <alert><em>Maximise</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-30">
+          <caption>The Bar chart dialog</caption>
+          <image source="images/ch3/image9.png" width="45%">
+            <description><p>The Bar chart dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-31">
+          <caption>The resulting graph</caption>
+          <image source="images/ch3/image4.png" width="45%">
+            <description><p>The resulting graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>This is not bad as a starting base. There are 3 labels, rather than 1, for each bar, (when there is space) but that should change when the extra factor is added.</p>
+      <p>This should produce a suitable starting script. So:</p>
+      <p><ul>
+          <li><p>Return to the dialog and press <alert><em>To Script</em></alert>.</p></li>
+      </ul></p>
+      <p>If just the third factor need be added then that change could be made immediately. But we will also have to tidy the resulting labels, so it is worth a little housekeeping on the script first.</p>
+      <p><ul>
+          <li><p>Add a new line before last graph. Add another before the data_book$add_object line.</p></li>
+          <li><p>Press <alert><em>&lt;Return&gt;</em></alert> after most plus (+) signs in the last graph command.</p></li>
+      </ul></p>
+      <p>The tidied script is in Fig. 33.</p>
+        <figure xml:id="fig-ch3-32">
+          <caption>The Bar chart script</caption>
+          <image source="images/ch3/image16.png" width="70%">
+            <description><p>The Bar chart script</p></description>
+          </image>
+        </figure>
+      <p>Check this will run, as from the dialog, before making any changes.</p>
+      <p><ul>
+          <li><p>Go to the top, anywhere in the <alert><em>green Comment line</em></alert>.</p></li>
+          <li><p>Press <alert><em>Run</em></alert> and the cursor should move to the start of the last-graph line.</p></li>
+          <li><p>Press <alert><em>Run</em></alert> again and it should run the whole command, so all 5 lines in Fig. 32.</p></li>
+          <li><p>Press <alert><em>Run</em></alert> 3 more times, and the graph should appear, just as from the dialog.</p></li>
+      </ul></p>
+      <p>The script in Fig 32 is worth an examination. It is long, but, maybe surprisingly, easy to read at least parts. So notice in Fig 32</p>
+      <p><ul>
+          <li><p>Line 6 includes the x and y for the graph.</p></li>
+          <li><p>Line 7 says it is a bar chart</p></li>
+          <li><p>Line 8 adds the labels</p></li>
+          <li><p>Line 9 confirms the graph has no legend</p></li>
+          <li><p>Line 10, with facet wrap, adds the 2 factors for the table.</p></li>
+      </ul></p>
+      <p>There are two changes to make. The main one is to add the extra factor.</p>
+      <aside>
+        <p>Before tweaking the script, remember that R is precise. In Code lines you need to check spelling, punctuation, and capital letters. If a package name, function name, column name, or object name is misspelled, the script will fail. If you change a name in one line, check whether later lines also use that name.</p>
+        <p>Green comment lines, which begin with #, are different. They are just notes for you, so you can change them freely.</p>
+        <p>This is why it is often useful to run a script step by step while you are editing it. <alert>Run All</alert> is efficient once the script works, but <alert>Run</alert> helps locate problems if they occur.</p>
+        <p>Check out the materials <url href="https://ecampus.r-instat.org/mod/page/view.php?id=242">here</url> and <url href="https://ecampus.r-instat.org/mod/page/view.php?id=243">here</url> for more on using scripts in R-Instat.</p>
+      </aside>
+      <p><ul>
+          <li><p>After gen, and before the bracket, <alert><em>add a comma</em></alert> and then type <alert><em>spacing</em></alert>.</p></li>
+          <li><p>So, the last part of line 10 becomes: <alert><em>ggplot2::vars(spacing, cols=gen,stock), dir="h")</em></alert></p></li>
+          <li><p>Either <alert><em>Press Run All</em></alert> or start at the top and <alert><em>Press Run repeatedly</em></alert>.</p></li>
+      </ul></p>
+        <figure xml:id="fig-ch3-33">
+          <caption>The Tidied script</caption>
+          <image source="images/ch3/image35.png" width="70%">
+            <description><p>The Tidied script</p></description>
+          </image>
+        </figure>
+      <sidebyside>
+        <figure xml:id="fig-ch3-34">
+          <caption>The graph with all 3 factors</caption>
+          <image source="images/ch3/image29.png" width="45%">
+            <description><p>The graph with all 3 factors</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-35">
+          <caption>The results with more tweaks in the script</caption>
+          <image source="images/ch3/image11.png" width="45%">
+            <description><p>The results with more tweaks in the script</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>That’s pretty good. You also note that it would be easy, in line 10 to swap the factors from rows and columns, or include more than 2 factors together, if you wish. That’s the R tweaking equivalent of pivoting!</p>
+      <p>There remain 3 small problems with the labels in Fig 35. They are too big, they are in the wrong place, and the decimal is not needed. Changing them are all tweaks in line 8 of Fig. 33.</p>
+      <p>The last is easy, luckily you used the <alert><em>round</em></alert> function earlier in this chapter, Fig. 5.</p>
+      <p><ul>
+          <li><p>In line 8 change (<alert><em>label = yield</em></alert>) to (<alert><em>label = round(yield)).</em></alert></p></li>
+          <li><p>At the end of line 8 change size = 4 to (say) <alert><em>size = 2</em></alert>.</p></li>
+          <li><p>Try again, with Run All. (The new size may not be right, and the label position looks tricky to change).</p></li>
+      </ul></p>
+      <p>The results, in Fig. 35, are better.</p>
+      <p><ul>
+          <li><p>In line 8 maybe <alert><em>size = 3</em></alert> is better.</p></li>
+          <li><p>Try different values instead of <alert><em>vjust = -0.25</em></alert>. We finished with <alert><em>-0.3</em></alert>, then <alert><em>Run All</em></alert>.</p></li>
+      </ul></p>
+      <p>This challenge is deliberately more advanced. It shows that a generated script can be a practical route, beyond the limits of a dialog. And you don’t need to know, or memorise any ggplot commands or options.</p>
+        <figure xml:id="fig-ch3-36">
+          <caption>A more presentable graph after the tweaks</caption>
+          <image source="images/ch3/image10.png" width="70%">
+            <description><p>A more presentable graph after the tweaks</p></description>
+          </image>
+        </figure>
+    </subsection>
+    <subsection xml:id="subsec-ch3-r-commands-in-the-output-window">
+      <title>R commands in the output window</title>
+      <p>The previous example used a generated script to go beyond the limits of a dialog. Generated commands are also useful in a simpler way: they can show exactly how results were produced. This matters when you want to review your own work, repeat it later, or ask someone else to check it.</p>
+      <p>Suppose you have started analysing some data and want an R expert to check your work. The output alone shows the results, but not the steps that produced them.</p>
+      <p>To check your work properly, R experts need the R commands as well as the output. Fortunately, R-Instat makes this easy. You can include the R commands with the output, so others can see both what you got, and what you did.</p>
+      <p><ul>
+          <li><p>Click the <alert><em>down arrow, by the output window icon</em></alert>, , Fig. 37.</p></li>
+          <li><p>Tick the option to <alert><em>Show R Commands</em></alert>.</p></li>
+          <li><p>Use <alert><em>Import from Library</em></alert> choose the <alert><em>lsrdata</em></alert> package, then <alert><em>clinicaltria</em></alert>l, Fig. 38.</p></li>
+          <li><p>Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-37">
+          <caption>Show R Commands</caption>
+          <image source="images/ch3/image34.png" width="45%">
+            <description><p>Show R Commands</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-38">
+          <caption>Import from Library dialog</caption>
+          <image source="images/ch3/image13.png" width="45%">
+            <description><p>Import from Library dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Check the data, there are just 3 columns and 18 rows.</p>
+      <p>The first two variables, drug, and therapy, are factors. The third is called mood.gain and is numeric.</p>
+      <p><ul>
+          <li><p>Use <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>. Click to <alert><em>Add All</em></alert>, Fig. 39. Press <alert><em>Ok</em></alert>.</p></li>
+      </ul></p>
+      <p>The results are quite neatly presented, Fig. 40. The R commands are now shown above the results.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-39">
+          <caption>One Variable Summarise dialog</caption>
+          <image source="images/ch3/image6.png" width="45%">
+            <description><p>One Variable Summarise dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-40">
+          <caption>The Summary</caption>
+          <image source="images/ch3/image3.png" width="45%">
+            <description><p>The Summary</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>The results show the drug factor has 3 levels, while therapy has 2. Both are equally replicated. The mood.gain ranges from 0.1 to 1.8.</p>
+      <p>If this is the report on which you would like advice on then:</p>
+      <p><ul>
+          <li><p>Click <alert><em>Save</em></alert> in the output window. Save the resulting file. It is currently an rtf file.</p></li>
+          <li><p>It reads easily into Word, so send the file to the person checking your work.</p></li>
+      </ul></p>
+      <p>The R commands make the file much more useful, because the person checking your work can see how the results were produced.</p>
+      <p><ul>
+          <li><p>Return to the toolbar, Fig. 37 and stop showing the R commands.</p></li>
+      </ul></p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch3-part-3-supplied-scripts-and-more-tweaking">
+    <title>Part 3: Supplied scripts and more tweaking</title>
+    <introduction>
+    <p><alert>In this section</alert>: So far, you have used scripts that R-Instat creates from dialogs. In this part, the starting point is different: using scripts that other people have written. These might come from a colleague, teaching material, or an R package. Learning how to work with supplied scripts is a useful skill, and it does not require you to fully learn how to write scripts yourself.</p>
+    <p>Supplied scripts are useful because they show how someone else has chosen to work with a dataset. You do not have to understand every line before using them. You can begin by reading the comments, running the script step by step, noticing what each section produces, and making small changes where needed.</p>
+    </introduction>
+    <subsection xml:id="subsec-ch3-using-the-script-library">
+      <title>Using the script library</title>
+      <p>The R-Instat script library gives access to scripts that are supplied with some R packages. Here we use a script from the agridat package for the bamboo data. For more on the script library check out the materials <url href="https://ecampus.r-instat.org/mod/page/view.php?id=243">here</url>.</p>
+      <p>This is a useful example because the data are already familiar from Chapter 2. There, the bamboo data were inspected and corrected. Now we use a supplied script to explore one possible analysis of the same data.</p>
+      <p><ul>
+          <li><p>Use the <alert><em>R scroll down arrow</em></alert> in the toolbar, to <alert><em>swap the data for the script window</em></alert>.</p></li>
+          <li><p><alert><em>Press New</em></alert> to give a blank script window, then press the <alert><em>Insert</em></alert> button, Fig. 41.</p></li>
+      </ul></p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-41">
+          <caption>The Script dialog</caption>
+          <image source="images/ch3/image5.png" width="45%">
+            <description><p>The Script dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-42">
+          <caption>The Script dialog</caption>
+          <image source="images/ch3/image19.png" width="45%">
+            <description><p>The Script dialog</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Choose the <alert><em>Library tab</em></alert> in the Script dialog and then the agridat package, Fig. 42.</p></li>
+          <li><p>Scroll down to select jayaram.bamboo, Fig. 42.</p></li>
+      </ul></p>
+      <p>In Chapter 2, with <alert><em>File &gt; Import from Library</em></alert>, you examined the data from this trial. The Preview in Fig. 43, shows you can also import corresponding R script.</p>
+      <p><ul>
+          <li><p>Press <alert><em>Ok</em></alert>, or <alert><em>To Script</em></alert>.</p></li>
+      </ul></p>
+      <p>The R script to analyse the bamboo data is in Fig. 43.</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-43">
+          <caption>The Script dialog</caption>
+          <image source="images/ch3/image24.png" width="45%">
+            <description><p>The Script dialog</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-44">
+          <caption>The generated script</caption>
+          <image source="images/ch3/image12.png" width="45%">
+            <description><p>The generated script</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p>Now, as a trainee “script user”, it is useful to check the script. You may have to “tweak” something. You notice:</p>
+      <p><ul>
+          <li><p>There are a lot of green comment lines. These are helpful as they are comments, they are just for reading and they give information about the script.</p></li>
+          <li><p>Lines 8 to 10 get the data.</p></li>
+          <li><p>Line 14 has the word plot, so that will probably make a graph. Good.</p></li>
+          <li><p>Line 20 shows a “more modern approach”.</p></li>
+          <li><p>So, lines 16 to 18 must be the not-so-modern approach. They are currently coloured green and so have been commented out.</p></li>
+      </ul></p>
+      <p>So, you do have to “tweak”, because you would like to run this simpler approach. So:</p>
+      <p><ul>
+          <li><p>Delete the hash (#) from the start of lines 16 to 18, Fig. 44.</p></li>
+      </ul></p>
+      <p>Spaces don’t matter in an R script, so you don’t need to worry about how many you leave.</p>
+      <p><ul>
+          <li><p>Go to the <alert><em>top of the script</em></alert> and click <alert><em>Run</em></alert>.</p></li>
+      </ul></p>
+      <p>It runs the library line, and all seems ok.</p>
+      <p><ul>
+          <li><p>Click <alert><em>Run twice more</em></alert>.</p></li>
+      </ul></p>
+      <p>(There are no results yet in the Output Window. You could use the toolbar Output Window down arrow to turn Commands on again. Then you would know exactly where you are.)</p>
+      <p><ul>
+          <li><p>Press <alert><em>Run twice more</em></alert>.</p></li>
+      </ul></p>
+      <p>You should see a graph flashing quickly and then disappearing.</p>
+      <p><ul>
+          <li><p>The graph is together with the R-Instat icon in the taskbar. So, show it. Fig. 46.</p></li>
+      </ul></p>
+      <p>It confirms the statement in the script, that the pattern of the heights is different in the 2 locations. Maybe they should be analysed separately?</p>
+      <sidebyside>
+        <figure xml:id="fig-ch3-45">
+          <caption>The edited script</caption>
+          <image source="images/ch3/image8.png" width="45%">
+            <description><p>The edited script</p></description>
+          </image>
+        </figure>
+        <figure xml:id="fig-ch3-46">
+          <caption>The Resulting graph</caption>
+          <image source="images/ch3/image1.png" width="45%">
+            <description><p>The Resulting graph</p></description>
+          </image>
+        </figure>
+      </sidebyside>
+      <p><ul>
+          <li><p>Press <alert><em>Run twice more</em></alert> to give the Analysis of Variance shown in Fig. 47.</p></li>
+      </ul></p>
+      <p>In Fig. 44 we have marked the line that corresponds to the “surprising differences”. We hope you are well motivated to understand ANOVA from the forthcoming chapters zzz and qqq.</p>
+      <p><ul>
+          <li><p>Continue, with Run, if you wish, for the “more modern approach”.</p></li>
+      </ul></p>
+      <p>That approach is more advanced than is covered in a first statistics book.</p>
+        <figure xml:id="fig-ch3-47">
+          <caption>Analysis of Variance</caption>
+          <image source="images/ch3/image2.png" width="70%">
+            <description><p>Analysis of Variance</p></description>
+          </image>
+        </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch3-reflections">
+    <title>Reflections</title>
+    <p>Using R is not the same as writing R from scratch. This is the central distinction. Many people think that moving towards R means memorising function names, argument names, and script syntax. R-Instat offers another route. The words of the R language can be supplied by calculator keys, dialogs, generated scripts, or scripts written by others.</p>
+    <p>This changes what the learner needs to do first. The first skill is not writing code. It is learning to recognise enough of a command to see what it is doing, run it, check the result, and make small changes when needed. That is an accessible and useful way to begin working with R commands and scripts.</p>
+    <p>It also changes the relationship between menus and code. Menus and dialogs are not separate from R. Each dialog produces and runs R commands. Seeing those commands or sending them to a script helps make the connection visible. Menus become a route into R, that allows users to do substantial work along the way.</p>
+    <p>The data detective habits from earlier chapters still matter. This chapter adds trainee script detective skills. These support data skills by giving you another way to extend your analysis when the menus do not quite do everything you need. A good script user is still a data detective: looking carefully, checking results, judging whether they make sense, and using the tools to support the analysis rather than distract from it.</p>
+  </section>
+
+</chapter>
