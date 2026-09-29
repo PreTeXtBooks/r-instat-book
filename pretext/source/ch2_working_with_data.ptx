@@ -21,7 +21,7 @@
         <li><p>This package provides many datasets. Scroll down to one called <alert><em>jayaraman bamboo</em></alert>, Fig. 1.</p></li>
         <li><p>Press <alert><em>Ok</em></alert>.</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-01">
         <caption>Import from Library dialog</caption>
         <image source="images/ch2/image81.png" width="45%">
@@ -49,7 +49,7 @@
         <li><p>Click the variable checkbox and include the <alert><em>heights</em></alert>, Fig 4.</p></li>
         <li><p>Press <alert><em>Ok</em></alert>. Then click on <alert><em>Maximise</em></alert> in the Output Window</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-03">
         <caption><alert>Describe &gt; Two/Three Variables &gt; Pivot Table</alert></caption>
         <image source="images/ch2/image74.png" width="45%">
@@ -83,7 +83,7 @@
     <p><ul>
         <li><p>Close the window to return to the data</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-06">
         <caption>Change Average to Count</caption>
         <image source="images/ch2/image92.png" width="45%">
@@ -104,7 +104,7 @@
       <p><ul>
           <li><p>Use <alert><em>Prepare &gt; Check Data &gt; Duplicate Rows</em></alert>, Fig 10</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-08">
           <caption>The duplicate values</caption>
           <image source="images/ch2/image87.png" width="45%">
@@ -125,7 +125,7 @@
       <p><ul>
           <li><p>So, right click and choose the option to <alert><em>Filter rows</em></alert>, Fig 12.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-10">
           <caption>Duplicate Rows dialog</caption>
           <image source="images/ch2/image95.png" width="45%">
@@ -151,7 +151,7 @@
           <li><p>Now <alert><em>right-click</em></alert> to (temporarily) make the <alert><em>Tree variable</em></alert> of <alert><em>character type</em></alert>, Fig. 14.</p></li>
       </ul></p>
       <p>We often make character columns into factors. This time we go "the other way" because it is easier to add the missing T5 to a character column than a factor column. Then we can switch it back to a factor where its complete levels are recognised correctly.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-12">
           <caption>Filter dialog and sub-dialog</caption>
           <image source="images/ch2/image90.png" width="45%">
@@ -173,7 +173,7 @@
       <p><ul>
           <li><p>Right-click anywhere and use the option <alert><em>Remove Current Filter</em></alert>, Fig. 17.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-14">
           <caption>Replace Values dialog</caption>
           <image source="images/ch2/image97.png" width="45%">
@@ -196,7 +196,7 @@
       <p><ul>
           <li><p>Right-click in the name <alert><em>dup</em></alert> and choose <alert><em>Delete Column(s)</em></alert>. Answer <alert><em>Yes</em></alert> to the confirming question.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-16">
           <caption>Right-click &gt; Levels/Labels</caption>
           <image source="images/ch2/image91.png" width="45%">
@@ -218,7 +218,7 @@
           <li><p>Use <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>. Use the <alert><em>Add</em></alert> down, button, and <alert><em>Add All</em></alert>, Fig. 19.</p></li>
           <li><p>Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-18">
           <caption>One Variable Summarise dialog</caption>
           <image source="images/ch2/image93.png" width="45%">
@@ -239,7 +239,7 @@
           <li><p>Click on <alert><em>Maximise</em></alert>.</p></li>
           <li><p>Before continuing, change the summary to <alert><em>Count</em></alert> once more to confirm that each combination now occurs only once, Fig. 22.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-20">
           <caption>Pivot Table dialog</caption>
           <image source="images/ch2/image67.png" width="45%">
@@ -283,7 +283,7 @@
         <li><p><alert><em>File &gt;</em></alert> <alert><em>Import from Library</em></alert>.</p></li>
         <li><p>Choose the <alert><em>likert</em></alert> package, Fig. 25, and select the <alert><em>mass</em></alert> dataset. Fig. 25.</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-23">
         <caption>Import from Library dialog</caption>
         <image source="images/ch2/image66.png" width="45%">
@@ -313,7 +313,7 @@
       <p><ul>
           <li><p>Press <alert><em>Ok</em></alert>, Fig. 30.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-25">
           <caption>Prepare &gt; Data Frame &gt; Insert Columns/Rows</caption>
           <image source="images/ch2/image68.png" width="45%">
@@ -332,7 +332,7 @@
           <li><p>Right-click in the <alert><em>NA</em></alert> in the <alert><em>Gender</em></alert> column and choose <alert><em>Edit Cell</em></alert>, Fig. 29.</p></li>
           <li><p>Click the down arrow on <alert><em>New Value</em></alert> and select the level. For us it was <alert><em>Female</em></alert>. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-27">
           <caption>Right-click &gt; Edit Cell</caption>
           <image source="images/ch2/image70.png" width="45%">
@@ -350,7 +350,7 @@
           <li><p>Repeat for the first question, “I find math interesting”, Fig 31. We chose “<alert><em>Strongly Agree</em></alert>”!</p></li>
           <li><p>Repeat again for the second question “I get uptight during math tests”, Fig. 32. We chose “<alert><em>Strongly Agree</em></alert>”.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-29">
           <caption>Edit Cell dialog</caption>
           <image source="images/ch2/image32.png" width="45%">
@@ -397,7 +397,7 @@
           <li><p>Click on the top of the <alert><em>Label</em></alert> column and press <alert><em>&lt;ctrl&gt;V</em></alert> to paste into the labels, Fig. 35</p></li>
           <li><p>Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-32">
           <caption>Output Icon</caption>
           <image source="images/ch2/image10.png" width="45%">
@@ -427,7 +427,7 @@
       <p><ul>
           <li><p>The second question could be named <alert><em>uptight</em></alert> and the third could become <alert><em>future</em></alert>, Fig. 37.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-34">
           <caption>Swap Data with Column Metadata</caption>
           <image source="images/ch2/image5.png" width="45%">
@@ -488,7 +488,7 @@
           <li><p>We start with the positive variables. <alert><em>Right-click</em></alert> and <alert><em>Select Columns</em></alert> again, Fig. 42.</p></li>
           <li><p>Add the select called <alert><em>positive</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-38">
           <caption>Negative Selection</caption>
           <image source="images/ch2/image8.png" width="45%">
@@ -507,7 +507,7 @@
           <li><p>Use <alert><em>Describe &gt; Two/Three Variables &gt; More Likert</em></alert>. <alert><em>Add all</em></alert> the variables, <alert><em>except</em></alert> <alert><em>Gender</em></alert>, into the receiver, Fig 42.</p></li>
           <li><p>Press <alert><em>Ok</em></alert>, then <alert><em>Maximise</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-40">
           <caption>More Likert Graph dialog</caption>
           <image source="images/ch2/image7.png" width="45%">
@@ -530,7 +530,7 @@
           <li><p>Return to the dialog. Click in the <alert><em>Facet</em></alert> receiver and Add <alert><em>Gender</em></alert>.</p></li>
           <li><p>Check the <alert><em>Legend</em></alert> checkbox as well and choose <alert><em>Bottom</em></alert> for the legend position. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-42">
           <caption>Likert Graph</caption>
           <image source="images/ch2/image2.png" width="45%">
@@ -556,7 +556,7 @@
           <li><p>At the top, choose columns, and change the select to negative, Fig. 46. Press <alert><em>Return</em></alert>.</p></li>
           <li><p>Then simply press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-44">
           <caption>More Likert Graph dialog</caption>
           <image source="images/ch2/image12.png" width="45%">
@@ -583,7 +583,7 @@
         <li><p>Use <alert><em>Import from Library</em></alert>.</p></li>
         <li><p>Go back to the <alert><em>agridat</em></alert> package and choose the <alert><em>cochran.bib</em></alert> data. Press <alert><em>Ok</em></alert>.</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-46">
         <caption>Import from Library dialog</caption>
         <image source="images/ch2/image14.png" width="45%">
@@ -647,7 +647,7 @@
           <li><p>Use <alert><em>Prepare &gt; Column: Numeric &gt; Transform</em></alert>.</p></li>
           <li><p>Press the third button at the top, called <alert><em>Rank</em></alert>. Select the <alert><em>yield</em></alert> variable. Call the new column <alert><em>ranks</em></alert>, Fig. 53, and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="30% 30% 30%">
         <figure xml:id="fig-ch2-51">
           <caption>Transform yields to ranks</caption>
           <image source="images/ch2/image38.png" width="30%">
@@ -675,7 +675,7 @@
           <li><p>Then, press <alert><em>Maximise</em></alert>.</p></li>
       </ul></p>
       <p>The resulting heatmap is in Fig. 57</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-54">
           <caption>Pivot Table dialog</caption>
           <image source="images/ch2/image48.png" width="45%">
@@ -704,7 +704,7 @@
           <li><p>Click the <alert><em>Edit checkbox</em></alert> and <alert><em>add a minus</em></alert>, in front of yield. (R doesn’t mind spaces, so we added some; they are optional).</p></li>
           <li><p>Call the new column <alert><em>ranks1</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-56">
           <caption>Editing the code</caption>
           <image source="images/ch2/image34.png" width="45%">
@@ -737,7 +737,7 @@
         <li><p>Select the <alert><em>anscombequartet</em></alert> file Fig. 60.</p></li>
         <li><p>Press <alert><em>Ok</em></alert>.</p></li>
     </ul></p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-58">
         <caption>Import from Library dialog</caption>
         <image source="images/ch2/image23.png" width="45%">
@@ -757,7 +757,7 @@
     </ul></p>
     <p>The results are in Fig. 63. The first 3 boxplots look the same. Looking back at the data, Fig. 61, shows that the 3 variables (x1, x2 x3) are identical.</p>
     <p>Then x4 has just 2 values. It is always 8 except for a 19. And y3 and y4 each have one large value, namely 12.74 and 12.5. The 12.5 in y4 is on the same row as the 19 in x4. But the 12.74 in y3 is not on the same row as the largest value in x3.</p>
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch2-60">
         <caption>One Variable Graph dialog</caption>
         <image source="images/ch2/image60.png" width="45%">
@@ -780,7 +780,7 @@
           <li><p>With just 11 points, make the points larger, by <alert><em>checking the size box</em></alert> and <alert><em>changing it to 3</em></alert>, Fig. 64.</p></li>
           <li><p>Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-62">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image33.png" width="45%">
@@ -817,7 +817,7 @@
       <p><ul>
           <li><p>Click on <alert><em>Add</em></alert> in Fig. 67.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-64">
           <caption>Scatterplot with Line of Best Fit</caption>
           <image source="images/ch2/image26.png" width="45%">
@@ -836,7 +836,7 @@
           <li><p>Choose <alert><em>stat_regline_equation</em></alert>. Then press <alert><em>Return</em></alert>.</p></li>
           <li><p>You are back in the <alert><em>Layer Tab</em></alert> and see you now have 3 layers. Press <alert><em>Return</em></alert> again. Then <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-66">
           <caption>Layer Options sub-dialog</caption>
           <image source="images/ch2/image30.png" width="45%">
@@ -861,7 +861,7 @@
       <p>It worked, Fig. 71. The fourth layer has been added, but the equation and correlation overlap and are difficult to read.</p>
       <p>One easy solution is to delete the less important summary. Do you prefer correlation or regression?</p>
       <p>Let’s try to do better. Could we move the correlation down in the graph, in Fig. 71, to say where y = 10?</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-68">
           <caption>Plot Options sub-dialog</caption>
           <image source="images/ch2/image17.png" width="45%">
@@ -879,7 +879,7 @@
           <li><p>Return to the dialog. Press <alert><em>Plot Options</em></alert> again, choose the <alert><em>stat_cor</em></alert> layer and, this time, press <alert><em>Edit</em></alert>.</p></li>
           <li><p>Now notice that each <alert><em>Layer Option</em></alert> has 2 tabs. Press on the 2nd, <alert><em>Layer Parameters</em></alert>, Fig. 73.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-70">
           <caption>Plot Options sub-dialog</caption>
           <image source="images/ch2/image54.png" width="45%">
@@ -898,7 +898,7 @@
           <li><p>Click this option and make it 10. Then <alert><em>Return</em></alert> and <alert><em>Return</em></alert> again and <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
       <p>The resulting graph, Fig. 75, shows it worked! The correlation is 0.82, and the small p-value provides strong evidence that the slope is not zero Fig. 75, assuming the linear model is appropriate.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-72">
           <caption>Adding label.y</caption>
           <image source="images/ch2/image62.png" width="45%">
@@ -923,7 +923,7 @@
       <p><ul>
           <li><p>Return to the dialog. Choose <alert><em>y3</em></alert> this time, and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-74">
           <caption>Scatterplot for y2</caption>
           <image source="images/ch2/image58.png" width="45%">
@@ -942,7 +942,7 @@
           <li><p>Back again for the 4<sup>th</sup> set. Use <alert><em>y4</em></alert>.</p></li>
           <li><p>This time the x’s are also different, so change to <alert><em>x4</em></alert> as well, Fig. 78. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-76">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image57.png" width="45%">
@@ -968,7 +968,7 @@
           <li><p>Change the <alert><em>Factor Variable</em></alert> to be called <alert><em>set</em></alert> and press <alert><em>Ok</em></alert>.</p></li>
           <li><p>Right-click on the set column and <alert><em>Convert to Factor</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-78">
           <caption>Stack dialog</caption>
           <image source="images/ch2/image50.png" width="45%">
@@ -994,7 +994,7 @@
           <li><p>Put <alert><em>y1</em></alert> into the top control and <alert><em>x1</em></alert> into the x variable.</p></li>
           <li><p>Then click on the <alert><em>Facet By</em></alert> box and add the <alert><em>set</em></alert> variable. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-80">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image41.png" width="45%">
@@ -1013,7 +1013,7 @@
       <p><ul>
           <li><p>Return to the dialog. Delete the <alert><em>set</em></alert> factor from the Facet control and put it in the <alert><em>By Variable</em></alert> instead. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-82">
           <caption>The Graph without facets</caption>
           <image source="images/ch2/image47.png" width="45%">
@@ -1040,7 +1040,7 @@
           <li><p>Return to the main dialog.</p></li>
           <li><p>Check on the <alert><em>Legend</em></alert> checkbox, to set it to <alert><em>None</em></alert>, Fig. 86. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-84">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image63.png" width="45%">
@@ -1065,7 +1065,7 @@
           <li><p>Tick to <alert><em>include the line of best fit</em></alert> and the <alert><em>Standard Error</em></alert> too.</p></li>
           <li><p>Include <alert><em>set</em></alert> in the <alert><em>Facet By</em></alert>, Fig. 88. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-86">
           <caption>Scatter Plot dialog</caption>
           <image source="images/ch2/image46.png" width="45%">
@@ -1085,7 +1085,7 @@
           <li><p>Use the down arrow by <alert><em>Facet wrap</em></alert> and use <alert><em>Facet Column + O</em></alert>. (O is for overall), Fig. 90.</p></li>
           <li><p>Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-88">
           <caption>Scatter Plot dialog</caption>
           <image source="images/ch2/image79.png" width="45%">
@@ -1118,7 +1118,7 @@
           <li><p>Call the new column <alert><em>simple</em></alert>, Fig. 93. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
       <p>Check that both factors have two levels, with 22 observations at each level.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-90">
           <caption>Recode Factor dialog</caption>
           <image source="images/ch2/image42.png" width="45%">
@@ -1146,7 +1146,7 @@
           <li><p>Add the two new 2-level factors, Fig. 95. Also check <alert><em>margins</em></alert> are ticked.</p></li>
           <li><p>Press <alert><em>Return</em></alert> then <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-92">
           <caption>Levels/Labels dialog</caption>
           <image source="images/ch2/image82.png" width="45%">

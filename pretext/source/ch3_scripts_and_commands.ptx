@@ -24,7 +24,7 @@
           <li><p>Use <alert><em>Prepare &gt; Calculator</em></alert>, Fig. 2.</p></li>
       </ul></p>
       <p>You may be pleasantly surprised that it looks like a phone calculator.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-01">
           <caption>Import from Library dialog</caption>
           <image source="images/ch3/image21.png" width="45%">
@@ -51,7 +51,7 @@
           <li><p>Press <alert><em>Try</em></alert> to check</p></li>
           <li><p>Press the down arrow by <alert><em>Store</em></alert> and put the result back into the <alert><em>yield1</em></alert> column. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-03">
           <caption>Changing Keyboards in the Calculator</caption>
           <image source="images/ch3/image25.png" width="45%">
@@ -77,7 +77,7 @@
           <li><p>Press the <alert><em>rank</em></alert> key, then include the <alert><em>yield</em></alert> column and press <alert><em>Try</em></alert>.</p></li>
           <li><p>Call the result <alert><em>rank</em></alert>, Fig. 6, then press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-05">
           <caption>The Maths Keyboard</caption>
           <image source="images/ch3/image31.png" width="45%">
@@ -97,7 +97,7 @@
           <li><p>Call it <alert><em>rank1</em></alert>, Fig. 7, and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
       <p>With the ranks, the calculator has reproduced the result from the <alert><em>Prepare &gt; Column: Numeric &gt; Transform</em></alert> dialog used in Chapter 2. The difference is that you have seen the R function, rank, from the start.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-07">
           <caption>Getting Ranks with the Transform Keyboard</caption>
           <image source="images/ch3/image26.png" width="45%">
@@ -148,7 +148,7 @@
       <p><ul>
           <li><p>Press <alert><em>Clear</em></alert>, then the <alert><em>logit</em></alert> key. Add <alert><em>yield</em></alert> and press <alert><em>Try</em></alert>, Fig 11.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-10">
           <caption>The tooltips</caption>
           <image source="images/ch3/image48.png" width="45%">
@@ -172,7 +172,7 @@
           <li><p>Click on car and you get to the whole documentation for the R car package. Go to logit, Fig. 13.</p></li>
       </ul></p>
       <p>You now see this function assumes the data are percentages. It is therefore not sensible for the yield data.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-12">
           <caption>The Calculator Maths Keyboard</caption>
           <image source="images/ch3/image51.png" width="45%">
@@ -197,7 +197,7 @@
           <li><p>Press or type <alert><em>(15 – 10))</em></alert> (so with an extra bracket) and press <alert><em>Try</em></alert></p></li>
           <li><p>It goes red. Press the 3 little points at the end of the Try control, Fig. 14.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-14">
           <caption>An Error?</caption>
           <image source="images/ch3/image32.png" width="45%">
@@ -246,7 +246,7 @@
         <p>In a data frame all columns are the same length. It is sometimes convenient to include the mean, as is done here. Another option is the Store Scalar checkbox in the dialog. This is like the memories in an ordinary calculator. This then stores the single values as ancillary information, associated with the data frame.</p>
       </aside>
       <p>Remember that you are the judge of the results, so check that 13.53 is a sensible result. In yield1 we see both 9 and 15.8, so our value of 13.53 is roughly in the middle. It seems sensible.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-16">
           <caption>The Summary Keyboard</caption>
           <image source="images/ch3/image37.png" width="45%">
@@ -323,7 +323,7 @@
           <li><p>Call the column <alert><em>mean2</em></alert> and <alert><em>press Ok</em></alert>.</p></li>
           <li><p>Return to the dialog and press <alert><em>Clear</em></alert>. Now use the <alert><em>ave_fun</em></alert> key. Press <alert><em>minus (-)</em></alert> then add the <alert><em>yield</em></alert>, and press <alert><em>Try</em></alert>, Fig. 22.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-21">
           <caption>The Function Keyboard</caption>
           <image source="images/ch3/image14.png" width="45%">
@@ -346,7 +346,7 @@
       <p><ul>
           <li><p>Call the new column <alert><em>rank2</em></alert>, Fig. 23 and press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-23">
           <caption>ave_fun button with the rank</caption>
           <image source="images/ch3/image15.png" width="45%">
@@ -384,7 +384,7 @@
           <li><p>Tick the <alert><em>Variable</em></alert> checkbox and add <alert><em>rank_loc</em></alert></p></li>
           <li><p>Tick the <alert><em>table/chart</em></alert> down arrow and choose <alert><em>Heatmap</em></alert>. Press <alert><em>Ok</em></alert>. Then <alert><em>Maximise</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-25">
           <caption>The Pivot Table dialog</caption>
           <image source="images/ch3/image17.png" width="45%">
@@ -428,7 +428,7 @@
           <li><p><alert><em>File &gt; Import From Library &gt; agridat package &gt; the archbold apple data</em></alert>, Fig. 28. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
       <p>These are yield data from an experiment to compare Golden Delicious and Redspur Delicious apples. The trees were also at 3 different spacing levels and from 4 different rootstocks. There were 5 blocks, making the 120 rows, Fig. 29.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-28">
           <caption>Importing the archbold apple data</caption>
           <image source="images/ch3/image20.png" width="45%">
@@ -455,7 +455,7 @@
           <li><p>Add <alert>spacing</alert> as the 1st factor and <alert><em>gen</em></alert> as the 2<sup>nd</sup>.</p></li>
           <li><p>Press <alert><em>Return</em></alert>. Press <alert><em>Ok</em></alert>, then <alert><em>Maximise</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-30">
           <caption>The Bar chart dialog</caption>
           <image source="images/ch3/image9.png" width="45%">
@@ -519,7 +519,7 @@
             <description><p>The Tidied script</p></description>
           </image>
         </figure>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-34">
           <caption>The graph with all 3 factors</caption>
           <image source="images/ch3/image29.png" width="45%">
@@ -565,7 +565,7 @@
           <li><p>Use <alert><em>Import from Library</em></alert> choose the <alert><em>lsrdata</em></alert> package, then <alert><em>clinicaltria</em></alert>l, Fig. 38.</p></li>
           <li><p>Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-37">
           <caption>Show R Commands</caption>
           <image source="images/ch3/image34.png" width="45%">
@@ -585,7 +585,7 @@
           <li><p>Use <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>. Click to <alert><em>Add All</em></alert>, Fig. 39. Press <alert><em>Ok</em></alert>.</p></li>
       </ul></p>
       <p>The results are quite neatly presented, Fig. 40. The R commands are now shown above the results.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-39">
           <caption>One Variable Summarise dialog</caption>
           <image source="images/ch3/image6.png" width="45%">
@@ -626,7 +626,7 @@
           <li><p>Use the <alert><em>R scroll down arrow</em></alert> in the toolbar, to <alert><em>swap the data for the script window</em></alert>.</p></li>
           <li><p><alert><em>Press New</em></alert> to give a blank script window, then press the <alert><em>Insert</em></alert> button, Fig. 41.</p></li>
       </ul></p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-41">
           <caption>The Script dialog</caption>
           <image source="images/ch3/image5.png" width="45%">
@@ -649,7 +649,7 @@
           <li><p>Press <alert><em>Ok</em></alert>, or <alert><em>To Script</em></alert>.</p></li>
       </ul></p>
       <p>The R script to analyse the bamboo data is in Fig. 43.</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-43">
           <caption>The Script dialog</caption>
           <image source="images/ch3/image24.png" width="45%">
@@ -692,7 +692,7 @@
           <li><p>The graph is together with the R-Instat icon in the taskbar. So, show it. Fig. 46.</p></li>
       </ul></p>
       <p>It confirms the statement in the script, that the pattern of the heights is different in the 2 locations. Maybe they should be analysed separately?</p>
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch3-45">
           <caption>The edited script</caption>
           <image source="images/ch3/image8.png" width="45%">

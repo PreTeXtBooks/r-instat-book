@@ -87,7 +87,7 @@
         This opens an R-Instat dialog.
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-01">
           <caption>R-Instat Start Screen</caption>
           <image source="images/ch1/image39.png" width="45%">
@@ -223,7 +223,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-03">
           <caption>About the Cassava data</caption>
           <image source="images/ch1/image45.png" width="45%">
@@ -370,7 +370,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-05">
           <caption>Right-click &gt; Convert to Factor</caption>
           <image source="images/ch1/image43.png" width="45%">
@@ -428,7 +428,7 @@
         extra level and is an error you need to correct before analysis.
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-07">
           <caption>Right-click &gt; Levels/Labels</caption>
           <image source="images/ch1/image47.png" width="45%">
@@ -492,7 +492,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-09">
           <caption>Levels/ Labels dialog</caption>
           <image source="images/ch1/image51.png" width="45%">
@@ -660,7 +660,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-12">
           <caption>Right-click &gt; Convert to Factor</caption>
           <image source="images/ch1/image50.png" width="45%">
@@ -718,7 +718,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-14">
           <caption>Visualise Data dialog</caption>
           <image source="images/ch1/image58.png" width="45%">
@@ -797,6 +797,25 @@
           </li>
         </ol>
       </p>
+
+      <exercise xml:id="ex-ch1-missing-values">
+        <title>Check your understanding: what does a missing value mean?</title>
+
+        <introduction>
+          <p>
+            This question looks at missing values, and includes a structure that
+            means that a missing value does not always indicate missing
+            information.
+            Some questions are only relevant depending on the answer to an
+            earlier question.
+            In this activity, you will examine the missing values in the dataset
+            and use the relationships between the variables to decide what those
+            missing values mean before producing summaries of the data.
+          </p>
+        </introduction>
+
+        <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/missing-values-1.xml" label="stk-ch1-missing-values"/>
+      </exercise>
 
       <p>
         Now for another dialog.
@@ -881,7 +900,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-16">
           <caption>One Variable Summarise</caption>
           <image source="images/ch1/image57.png" width="45%">
@@ -1112,7 +1131,7 @@
         <stack source="stack/01_estimated_mean.xml" label="stk-ch1-est-mean"/>
       </exercise>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-20">
           <caption>One Variable Summarise dialog</caption>
           <image source="images/ch1/image27.png" width="45%">
@@ -1167,7 +1186,7 @@
         </ul>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-22">
           <caption>One Variable Summarise dialog</caption>
           <image source="images/ch1/image34.png" width="45%">
@@ -1311,7 +1330,7 @@
         </ol>
       </p>
 
-      <sidebyside>
+      <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch1-24">
           <caption>One Variable Summarise &gt; Skim</caption>
           <image source="images/ch1/image40.png" width="45%">
@@ -1395,7 +1414,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-26">
         <caption>One Variable Graph</caption>
         <image source="images/ch1/image35.png" width="45%">
@@ -1482,7 +1501,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-28">
         <caption>One Variable Graph</caption>
         <image source="images/ch1/image52.png" width="45%">
@@ -1530,7 +1549,7 @@
       21.
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-30">
         <caption>The Plotly View</caption>
         <image source="images/ch1/image3.png" width="45%">
@@ -1615,7 +1634,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-32">
         <caption>Labels/Levels dialog</caption>
         <image source="images/ch1/image31.png" width="45%">
@@ -1678,7 +1697,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-34">
         <caption>Reorder Levels dialog</caption>
         <image source="images/ch1/image28.png" width="45%">
@@ -1779,7 +1798,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-36">
         <caption>Labels/ Levels dialog</caption>
         <image source="images/ch1/image18.png" width="45%">
@@ -1851,7 +1870,7 @@
       This all ties with what you expected, so continue:
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-38">
         <caption>Filter dialog</caption>
         <image source="images/ch1/image17.png" width="45%">
@@ -1891,7 +1910,7 @@
       replicated them equally.
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-40">
         <caption>Labels/ Levels dialog</caption>
         <image source="images/ch1/image5.png" width="45%">
@@ -1986,7 +2005,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-42">
         <caption>Filter dialog &gt; Subset</caption>
         <image source="images/ch1/image15.png" width="45%">
@@ -2015,6 +2034,29 @@
       As with a spreadsheet it is nice to know that R and R-Instat can easily
       work with multiple sheets.
     </p>
+
+    <exercise xml:id="ex-ch1-filtering-data">
+      <title>Check your understanding: filtering the data</title>
+
+      <introduction>
+        <p>
+          This question has a simulated survey of 100 farmers with information
+          on three key variables.
+          We would eventually like to investigate whether younger and older
+          farmers plant different varieties, and whether this is associated with
+          differences in yield.
+        </p>
+
+        <p>
+          Before attempting that analysis, however, we need to understand the
+          data and make sure that we are using the appropriate observations.
+          In this activity, you will use filtering to explore the dataset and
+          check that the data are ready for analysis.
+        </p>
+      </introduction>
+
+      <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/filtering-question-1.xml" label="stk-ch1-filtering"/>
+    </exercise>
   </section>
 
   <section xml:id="sec-housekeeping">
@@ -2149,7 +2191,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-45">
         <caption>Prepare &gt; Data Frame &gt; Delete Columns/Rows</caption>
         <image source="images/ch1/image11.png" width="45%">
@@ -2212,7 +2254,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-47">
         <caption>File &gt; Save As &gt; Save Data As</caption>
         <image source="images/ch1/image8.png" width="45%">
@@ -2276,7 +2318,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-49">
         <caption>Save Data As dialog</caption>
         <image source="images/ch1/image24.png" width="45%">
@@ -2438,7 +2480,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-52">
         <caption>Labels/Levels dialog</caption>
         <image source="images/ch1/image21.png" width="45%">
@@ -2499,7 +2541,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-54">
         <caption>Split Text Column dialog</caption>
         <image source="images/ch1/image20.png" width="45%">
@@ -2560,7 +2602,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-56">
         <caption>Define New Filter sub-dialog</caption>
         <image source="images/ch1/image29.png" width="45%">
@@ -2621,7 +2663,7 @@
       </ul>
     </p>
 
-    <sidebyside>
+    <sidebyside widths="45% 45%">
       <figure xml:id="fig-ch1-58">
         <caption>Labels/Levels dialog</caption>
         <image source="images/ch1/image30.png" width="45%">
