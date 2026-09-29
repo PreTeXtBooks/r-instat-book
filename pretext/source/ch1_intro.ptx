@@ -1128,6 +1128,11 @@
         </introduction>
 
         <stack source="stack/01_outlier_age.xml" label="stk-ch1-mean-median"/>
+      </exercise>
+
+      <exercise>
+        <title>Check your understanding: Estimating the mean and median</title>
+
         <stack source="stack/01_estimated_mean.xml" label="stk-ch1-est-mean"/>
       </exercise>
 
@@ -1572,6 +1577,20 @@
         </image>
       </figure>
     </sidebyside>
+
+    <exercise xml:id="ex-ch1-boxplots">
+      <title>Check your understanding: using boxplots</title>
+
+      <introduction>
+        <p>
+          Here are two questions on using boxplots to test your understanding on
+          interpreting and using boxplots
+        </p>
+      </introduction>
+
+      <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Interpret-and-match-dotplots-to-respective-boxplots.xml" label="stk-ch3-match-dots"/>
+      <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Edit-boxplot-to-match-histogram-distribution.xml" label="stk-ch3-edit-boxplot"/>
+    </exercise>
   </section>
 
   <section xml:id="sec-factor-menu">
