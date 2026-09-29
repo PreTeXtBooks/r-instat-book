@@ -798,25 +798,6 @@
         </ol>
       </p>
 
-      <exercise xml:id="ex-ch1-missing-values">
-        <title>Check your understanding: what does a missing value mean?</title>
-
-        <introduction>
-          <p>
-            This question looks at missing values, and includes a structure that
-            means that a missing value does not always indicate missing
-            information.
-            Some questions are only relevant depending on the answer to an
-            earlier question.
-            In this activity, you will examine the missing values in the dataset
-            and use the relationships between the variables to decide what those
-            missing values mean before producing summaries of the data.
-          </p>
-        </introduction>
-
-        <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/missing-values-1.xml" label="stk-ch1-missing-values"/>
-      </exercise>
-
       <p>
         Now for another dialog.
       </p>
