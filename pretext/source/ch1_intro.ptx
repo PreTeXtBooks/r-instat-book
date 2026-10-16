@@ -69,8 +69,7 @@
       </p>
 
       <p>
-        The starting screen is shown in Fig.
-        1.
+        The starting screen is shown in <xref ref="fig-ch1-01"/>.
       </p>
 
       <p>
@@ -152,8 +151,7 @@
           <li>
             <p>
               Click on the down-arrow in the
-              <alert><em>From Package</em></alert> control, Fig.
-              2.
+              <alert><em>From Package</em></alert> control, <xref ref="fig-ch1-02"/>.
             </p>
           </li>
         </ul>
@@ -195,8 +193,7 @@
 
       <p>
         The resulting information about the dataset is provided by the gosset
-        package, is in Fig.
-        3.
+        package, is in <xref ref="fig-ch1-03"/>.
         This opens in a new R-Instat window.
         The data are from 2 countries, and the study is of 13 varieties of
         cassava.
@@ -300,8 +297,7 @@
       </p>
 
       <p>
-        At the bottom of Fig.
-        4, we see that the data frame has 1,000 rows and 27 columns.
+        At the bottom of <xref ref="fig-ch1-04"/>, we see that the data frame has 1,000 rows and 27 columns.
         We begin with the columns, because their names and types tell us how the
         data are organised.
       </p>
@@ -309,8 +305,7 @@
       <p>
         In R, and therefore in R-Instat, every column must have a name.
         Unlike a spreadsheet, these names sit in a special header row, so the
-        data start in row 1, Fig.
-        4.
+        data start in row 1, <xref ref="fig-ch1-04"/>.
       </p>
 
       <p>
@@ -333,8 +328,7 @@
             <p>
               Go anywhere into the <alert><em>second variable</em></alert> and
               <alert><em>right-click</em></alert>.
-              Look at the menu, Fig.
-              5.
+              Look at the menu, <xref ref="fig-ch1-05"/>.
               It has some common options for your data.
             </p>
           </li>
@@ -355,8 +349,7 @@
         <ul>
           <li>
             <p>
-              Now go to the top of the next 4 columns, Fig.
-              6.
+              Now go to the top of the next 4 columns, <xref ref="fig-ch1-06"/>.
               <alert><em>Mark them</em></alert> all, then
               <alert><em>right-click</em></alert> again,
             </p>
@@ -422,8 +415,7 @@
       </p>
 
       <p>
-        The summary shows 13 levels, which matches the data description in Fig.
-        8.
+        The summary shows 13 levels, which matches the data description in <xref ref="fig-ch1-08"/>.
         That matters because a typing error during data entry would create an
         extra level and is an error you need to correct before analysis.
       </p>
@@ -485,8 +477,7 @@
 
           <li>
             <p>
-              Now use the country factor, Fig.
-              9.
+              Now use the country factor, <xref ref="fig-ch1-09"/>.
             </p>
           </li>
         </ul>
@@ -525,8 +516,7 @@
         <ul>
           <li>
             <p>
-              Try also <alert><em>gender</em></alert> see Fig.
-              10.
+              Try also <alert><em>gender</em></alert> see <xref ref="fig-ch1-10"/>.
             </p>
           </li>
         </ul>
@@ -554,8 +544,7 @@
           If you are unsure about what a dialog is for or how to use it use the
           help system for insight.
           You can navigate to other help pages from within this system using the
-          menu on the left-hand side (Fig.
-          11).
+          menu on the left-hand side (<xref ref="fig-ch1-11"/>).
         </p>
       </aside>
 
@@ -653,8 +642,7 @@
             <p>
               Mark the two variables after age.
               Right-click and choose <alert><em>Convert to Factor</em></alert>
-              again, Fig.
-              11.
+              again, <xref ref="fig-ch1-11"/>.
             </p>
           </li>
         </ul>
@@ -696,15 +684,14 @@
           <li>
             <p>
               Use the first dialog, called
-              <alert><em>Visualise Data</em></alert>, Fig.
-              14.
+              <alert><em>Visualise Data</em></alert>, <xref ref="fig-ch1-14"/>.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        The Visualise dialog opens, Fig.14.
+        The Visualise dialog opens, <xref ref="fig-ch1-14"/>.
       </p>
 
       <p>
@@ -743,8 +730,7 @@
       </sidebyside>
 
       <p>
-        This is the first dialog to produce results in the Output window, Fig.
-        15.
+        This is the first dialog to produce results in the Output window, <xref ref="fig-ch1-15"/>.
       </p>
 
       <p>
@@ -816,8 +802,7 @@
       </p>
 
       <p>
-        Pause a little to study this dialog, Fig.
-        16.
+        Pause a little to study this dialog, <xref ref="fig-ch1-16"/>.
       </p>
       <aside>
         <p>
@@ -840,8 +825,7 @@
       <p>
         Let’s summarise all the columns.
         This is easy to do by using the down-arrow next to
-        <alert><em>Add</em></alert> in the data selector, Fig.
-        16.
+        <alert><em>Add</em></alert> in the data selector, <xref ref="fig-ch1-16"/>.
       </p>
 
       <p>
@@ -859,8 +843,7 @@
         <alert><em>Maximum Factor Levels</em></alert>
         <alert><em>Shown</em></alert>.
         The default value is 12.
-        But we have already seen, in Fig.
-        8, that some factors have more levels.
+        But we have already seen, in <xref ref="fig-ch1-08"/>, that some factors have more levels.
       </p>
 
       <p>
@@ -906,8 +889,7 @@
       </sidebyside>
 
       <p>
-        The results in Fig.
-        17 are hard to read at first.
+        The results in <xref ref="fig-ch1-17"/> are hard to read at first.
       </p>
 
       <p>
@@ -941,8 +923,7 @@
           <li>
             <p>
               Click on the word <alert><em>Maximise</em></alert>, towards at the
-              top left, within the Output window, Fig.
-              17.
+              top left, within the Output window, <xref ref="fig-ch1-17"/>.
             </p>
           </li>
         </ul>
@@ -982,8 +963,7 @@
               Factor columns are summarised with the frequencies.
               Those are the same as we saw earlier, via the right-click menu,
               e.g.
-              Fig.
-              8.
+              <xref ref="fig-ch1-08"/>.
             </p>
           </li>
 
@@ -1029,8 +1009,7 @@
       </p>
 
       <p>
-        To reopen a dialog, you can use the menu again or use the toolbar, Fig.
-        19.
+        To reopen a dialog, you can use the menu again or use the toolbar, <xref ref="fig-ch1-19"/>.
       </p>
 
       <figure xml:id="fig-ch1-19">
@@ -1057,8 +1036,7 @@
             <p>
               The dialog is as you left it.
               Right-click in the receiver and press
-              <alert><em>Clear</em></alert>, Fig.
-              20 (or select all the variables and delete them.)
+              <alert><em>Clear</em></alert>, <xref ref="fig-ch1-20"/> (or select all the variables and delete them.)
             </p>
           </li>
 
@@ -1164,8 +1142,7 @@
           <li>
             <p>
               Change the number of factor levels to <alert><em>25</em></alert>,
-              Fig.
-              22.
+              <xref ref="fig-ch1-22"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -1197,8 +1174,7 @@
       </sidebyside>
 
       <p>
-        The results, in Fig.
-        23 show that:
+        The results, in <xref ref="fig-ch1-23"/> show that:
       </p>
 
       <p>
@@ -1274,8 +1250,7 @@
 
           <li>
             <p>
-              <alert><em>Add All</em></alert> the variables again, Fig.
-              24.
+              <alert><em>Add All</em></alert> the variables again, <xref ref="fig-ch1-24"/>.
               Then press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -1289,8 +1264,7 @@
       </p>
 
       <p>
-        This closes the data window, Fig.
-        25, so the whole screen is for the results.
+        This closes the data window, <xref ref="fig-ch1-25"/>, so the whole screen is for the results.
       </p>
 
       <p>
@@ -1425,14 +1399,12 @@
     </sidebyside>
 
     <p>
-      This dialog, Fig.
-      26, is similar to Summarise, this is intentional as we want you to quickly
+      This dialog, <xref ref="fig-ch1-26"/>, is similar to Summarise, this is intentional as we want you to quickly
       feel familiar with the dialogs.
     </p>
 
     <p>
-      The results are in the output window, Fig.
-      27.
+      The results are in the output window, <xref ref="fig-ch1-27"/>.
       R’s graphs are wonderful and this is an initial hint.
     </p>
 
@@ -1479,8 +1451,7 @@
       <ul>
         <li>
           <p>
-            Press the down arrow on the toolbar, next to the graph icon, Fig.
-            29.
+            Press the down arrow on the toolbar, next to the graph icon, <xref ref="fig-ch1-29"/>.
             Choose the option called <alert><em>plotly</em></alert>.
           </p>
         </li>
@@ -1512,8 +1483,7 @@
     </sidebyside>
 
     <p>
-      This initially looks just the same, Fig.
-      30.
+      This initially looks just the same, <xref ref="fig-ch1-30"/>.
     </p>
 
     <p>
@@ -1521,8 +1491,7 @@
         <li>
           <p>
             But hover near the graph, then it also includes the summary values
-            Fig.
-            31.
+            <xref ref="fig-ch1-31"/>.
           </p>
         </li>
       </ul>
@@ -1531,8 +1500,7 @@
     <p>
       This makes it much easier to explore the summaries that make up the
       boxplot.
-      Most are the same as given earlier, in Fig.
-      21.
+      Most are the same as given earlier, in <xref ref="fig-ch1-21"/>.
     </p>
 
     <sidebyside widths="45% 45%">
@@ -1589,16 +1557,14 @@
         <li>
           <p>
             Right-click in option_a, and choose
-            <alert><em>Levels/Labels</em></alert> (as in Fig.
-            8).
+            <alert><em>Levels/Labels</em></alert> (as in <xref ref="fig-ch1-08"/>).
           </p>
         </li>
       </ul>
     </p>
 
     <p>
-      Examine the result in Fig.
-      32.
+      Examine the result in <xref ref="fig-ch1-32"/>.
     </p>
 
     <p>
@@ -1682,16 +1648,14 @@
           <p>
             Select option_a, then choose the
             <alert><em>Frequency button</em></alert>, and in
-            <alert><em>Descending order</em></alert>, Fig.
-            34.
+            <alert><em>Descending order</em></alert>, <xref ref="fig-ch1-34"/>.
           </p>
         </li>
 
         <li>
           <p>
             Click on the <alert><em>Store As</em></alert> down arrow and choose
-            to save into option_a, Fig.
-            35.
+            to save into option_a, <xref ref="fig-ch1-35"/>.
           </p>
         </li>
       </ul>
@@ -1739,8 +1703,7 @@
           <p>
             <alert><em>Right-click again</em></alert> to look at the
             <alert><em>Levels and Labels</em></alert> for option_a.
-            The blocks of similar frequencies are now clear, Fig.
-            36.
+            The blocks of similar frequencies are now clear, <xref ref="fig-ch1-36"/>.
           </p>
         </li>
 
@@ -1790,8 +1753,7 @@
 
         <li>
           <p>
-            In the sub-dialog select <alert><em>country</em></alert>, Fig.
-            37.
+            In the sub-dialog select <alert><em>country</em></alert>, <xref ref="fig-ch1-37"/>.
             Then press <alert><em>Return</em></alert>.
           </p>
         </li>
@@ -1831,8 +1793,7 @@
         <li>
           <p>
             Back in the main dialog, select <alert><em>Cameroon</em></alert>,
-            Fig.
-            38 and press <alert><em>Ok</em></alert>.
+            <xref ref="fig-ch1-38"/> and press <alert><em>Ok</em></alert>.
           </p>
         </li>
       </ul>
@@ -1859,8 +1820,7 @@
 
         <li>
           <p>
-            From the bottom of Fig.
-            39 you see you have 400 rows.
+            From the bottom of <xref ref="fig-ch1-39"/> you see you have 400 rows.
           </p>
         </li>
       </ol>
@@ -1898,8 +1858,7 @@
       <ul>
         <li>
           <p>
-            Right-click again in variable option_a, Fig.
-            39 and choose <alert><em>Levels/Labels</em></alert> again.
+            Right-click again in variable option_a, <xref ref="fig-ch1-39"/> and choose <alert><em>Levels/Labels</em></alert> again.
           </p>
         </li>
       </ul>
@@ -1962,8 +1921,7 @@
         <li>
           <p>
             Right-click and choose
-            <alert><em>Remove Current Filter</em></alert>, Fig.
-            41.
+            <alert><em>Remove Current Filter</em></alert>, <xref ref="fig-ch1-41"/>.
           </p>
         </li>
 
@@ -1976,8 +1934,7 @@
         <li>
           <p>
             This time choose to apply as a subset, and call it
-            <alert><em>Cameroon</em></alert>, Fig.
-            42.
+            <alert><em>Cameroon</em></alert>, <xref ref="fig-ch1-42"/>.
             Press <alert><em>Ok</em></alert>.
           </p>
         </li>
@@ -2167,8 +2124,7 @@
           <p>
             Use
             <alert><em>Prepare &gt; Data Frame &gt; Delete Columns/Rows</em></alert>,
-            Fig.
-            45.
+            <xref ref="fig-ch1-45"/>.
           </p>
         </li>
       </ul>
@@ -2233,8 +2189,7 @@
         <li>
           <p>
             Use <alert><em>File &gt; Save As &gt; Save Data As</em></alert>,
-            Fig.
-            47.
+            <xref ref="fig-ch1-47"/>.
           </p>
         </li>
 
@@ -2247,8 +2202,7 @@
 
         <li>
           <p>
-            Press <alert><em>Save</em></alert>, Fig.
-            48.
+            Press <alert><em>Save</em></alert>, <xref ref="fig-ch1-48"/>.
           </p>
         </li>
       </ul>
@@ -2279,16 +2233,14 @@
     </sidebyside>
 
     <p>
-      Although it says Save in Fig.
-      48 it isn’t saved quite yet.
+      Although it says Save in <xref ref="fig-ch1-48"/> it isn’t saved quite yet.
     </p>
 
     <p>
       <ul>
         <li>
           <p>
-            Return to the R-Instat <alert><em>Save As</em></alert> dialog, Fig.
-            49.
+            Return to the R-Instat <alert><em>Save As</em></alert> dialog, <xref ref="fig-ch1-49"/>.
             Just press <alert><em>Ok</em></alert>.
           </p>
         </li>
@@ -2296,8 +2248,7 @@
     </p>
 
     <p>
-      You can also export the data, as shown in the File Menu in Fig.
-      50.
+      You can also export the data, as shown in the File Menu in <xref ref="fig-ch1-50"/>.
     </p>
 
     <p>
@@ -2311,8 +2262,7 @@
 
         <li>
           <p>
-            Press the down arrow on your file-types, Fig.
-            50 to confirm you can export many ways.
+            Press the down arrow on your file-types, <xref ref="fig-ch1-50"/> to confirm you can export many ways.
           </p>
         </li>
       </ul>
@@ -2473,8 +2423,7 @@
         <li>
           <p>
             Use <alert><em>Prepare &gt; Column: Text &gt; Split</em></alert>,
-            Fig.
-            52.
+            <xref ref="fig-ch1-52"/>.
           </p>
         </li>
       </ul>
@@ -2509,8 +2458,7 @@
         <li>
           <p>
             Choose <alert><em>id</em></alert>, then to split by a
-            <alert><em>hyphen</em></alert>, Fig.
-            54.
+            <alert><em>hyphen</em></alert>, <xref ref="fig-ch1-54"/>.
             Call the new columns <alert><em>trial</em></alert> and press
             <alert><em>Ok</em></alert>.
           </p>
@@ -2519,8 +2467,7 @@
     </p>
 
     <p>
-      There are now 29 columns and the new column, called trial, Fig.
-      55, distinguishes between them.
+      There are now 29 columns and the new column, called trial, <xref ref="fig-ch1-55"/>, distinguishes between them.
     </p>
 
     <p>
@@ -2534,8 +2481,7 @@
 
         <li>
           <p>
-            Right-click again and use <alert><em>Filter Rows</em></alert>, Fig.
-            55.
+            Right-click again and use <alert><em>Filter Rows</em></alert>, <xref ref="fig-ch1-55"/>.
           </p>
         </li>
       </ul>
@@ -2581,8 +2527,7 @@
         <li>
           <p>
             In the sub-dialog choose the trial variable.
-            Select <alert><em>Osun</em></alert>, Fig.
-            56.
+            Select <alert><em>Osun</em></alert>, <xref ref="fig-ch1-56"/>.
           </p>
         </li>
 
@@ -2656,8 +2601,7 @@
         <li>
           <p>
             Use the diskette icon on the toolbar, or
-            <alert><em>File &gt; Save</em></alert>, Fig.
-            59 to save.
+            <alert><em>File &gt; Save</em></alert>, <xref ref="fig-ch1-59"/> to save.
           </p>
         </li>
       </ul>
@@ -2746,8 +2690,7 @@
     </p>
 
     <p>
-      Fig.
-      60, shows the Data section of the help file.
+      <xref ref="fig-ch1-60"/>, shows the Data section of the help file.
       This outlines the different sources of data that are available through
       R-Instat.
       Many datasets are included within the program and can be accessed through
@@ -2776,8 +2719,7 @@
 
     <p>
       You can see that this is a large dataset.
-      The page (or sheet) in Fig.
-      61 has 418 columns and 42,408 rows, and the full databook contains eight
+      The page (or sheet) in <xref ref="fig-ch1-61"/> has 418 columns and 42,408 rows, and the full databook contains eight
       different sheets.
     </p>
 

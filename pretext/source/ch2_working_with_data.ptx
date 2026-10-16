@@ -59,8 +59,7 @@
           <li>
             <p>
               Click on the <alert><em>down-arrow</em></alert> in the
-              <alert><em>From Package</em></alert> control, Fig.
-              1.
+              <alert><em>From Package</em></alert> control, <xref ref="fig-ch2-01"/>.
             </p>
           </li>
 
@@ -74,8 +73,7 @@
             <p>
               This package provides many datasets.
               Scroll down to one called
-              <alert><em>jayaraman bamboo</em></alert>, Fig.
-              1.
+              <alert><em>jayaraman bamboo</em></alert>, <xref ref="fig-ch2-01"/>.
             </p>
           </li>
 
@@ -147,8 +145,7 @@
             <p>
               Use
               <alert><em>Describe &gt; Two/Three Variables &gt; Pivot Table</em></alert>,
-              Fig.
-              3.
+              <xref ref="fig-ch2-03"/>.
             </p>
           </li>
 
@@ -170,7 +167,7 @@
           <li>
             <p>
               Click the variable checkbox and include the
-              <alert><em>heights</em></alert>, Fig 4.
+              <alert><em>heights</em></alert>, <xref ref="fig-ch2-04"/>.
             </p>
           </li>
 
@@ -218,16 +215,14 @@
       </exercise>
 
       <p>
-        Fig.
-        5 is a convenient layout to continue exploring the heights.
+        <xref ref="fig-ch2-05"/> is a convenient layout to continue exploring the heights.
       </p>
 
       <p>
         <ul>
           <li>
             <p>
-              Click the down-arrow in the top left corner, Fig.
-              5 and change <alert><em>Table</em></alert> to
+              Click the down-arrow in the top left corner, <xref ref="fig-ch2-05"/> and change <alert><em>Table</em></alert> to
               <alert><em>Heatmap</em></alert>.
             </p>
           </li>
@@ -266,8 +261,7 @@
         <ul>
           <li>
             <p>
-              Click on the <alert><em>down arrow by Average</em></alert>, Fig.
-              7, and change it to <alert><em>Count</em></alert>.
+              Click on the <alert><em>down arrow by Average</em></alert>, <xref ref="fig-ch2-06"/>, and change it to <alert><em>Count</em></alert>.
             </p>
           </li>
         </ul>
@@ -315,8 +309,7 @@
       </sidebyside>
 
       <p>
-        Returning to the data, the error is clear, Fig.
-        9.
+        Returning to the data, the error is clear, <xref ref="fig-ch2-08"/>.
         There are duplicate T4 values, the second of which should be changed
         into T5.
         Of course, R has everything you need to correct this.
@@ -332,7 +325,7 @@
             <p>
               Use
               <alert><em>Prepare &gt; Check Data &gt; Duplicate Rows</em></alert>,
-              Fig 10
+              <xref ref="fig-ch2-09"/>
             </p>
           </li>
         </ul>
@@ -371,8 +364,7 @@
             <p>
               Include <alert><em>all the factors</em></alert>.
               Then use the third radio button to get the
-              <alert><em>index number</em></alert> of each duplicate, Fig.
-              11.
+              <alert><em>index number</em></alert> of each duplicate, <xref ref="fig-ch2-10"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -389,7 +381,7 @@
           <li>
             <p>
               So, right click and choose the option to
-              <alert><em>Filter rows</em></alert>, Fig 12.
+              <alert><em>Filter rows</em></alert>, <xref ref="fig-ch2-11"/>.
             </p>
           </li>
         </ul>
@@ -433,7 +425,7 @@
               In the sub-dialog, <alert><em>select dup</em></alert>.
               Choose the <alert><em>==</em></alert> condition and add
               <alert><em>2</em></alert>.
-              Fig 13.
+              <xref ref="fig-ch2-12"/>.
             </p>
           </li>
 
@@ -453,8 +445,7 @@
       </p>
 
       <p>
-        Now look carefully at the filtered data, Fig.
-        14.
+        Now look carefully at the filtered data, <xref ref="fig-ch2-13"/>.
       </p>
 
       <p>
@@ -470,8 +461,7 @@
             <p>
               Now <alert><em>right-click</em></alert> to (temporarily) make the
               <alert><em>Tree variable</em></alert> of
-              <alert><em>character type</em></alert>, Fig.
-              14.
+              <alert><em>character type</em></alert>, <xref ref="fig-ch2-13"/>.
             </p>
           </li>
         </ul>
@@ -518,8 +508,7 @@
             <p>
               Use
               <alert><em>Prepare &gt; Data Frame &gt; Replace Values</em></alert>,
-              Fig.
-              15.
+              <xref ref="fig-ch2-14"/>.
             </p>
           </li>
 
@@ -536,8 +525,7 @@
       </p>
 
       <p>
-        Now we have T5 in the data, Fig.
-        16!
+        Now we have T5 in the data, <xref ref="fig-ch2-15"/>!
         Just a couple of tidying steps are needed now, to finish the correction.
       </p>
 
@@ -546,8 +534,7 @@
           <li>
             <p>
               Right-click anywhere and use the option
-              <alert><em>Remove Current Filter</em></alert>, Fig.
-              17.
+              <alert><em>Remove Current Filter</em></alert>, <xref ref="fig-ch2-16"/>.
             </p>
           </li>
         </ul>
@@ -590,8 +577,7 @@
             <p>
               Then check, by
               <alert><em>right-clicking in the tree column</em></alert> again
-              and choosing <alert><em>Levels/Labels</em></alert>, Fig.
-              17.
+              and choosing <alert><em>Levels/Labels</em></alert>, <xref ref="fig-ch2-16"/>.
             </p>
           </li>
         </ul>
@@ -660,8 +646,7 @@
               Use
               <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>.
               Use the <alert><em>Add</em></alert> down, button, and
-              <alert><em>Add All</em></alert>, Fig.
-              19.
+              <alert><em>Add All</em></alert>, <xref ref="fig-ch2-18"/>.
             </p>
           </li>
 
@@ -715,7 +700,7 @@
           <li>
             <p>
               Return to the <alert><em>Pivot Table</em></alert> dialog.
-              This is just as you left it, Fig, 21, so simply press
+              This is just as you left it, <xref ref="fig-ch2-20"/>, so simply press
               <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -730,8 +715,7 @@
             <p>
               Before continuing, change the summary to
               <alert><em>Count</em></alert> once more to confirm that each
-              combination now occurs only once, Fig.
-              22.
+              combination now occurs only once, <xref ref="fig-ch2-21"/>.
             </p>
           </li>
         </ul>
@@ -771,8 +755,7 @@
           <li>
             <p>
               Return to the <alert><em>average heights</em></alert> and to a
-              <alert><em>Heatmap</em></alert>, Fig.
-              23.
+              <alert><em>Heatmap</em></alert>, <xref ref="fig-ch2-22"/>.
             </p>
           </li>
         </ul>
@@ -783,8 +766,7 @@
         For example, all the really high trees are in the second location, but
         some there remain very low.
         And that includes the smallest tree with a height of 14, (as noted in
-        the Summarise results in Fig.
-        20).
+        the Summarise results in <xref ref="fig-ch2-19"/>).
       </p>
 
       <figure xml:id="fig-ch2-22">
@@ -863,10 +845,8 @@
 
           <li>
             <p>
-              Choose the <alert><em>likert</em></alert> package, Fig.
-              25, and select the <alert><em>mass</em></alert> dataset.
-              Fig.
-              25.
+              Choose the <alert><em>likert</em></alert> package, <xref ref="fig-ch2-23"/>, and select the <alert><em>mass</em></alert> dataset.
+              <xref ref="fig-ch2-23"/>.
             </p>
           </li>
         </ul>
@@ -906,8 +886,7 @@
         5-point scale.
         In R these are each Ordered Factors, going from Strongly Disagree to
         Strongly Agree.
-        There is therefore an (O.F) after the variable names, in Fig.
-        26.
+        There is therefore an (O.F) after the variable names, in <xref ref="fig-ch2-24"/>.
       </p>
 
       <p>
@@ -941,15 +920,13 @@
             <p>
               Use
               <alert><em>Prepare &gt; Data Frame &gt; Insert Columns/Rows</em></alert>,
-              Fig.
-              27.
+              <xref ref="fig-ch2-25"/>.
             </p>
           </li>
 
           <li>
             <p>
-              Press the <alert><em>Insert Rows</em></alert> button Fig.
-              28.
+              Press the <alert><em>Insert Rows</em></alert> button <xref ref="fig-ch2-26"/>.
             </p>
           </li>
         </ul>
@@ -965,8 +942,7 @@
         <ul>
           <li>
             <p>
-              Press <alert><em>Ok</em></alert>, Fig.
-              30.
+              Press <alert><em>Ok</em></alert>, <xref ref="fig-ch2-28"/>.
             </p>
           </li>
         </ul>
@@ -1006,8 +982,7 @@
             <p>
               Right-click in the <alert><em>NA</em></alert> in the
               <alert><em>Gender</em></alert> column and choose
-              <alert><em>Edit Cell</em></alert>, Fig.
-              29.
+              <alert><em>Edit Cell</em></alert>, <xref ref="fig-ch2-27"/>.
             </p>
           </li>
 
@@ -1050,7 +1025,7 @@
         <ul>
           <li>
             <p>
-              Repeat for the first question, “I find math interesting”, Fig 31.
+              Repeat for the first question, “I find math interesting”, <xref ref="fig-ch2-29"/>.
               We chose “ <alert><em>Strongly Agree</em></alert> ”!
             </p>
           </li>
@@ -1058,8 +1033,7 @@
           <li>
             <p>
               Repeat again for the second question “I get uptight during math
-              tests”, Fig.
-              32.
+              tests”, <xref ref="fig-ch2-30"/>.
               We chose “ <alert><em>Strongly Agree</em></alert> ”.
             </p>
           </li>
@@ -1108,8 +1082,7 @@
         <ul>
           <li>
             <p>
-              <alert><em>Enlarge</em></alert> the variables in turn, Fig.
-              33, to <alert><em>show each question</em></alert> in full.
+              <alert><em>Enlarge</em></alert> the variables in turn, <xref ref="fig-ch2-31"/>, to <alert><em>show each question</em></alert> in full.
             </p>
           </li>
 
@@ -1215,8 +1188,7 @@
             <p>
               Click on the top of the <alert><em>Label</em></alert> column and
               press <alert><em>&lt;ctrl&gt;V</em></alert> to paste into the
-              labels, Fig.
-              35
+              labels, <xref ref="fig-ch2-33"/>
             </p>
           </li>
 
@@ -1263,8 +1235,7 @@
             <p>
               Click the down arrow next to the data icon.
               Choose to
-              <alert><em>Swap Data with the Column Metadata</em></alert>, Fig.
-              36.
+              <alert><em>Swap Data with the Column Metadata</em></alert>, <xref ref="fig-ch2-34"/>.
             </p>
           </li>
 
@@ -1278,8 +1249,7 @@
           <li>
             <p>
               Make the <alert><em>names column</em></alert> quite wide, and the
-              labels <alert><em>column</em></alert> very wide, Fig.
-              37.
+              labels <alert><em>column</em></alert> very wide, <xref ref="fig-ch2-35"/>.
             </p>
           </li>
         </ul>
@@ -1333,8 +1303,7 @@
           <li>
             <p>
               The second question could be named <alert><em>uptight</em></alert>
-              and the third could become <alert><em>future</em></alert>, Fig.
-              37.
+              and the third could become <alert><em>future</em></alert>, <xref ref="fig-ch2-35"/>.
             </p>
           </li>
         </ul>
@@ -1385,16 +1354,14 @@
             <p>
               Choose <alert><em>Edit</em></alert>.
               Then the final option in the drop down, namely
-              <alert><em>Contains All</em></alert>, Fig.
-              38.
+              <alert><em>Contains All</em></alert>, <xref ref="fig-ch2-36"/>.
             </p>
           </li>
 
           <li>
             <p>
               Then Replace <alert><em>dot</em></alert>, by
-              <alert><em>&lt;space&gt;</em></alert>, Fig.
-              38.
+              <alert><em>&lt;space&gt;</em></alert>, <xref ref="fig-ch2-36"/>.
               Then <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -1441,8 +1408,7 @@
               In the sub-dialog Add <alert><em>gender</em></alert>, and the 6
               positive variables, namely
               <alert><em>interesting, future, life, more, favorite</em></alert>
-              and <alert><em>enjoy</em></alert>, Fig.
-              39.
+              and <alert><em>enjoy</em></alert>, <xref ref="fig-ch2-37"/>.
               Check 7 variables are selected.
             </p>
           </li>
@@ -1477,8 +1443,7 @@
 
       <p>
         Earlier, e.g.
-        Fig.
-        14, when a filter was used, the left row was red.
+        <xref ref="fig-ch2-13"/>, when a filter was used, the left row was red.
         So, a select is for a temporary subset of the columns, just as a filter
         is for a temporary subset of the rows.
       </p>
@@ -1517,8 +1482,7 @@
       </p>
 
       <p>
-        The resulting subset is in Fig.
-        40.
+        The resulting subset is in <xref ref="fig-ch2-38"/>.
         The preparation is now done and we move to the analysis.
       </p>
       <aside>
@@ -1528,8 +1492,7 @@
           Hide from the menu.
           The main difference in R-Instat is that a Select is kept as an Object.
           Hence you can make multiple selects and apply them, when needed.
-          We give an example in Fig.
-          43, below.
+          We give an example in <xref ref="fig-ch2-41"/>, below.
         </p>
       </aside>
     </subsection>
@@ -1543,8 +1506,7 @@
             <p>
               We start with the positive variables.
               <alert><em>Right-click</em></alert> and
-              <alert><em>Select Columns</em></alert> again, Fig.
-              42.
+              <alert><em>Select Columns</em></alert> again, <xref ref="fig-ch2-40"/>.
             </p>
           </li>
 
@@ -1582,8 +1544,7 @@
       </sidebyside>
 
       <p>
-        Fig.
-        44 shows the 7 variables in the positive select.
+        <xref ref="fig-ch2-42"/> shows the 7 variables in the positive select.
       </p>
 
       <p>
@@ -1594,7 +1555,7 @@
               <alert><em>Describe &gt; Two/Three Variables &gt; More Likert</em></alert>.
               <alert><em>Add all</em></alert> the variables,
               <alert><em>except</em></alert> <alert><em>Gender</em></alert>,
-              into the receiver, Fig 42.
+              into the receiver, <xref ref="fig-ch2-40"/>.
             </p>
           </li>
 
@@ -1632,8 +1593,7 @@
       </sidebyside>
 
       <p>
-        The results are in Fig.
-        43.
+        The results are in <xref ref="fig-ch2-41"/>.
         We see that Likert graphs are basically bar charts.
         Compared to ordinary bar charts (in R) they are “on their side”.
       </p>
@@ -1646,10 +1606,8 @@
       <p>
         Bar charts in R also summarise the data, and chart the summaries.
         For example, the data in the column called i
-        <alert><em>nteresting</em></alert> in Fig.
-        43 shows 7 Strongly Agrees out of 21, and 2 Strongly Disagrees.
-        Those are presented as 33% and 10% in the top bar-chart in Fig.
-        43.
+        <alert><em>nteresting</em></alert> in <xref ref="fig-ch2-41"/> shows 7 Strongly Agrees out of 21, and 2 Strongly Disagrees.
+        Those are presented as 33% and 10% in the top bar-chart in <xref ref="fig-ch2-41"/>.
       </p>
 
       <p>
@@ -1712,17 +1670,14 @@
       </sidebyside>
 
       <p>
-        The graph in Fig.
-        44 is impressive.
+        The graph in <xref ref="fig-ch2-42"/> is impressive.
         That’s because R is really impressive, and the graphs are excellent.
       </p>
 
       <p>
         But, as a new results detective, you could do better.
-        The main reason for Fig.
-        44 is to compare males and females.
-        This is quite tricky with the layout in Fig.
-        44.
+        The main reason for <xref ref="fig-ch2-42"/> is to compare males and females.
+        This is quite tricky with the layout in <xref ref="fig-ch2-42"/>.
       </p>
 
       <p>
@@ -1741,8 +1696,7 @@
       </p>
 
       <p>
-        That layout in Fig.
-        45 makes the comparisons much easier.
+        That layout in <xref ref="fig-ch2-43"/> makes the comparisons much easier.
         One result is that men were more enthusiastic than the women about
         maths, at least on the positive questions.
       </p>
@@ -1765,8 +1719,7 @@
           <li>
             <p>
               At the top, choose columns, and change the select to negative,
-              Fig.
-              46.
+              <xref ref="fig-ch2-44"/>.
               Press <alert><em>Return</em></alert>.
             </p>
           </li>
@@ -1876,8 +1829,7 @@
         locations.
         There are also 13 genotypes, G01 to G13, which we will refer to as
         varieties.
-        In Fig.
-        49 there are 52 rows, because just 4 of the varieties were used at each
+        In <xref ref="fig-ch2-47"/> there are 52 rows, because just 4 of the varieties were used at each
         location.
         There was just one measurement, namely the corn (maize) yield in pounds
         per plot.
@@ -1930,8 +1882,7 @@
         <ul>
           <li>
             <p>
-              In the pivot-table, Fig.
-              50, click the down-arrow that has Count and select
+              In the pivot-table, <xref ref="fig-ch2-48"/>, click the down-arrow that has Count and select
               <alert><em>Average</em></alert>.
               Use the <alert><em>yield</em></alert> column.
             </p>
@@ -1939,8 +1890,7 @@
 
           <li>
             <p>
-              Choose <alert><em>Row Heatmap</em></alert> instead of Table, Fig.
-              51.
+              Choose <alert><em>Row Heatmap</em></alert> instead of Table, <xref ref="fig-ch2-49"/>.
             </p>
           </li>
         </ul>
@@ -1979,8 +1929,7 @@
 
           <li>
             <p>
-              Similarly, in the last column in Fig.
-              51, before the totals, variety 13 was the best (darkest red) in 3
+              Similarly, in the last column in <xref ref="fig-ch2-49"/>, before the totals, variety 13 was the best (darkest red) in 3
               of its 4 locations.
               Its yield, of 26.6, was also the 2nd highest in the 4th location,
               namely <alert><em>B03</em></alert>.
@@ -1989,8 +1938,7 @@
 
           <li>
             <p>
-              The bottom row in Fig.
-              51 also shows varieties G01 and G13 have the highest mean yields.
+              The bottom row in <xref ref="fig-ch2-49"/> also shows varieties G01 and G13 have the highest mean yields.
             </p>
           </li>
         </ul>
@@ -2006,16 +1954,14 @@
           <li>
             <p>
               Change the <alert><em>Row Heatmap</em></alert> above, to just
-              <alert><em>heatmap</em></alert>, Fig.
-              52.
+              <alert><em>heatmap</em></alert>, <xref ref="fig-ch2-50"/>.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        Now look for the highest and lowest yields overall, see Fig.
-        52.
+        Now look for the highest and lowest yields overall, see <xref ref="fig-ch2-50"/>.
         This is the darkest red and is 41.1, from genotype 13 at location 12.
         That’s the only yield of over 40.
       </p>
@@ -2057,8 +2003,7 @@
               Press the third button at the top, called
               <alert><em>Rank</em></alert>.
               Select the <alert><em>yield</em></alert> variable.
-              Call the new column <alert><em>ranks</em></alert>, Fig.
-              53, and press <alert><em>Ok</em></alert>.
+              Call the new column <alert><em>ranks</em></alert>, <xref ref="fig-ch2-51"/>, and press <alert><em>Ok</em></alert>.
             </p>
           </li>
         </ul>
@@ -2100,12 +2045,10 @@
       </sidebyside>
 
       <p>
-        This produces a new variable, Fig.
-        56.
+        This produces a new variable, <xref ref="fig-ch2-54"/>.
         This shows, for example, that row 9, with rank 1, has the lowest yield.
         That’s <alert><em>16.2, for genotype 10 in location B03</em></alert>.
-        The highest yield, with rank 52, Fig.
-        55 is in row 48.
+        The highest yield, with rank 52, <xref ref="fig-ch2-53"/> is in row 48.
         It is <alert><em>the 41.1 for genotype 13 in location B12</em></alert>.
       </p>
 
@@ -2127,8 +2070,7 @@
           <li>
             <p>
               Change the <alert><em>Table/Chart</em></alert> to
-              <alert><em>heatmap</em></alert>, Fig.
-              56.
+              <alert><em>heatmap</em></alert>, <xref ref="fig-ch2-54"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -2142,8 +2084,7 @@
       </p>
 
       <p>
-        The resulting heatmap is in Fig.
-        57
+        The resulting heatmap is in <xref ref="fig-ch2-55"/>
       </p>
 
       <sidebyside widths="45% 45%">
@@ -2248,8 +2189,7 @@
       </sidebyside>
 
       <p>
-        The ranks1 column now has the ranks in the opposite order, Fig.
-        59.
+        The ranks1 column now has the ranks in the opposite order, <xref ref="fig-ch2-57"/>.
       </p>
 
       <p>
@@ -2306,8 +2246,7 @@
 
           <li>
             <p>
-              Select the <alert><em>anscombequartet</em></alert> file Fig.
-              60.
+              Select the <alert><em>anscombequartet</em></alert> file <xref ref="fig-ch2-58"/>.
             </p>
           </li>
 
@@ -2355,19 +2294,16 @@
           <li>
             <p>
               Use Describe <alert><em>One Variable &gt; Graph</em></alert>.
-              <alert><em>Add All</em></alert> Variables, Fig.
-              62, and press <alert><em>Ok</em></alert>.
+              <alert><em>Add All</em></alert> Variables, <xref ref="fig-ch2-60"/>, and press <alert><em>Ok</em></alert>.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        The results are in Fig.
-        63.
+        The results are in <xref ref="fig-ch2-61"/>.
         The first 3 boxplots look the same.
-        Looking back at the data, Fig.
-        61, shows that the 3 variables (x1, x2 x3) are identical.
+        Looking back at the data, <xref ref="fig-ch2-59"/>, shows that the 3 variables (x1, x2 x3) are identical.
       </p>
 
       <p>
@@ -2425,8 +2361,7 @@
             <p>
               With just 11 points, make the points larger, by
               <alert><em>checking the size box</em></alert> and
-              <alert><em>changing it to 3</em></alert>, Fig.
-              64.
+              <alert><em>changing it to 3</em></alert>, <xref ref="fig-ch2-62"/>.
             </p>
           </li>
 
@@ -2492,8 +2427,7 @@
       </p>
 
       <p>
-        The graph in Fig.
-        66 looks better, but it would be nice to include the equation of the
+        The graph in <xref ref="fig-ch2-64"/> looks better, but it would be nice to include the equation of the
         line.
       </p>
 
@@ -2526,29 +2460,25 @@
           <li>
             <p>
               Choose the <alert><em>Layers</em></alert>
-              <alert><em>Tab</em></alert>, Fig.
-              67
+              <alert><em>Tab</em></alert>, <xref ref="fig-ch2-65"/>
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        Now reflect on the information in Fig.
-        67.
+        Now reflect on the information in <xref ref="fig-ch2-65"/>.
         In ggplot terms, your current graph has 2 layers.
         In the grammar of graphics, layers use geoms, or geometric shapes.
       </p>
 
       <p>
-        The first layer is the 11 points, and that’s the geom_point, in Fig.
-        67.
+        The first layer is the 11 points, and that’s the geom_point, in <xref ref="fig-ch2-65"/>.
       </p>
 
       <p>
         The second layer is the fitted line, plus the shaded area.
-        And that is geom_smooth in Fig.
-        67.
+        And that is geom_smooth in <xref ref="fig-ch2-65"/>.
         Your task is to add a 3rd layer, containing the equation of the line.
       </p>
 
@@ -2556,8 +2486,7 @@
         <ul>
           <li>
             <p>
-              Click on <alert><em>Add</em></alert> in Fig.
-              67.
+              Click on <alert><em>Add</em></alert> in <xref ref="fig-ch2-65"/>.
             </p>
           </li>
         </ul>
@@ -2593,8 +2522,7 @@
             <p>
               Click on <alert><em>Add</em></alert> to open the
               <alert><em>Layer Options</em></alert>.
-              Fig.
-              68.
+              <xref ref="fig-ch2-66"/>.
               Press the down-arrow for the type of layer.
             </p>
           </li>
@@ -2680,8 +2608,7 @@
 
           <li>
             <p>
-              In Fig.
-              70 you now have 4 layers.
+              In <xref ref="fig-ch2-68"/> you now have 4 layers.
               Press <alert><em>Return</em></alert> and then
               <alert><em>Ok</em></alert>.
             </p>
@@ -2690,8 +2617,7 @@
       </p>
 
       <p>
-        It worked, Fig.
-        71.
+        It worked, <xref ref="fig-ch2-69"/>.
         The fourth layer has been added, but the equation and correlation
         overlap and are difficult to read.
       </p>
@@ -2703,8 +2629,7 @@
 
       <p>
         Let’s try to do better.
-        Could we move the correlation down in the graph, in Fig.
-        71, to say where y = 10?
+        Could we move the correlation down in the graph, in <xref ref="fig-ch2-69"/>, to say where y = 10?
       </p>
 
       <sidebyside widths="45% 45%">
@@ -2746,8 +2671,7 @@
             <p>
               Now notice that each <alert><em>Layer Option</em></alert> has 2
               tabs.
-              Press on the 2nd, <alert><em>Layer Parameters</em></alert>, Fig.
-              73.
+              Press on the 2nd, <alert><em>Layer Parameters</em></alert>, <xref ref="fig-ch2-71"/>.
             </p>
           </li>
         </ul>
@@ -2798,11 +2722,9 @@
       </p>
 
       <p>
-        The resulting graph, Fig.
-        75, shows it worked!
+        The resulting graph, <xref ref="fig-ch2-73"/>, shows it worked!
         The correlation is 0.82, and the small p-value provides strong evidence
-        that the slope is not zero Fig.
-        75, assuming the linear model is appropriate.
+        that the slope is not zero <xref ref="fig-ch2-73"/>, assuming the linear model is appropriate.
       </p>
 
       <exercise xml:id="ex-ch2-corr">
@@ -2856,8 +2778,7 @@
       </p>
 
       <p>
-        The result, in Fig.
-        76, shows the value of this very clever set of data.
+        The result, in <xref ref="fig-ch2-74"/>, shows the value of this very clever set of data.
         With the second set, as soon as you see the data, you know that fitting
         a straight line is a ridiculous summary.
         But notice also that the summary statistics, both the equation, and the
@@ -2919,8 +2840,7 @@
           <li>
             <p>
               This time the x’s are also different, so change to
-              <alert><em>x4</em></alert> as well, Fig.
-              78.
+              <alert><em>x4</em></alert> as well, <xref ref="fig-ch2-76"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -2983,8 +2903,7 @@
 
           <li>
             <p>
-              Add all the columns, Fig.
-              80 and tick the checkbox to
+              Add all the columns, <xref ref="fig-ch2-78"/> and tick the checkbox to
               <alert><em>Stack multiple column sets</em></alert>.
             </p>
           </li>
@@ -3030,8 +2949,7 @@
       </sidebyside>
 
       <p>
-        The 4 sets of data, in Fig.
-        81, are now one below the other.
+        The 4 sets of data, in <xref ref="fig-ch2-79"/>, are now one below the other.
         So, there are now 44 rows of data.
       </p>
 
@@ -3055,8 +2973,7 @@
           <li>
             <p>
               Use the <alert><em>down-arrow</em></alert> and move to the new
-              data frame, Fig.
-              82
+              data frame, <xref ref="fig-ch2-80"/>
             </p>
           </li>
         </ul>
@@ -3106,8 +3023,7 @@
       </sidebyside>
 
       <p>
-        The resulting 4 graphs are in Fig.
-        83.
+        The resulting 4 graphs are in <xref ref="fig-ch2-81"/>.
         They combine the graphs, by default they have the same x-axis and y-axis
         for each graph.
         So, the axis labels are only at the bottom and left of the set of graphs
@@ -3188,14 +3104,12 @@
       <p>
         The resulting graphs are nicely in colour.
         But the different position of the regression equation, which was fine in
-        Fig.
-        83, is a problem with the facets, and particularly with the last graph.
+        <xref ref="fig-ch2-81"/>, is a problem with the facets, and particularly with the last graph.
       </p>
 
       <p>
         Fortunately, you know how to correct this.
-        Also, the legend is no longer needed in Fig.
-        85.
+        Also, the legend is no longer needed in <xref ref="fig-ch2-83"/>.
       </p>
 
       <p>
@@ -3223,8 +3137,7 @@
           <li>
             <p>
               Check on the <alert><em>Legend</em></alert> checkbox, to set it to
-              <alert><em>None</em></alert>, Fig.
-              86.
+              <alert><em>None</em></alert>, <xref ref="fig-ch2-84"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -3297,8 +3210,7 @@
           <li>
             <p>
               Include <alert><em>set</em></alert> in the
-              <alert><em>Facet By</em></alert>, Fig.
-              88.
+              <alert><em>Facet By</em></alert>, <xref ref="fig-ch2-86"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -3330,7 +3242,7 @@
       </sidebyside>
 
       <p>
-        Figure 89 shows the four graphs in a two-by-two arrangement.
+        <xref ref="fig-ch2-87"/> shows the four graphs in a two-by-two arrangement.
         Although it looks like a two-way table, it is a one-way display because
         its four cells are defined by the four levels of a single factor:
         <alert><em>set</em></alert>.
@@ -3349,8 +3261,7 @@
             <p>
               Use the down arrow by <alert><em>Facet wrap</em></alert> and use
               <alert><em>Facet Column + O</em></alert>.
-              (O is for overall), Fig.
-              90.
+              (O is for overall), <xref ref="fig-ch2-88"/>.
             </p>
           </li>
 
@@ -3387,8 +3298,7 @@
       </sidebyside>
 
       <p>
-        The <alert><em>all</em></alert> panel on the right of Fig.
-        91 plays the same role as a total column in an ordinary table.
+        The <alert><em>all</em></alert> panel on the right of <xref ref="fig-ch2-89"/> plays the same role as a total column in an ordinary table.
       </p>
 
       <p>
@@ -3447,8 +3357,7 @@
             <p>
               In the <alert><em>New Label</em></alert> column make 1 and 2 into
               <alert><em>linear</em></alert>.
-              Then 3 and 4 into <alert><em>outlier</em></alert>, Fig.
-              92.
+              Then 3 and 4 into <alert><em>outlier</em></alert>, <xref ref="fig-ch2-90"/>.
             </p>
           </li>
 
@@ -3478,8 +3387,7 @@
 
           <li>
             <p>
-              Call the new column <alert><em>simple</em></alert>, Fig.
-              93.
+              Call the new column <alert><em>simple</em></alert>, <xref ref="fig-ch2-91"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -3528,8 +3436,7 @@
           <li>
             <p>
               Close and repeat with the new <alert><em>simple</em></alert>
-              column, Fig.
-              94.
+              column, <xref ref="fig-ch2-92"/>.
             </p>
           </li>
         </ul>
@@ -3566,8 +3473,7 @@
 
           <li>
             <p>
-              Add the two new 2-level factors, Fig.
-              95.
+              Add the two new 2-level factors, <xref ref="fig-ch2-93"/>.
               Also check <alert><em>margins</em></alert> are ticked.
             </p>
           </li>
@@ -3606,8 +3512,7 @@
       </sidebyside>
 
       <p>
-        The results are in Fig.
-        96.
+        The results are in <xref ref="fig-ch2-94"/>.
       </p>
 
       <p>
