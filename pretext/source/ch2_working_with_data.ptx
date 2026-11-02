@@ -242,7 +242,7 @@
 <sidebyside widths="45% 45%">
         <figure xml:id="fig-ch2-05">
         <caption>Pivot Table</caption>
-        <image source="images/ch2/image13.png" width="70%">
+        <image source="images/ch2/image13.png" width="45%">
           <description>
             <p>
               Pivot Table
@@ -253,7 +253,7 @@
 
         <figure xml:id="fig-6">
           <caption>Heatmap</caption>
-          <image source="images/ch2/fig_6.png" width="45%">
+          <image source="images/ch2/image75.png" width="45%">
             <description>
               <p>
                 Heatmap
@@ -834,7 +834,16 @@
           </li>
         </ul>
       </p>
-
+     <figure xml:id="fig_24">
+        <caption>Save As</caption>
+        <image source="images/ch2/Fig_24.png" width="70%">
+          <description>
+            <p>
+              Save As
+            </p>
+          </description>
+        </image>
+      </figure>
       <p>
         <em>The bamboo data have now been checked, correcte, and saved, ready for later analysis. This example is more than a correction exercise. It shows a common workflow: start by looking at the data, use a table or graph to reveal structure, check anything that looks odd, make a careful correction, and then check again.</em>
       </p>
