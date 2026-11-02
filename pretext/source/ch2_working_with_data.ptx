@@ -512,13 +512,13 @@
 
         <figure xml:id="fig-ch2-13">
           <caption>
-            The filtered data Right-click &gt; Convert to Character
+            The filtered data
           </caption>
 
           <image source="images/ch2/image85.png" width="45%">
             <description>
               <p>
-                The filtered data Right-click &gt; Convert to Character
+                The filtered data
               </p>
             </description>
           </image>
@@ -1889,10 +1889,11 @@
         </figure>
 
         <figure xml:id="fig-ch2-47">
+          <caption>The incomplete block data.</caption>
           <image source="images/ch2/image24.png" width="45%">
             <description>
               <p>
-                image24.png
+                The incomplete block data.
               </p>
             </description>
           </image>
