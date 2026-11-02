@@ -251,7 +251,7 @@
         </image>
       </figure>
 
-        <figure xml:id="fig-6">
+        <figure xml:id="fig-ch2-06">
           <caption>Heatmap</caption>
           <image source="images/ch2/image77.png" width="45%">
             <description>
@@ -304,7 +304,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-06">
+        <figure xml:id="fig-ch2-07">
           <caption>Change Average to Count</caption>
           <image source="images/ch2/image92.png" width="45%">
             <description>
@@ -315,7 +315,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-07">
+        <figure xml:id="fig-ch2-08">
           <caption>By Count</caption>
           <image source="images/ch2/image84.png" width="45%">
             <description>
@@ -352,7 +352,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-08">
+        <figure xml:id="fig-ch2-09">
           <caption>The duplicate values</caption>
           <image source="images/ch2/image87.png" width="45%">
             <description>
@@ -363,7 +363,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-09">
+        <figure xml:id="fig-ch2-10">
           <caption>
             <alert>Prepare &gt; Check Data &gt; Duplicate Rows</alert>
           </caption>
@@ -409,7 +409,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-10">
+        <figure xml:id="fig-ch2-11">
           <caption>Duplicate Rows dialog</caption>
           <image source="images/ch2/image95.png" width="45%">
             <description>
@@ -420,7 +420,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-11">
+        <figure xml:id="fig-ch2-12">
           <caption>Right-click &gt; Filter Rows</caption>
           <image source="images/ch2/image83.png" width="45%">
             <description>
@@ -499,7 +499,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-12">
+        <figure xml:id="fig-ch2-13">
           <caption>Filter dialog and sub-dialog</caption>
           <image source="images/ch2/image90.png" width="45%">
             <description>
@@ -510,7 +510,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-13">
+        <figure xml:id="fig-ch2-14">
           <caption>
             The filtered data
           </caption>
@@ -567,7 +567,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-14">
+        <figure xml:id="fig-ch2-15">
           <caption>Replace Values dialog</caption>
           <image source="images/ch2/image97.png" width="45%">
             <description>
@@ -578,7 +578,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-15">
+        <figure xml:id="fig-ch2-16">
           <caption>Right-click &gt; Remove Current Filter</caption>
           <image source="images/ch2/image86.png" width="45%">
             <description>
@@ -632,7 +632,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-16">
+        <figure xml:id="fig-ch2-17">
           <caption>Right-click &gt; Levels/Labels</caption>
           <image source="images/ch2/image91.png" width="45%">
             <description>
@@ -643,7 +643,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-17">
+        <figure xml:id="fig-ch2-18">
           <caption>Levels/Labels dialog</caption>
           <image source="images/ch2/image96.png" width="45%">
             <description>
@@ -686,7 +686,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-18">
+        <figure xml:id="fig-ch2-19">
           <caption>One Variable Summarise dialog</caption>
           <image source="images/ch2/image93.png" width="45%">
             <description>
@@ -697,7 +697,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-19">
+        <figure xml:id="fig-ch2-20">
           <caption>The Summary</caption>
           <image source="images/ch2/image61.png" width="45%">
             <description>
@@ -749,7 +749,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-20">
+        <figure xml:id="fig-ch2-21">
           <caption>Pivot Table dialog</caption>
           <image source="images/ch2/image67.png" width="45%">
             <description>
@@ -760,7 +760,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-21">
+        <figure xml:id="fig-ch2-22">
           <caption>The Count</caption>
           <image source="images/ch2/image65.png" width="45%">
             <description>
@@ -798,7 +798,7 @@
         20).
       </p>
 
-      <figure xml:id="fig-ch2-22">
+      <figure xml:id="fig-ch2-23">
         <caption>The heatmap</caption>
         <image source="images/ch2/image75.png" width="70%">
           <description>
@@ -834,7 +834,7 @@
           </li>
         </ul>
       </p>
-     <figure xml:id="fig_24">
+     <figure xml:id="fig-ch2-24">
         <caption>Save As</caption>
         <image source="images/ch2/Fig_24.png" width="70%">
           <description>
@@ -893,7 +893,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-23">
+        <figure xml:id="fig-ch2-25">
           <caption>Import from Library dialog</caption>
           <image source="images/ch2/image66.png" width="45%">
             <description>
@@ -904,7 +904,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-24">
+        <figure xml:id="fig-ch2-26">
           <caption>The Maths Dataset</caption>
           <image source="images/ch2/image69.png" width="45%">
             <description>
@@ -993,7 +993,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-25">
+        <figure xml:id="fig-ch2-27">
           <caption>Prepare &gt; Data Frame &gt; Insert Columns/Rows</caption>
           <image source="images/ch2/image68.png" width="45%">
             <description>
@@ -1004,7 +1004,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-26">
+        <figure xml:id="fig-ch2-28">
           <caption>Insert Columns/Rows</caption>
           <image source="images/ch2/image71.png" width="45%">
             <description>
@@ -1043,7 +1043,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-27">
+        <figure xml:id="fig-ch2-29">
           <caption>Right-click &gt; Edit Cell</caption>
           <image source="images/ch2/image70.png" width="45%">
             <description>
@@ -1054,7 +1054,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-28">
+        <figure xml:id="fig-ch2-30">
           <caption>Edit Cell dialog</caption>
           <image source="images/ch2/image72.png" width="45%">
             <description>
@@ -1087,7 +1087,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-29">
+        <figure xml:id="fig-ch2-31">
           <caption>Edit Cell dialog</caption>
           <image source="images/ch2/image32.png" width="45%">
             <description>
@@ -1098,7 +1098,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-30">
+        <figure xml:id="fig-ch2-32">
           <caption>Edit Cell dialog</caption>
           <image source="images/ch2/image18.png" width="45%">
             <description>
@@ -1168,7 +1168,7 @@
         </ul>
       </p>
 
-      <figure xml:id="fig-ch2-31">
+      <figure xml:id="fig-ch2-33">
         <caption>: The Expanded Data View</caption>
         <image source="images/ch2/image19.png" width="70%">
           <description>
@@ -1259,7 +1259,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-32">
+        <figure xml:id="fig-ch2-34">
           <caption>Output Icon</caption>
           <image source="images/ch2/image10.png" width="45%">
             <description>
@@ -1270,7 +1270,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-33">
+        <figure xml:id="fig-ch2-35">
           <caption>Rename Columns dialog</caption>
           <image source="images/ch2/image9.png" width="45%">
             <description>
@@ -1371,7 +1371,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-34">
+        <figure xml:id="fig-ch2-36">
           <caption>Swap Data with Column Metadata</caption>
           <image source="images/ch2/image5.png" width="45%">
             <description>
@@ -1382,7 +1382,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-35">
+        <figure xml:id="fig-ch2-37">
           <caption>Column Metadata</caption>
           <image source="images/ch2/image21.png" width="45%">
             <description>
@@ -1431,7 +1431,7 @@
         </ul>
       </p>
 
-      <figure xml:id="fig-ch2-36">
+      <figure xml:id="fig-ch2-38">
         <caption>Rename Columns dialog</caption>
         <image source="images/ch2/image11.png" width="70%">
           <description>
@@ -1488,7 +1488,7 @@
         </ul>
       </p>
 
-      <figure xml:id="fig-ch2-37">
+      <figure xml:id="fig-ch2-39">
         <caption>Columns Selection dialog</caption>
         <image source="images/ch2/image22.png" width="70%">
           <description>
@@ -1588,7 +1588,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-38">
+        <figure xml:id="fig-ch2-40">
           <caption>Negative Selection</caption>
           <image source="images/ch2/image8.png" width="45%">
             <description>
@@ -1599,7 +1599,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-39">
+        <figure xml:id="fig-ch2-41">
           <caption>Column Selection dialog</caption>
           <image source="images/ch2/image6.png" width="45%">
             <description>
@@ -1638,7 +1638,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-40">
+        <figure xml:id="fig-ch2-42">
           <caption>More Likert Graph dialog</caption>
           <image source="images/ch2/image7.png" width="45%">
             <description>
@@ -1649,7 +1649,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-41">
+        <figure xml:id="fig-ch2-43">
           <caption>Likert Graph</caption>
           <image source="images/ch2/image15.png" width="45%">
             <description>
@@ -1717,7 +1717,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-42">
+        <figure xml:id="fig-ch2-44">
           <caption>Likert Graph</caption>
           <image source="images/ch2/image2.png" width="45%">
             <description>
@@ -1728,7 +1728,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-43">
+        <figure xml:id="fig-ch2-45">
           <caption>Likert Graph Comparing Male and Female</caption>
           <image source="images/ch2/image16.png" width="45%">
             <description>
@@ -1809,7 +1809,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-44">
+        <figure xml:id="fig-ch2-46">
           <caption>More Likert Graph dialog</caption>
           <image source="images/ch2/image12.png" width="45%">
             <description>
@@ -1820,7 +1820,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-45">
+        <figure xml:id="fig-ch2-47">
           <caption>Likert Graph dialog</caption>
           <image source="images/ch2/image3.png" width="45%">
             <description>
@@ -1877,7 +1877,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-46">
+        <figure xml:id="fig-ch2-48">
           <caption>Import from Library dialog</caption>
           <image source="images/ch2/image14.png" width="45%">
             <description>
@@ -1888,7 +1888,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-47">
+        <figure xml:id="fig-ch2-49">
           <caption>The incomplete block data.</caption>
           <image source="images/ch2/image24.png" width="45%">
             <description>
@@ -1937,7 +1937,7 @@
         </ul>
       </p>
 
-      <figure xml:id="fig-ch2-48">
+      <figure xml:id="fig-ch2-50">
         <caption>Pivot Table of Layout</caption>
         <image source="images/ch2/image56.png" width="70%">
           <description>
@@ -1975,7 +1975,7 @@
         </ul>
       </p>
 
-      <figure xml:id="fig-ch2-49">
+      <figure xml:id="fig-ch2-51">
         <caption>Row Heatmap</caption>
         <image source="images/ch2/image64.png" width="70%">
           <description>
@@ -2049,7 +2049,7 @@
         That’s the only yield of over 40.
       </p>
 
-      <figure xml:id="fig-ch2-50">
+      <figure xml:id="fig-ch2-52">
         <caption>Heatmap</caption>
         <image source="images/ch2/image31.png" width="70%">
           <description>
@@ -2094,7 +2094,7 @@
       </p>
 
       <sidebyside widths="30% 30% 30%">
-        <figure xml:id="fig-ch2-51">
+        <figure xml:id="fig-ch2-53">
           <caption>Transform yields to ranks</caption>
           <image source="images/ch2/image38.png" width="30%">
             <description>
@@ -2105,7 +2105,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-52">
+        <figure xml:id="fig-ch2-54">
           <caption>Rank 1</caption>
           <image source="images/ch2/image29.png" width="30%">
             <description>
@@ -2116,7 +2116,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-53">
+        <figure xml:id="fig-ch2-55">
           <caption>Rank 52</caption>
           <image source="images/ch2/image45.png" width="30%">
             <description>
@@ -2176,7 +2176,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-54">
+        <figure xml:id="fig-ch2-56">
           <caption>Pivot Table dialog</caption>
           <image source="images/ch2/image48.png" width="45%">
             <description>
@@ -2187,7 +2187,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-55">
+        <figure xml:id="fig-ch2-57">
           <caption>Pivot Table Heatmap Layout</caption>
           <image source="images/ch2/image39.png" width="45%">
             <description>
@@ -2253,7 +2253,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-56">
+        <figure xml:id="fig-ch2-58">
           <caption>Editing the code</caption>
           <image source="images/ch2/image34.png" width="45%">
             <description>
@@ -2264,7 +2264,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-57">
+        <figure xml:id="fig-ch2-59">
           <caption>The reversed ranks</caption>
           <image source="images/ch2/image27.png" width="45%">
             <description>
@@ -2349,7 +2349,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-58">
+        <figure xml:id="fig-ch2-60">
           <caption>Import from Library dialog</caption>
           <image source="images/ch2/image23.png" width="45%">
             <description>
@@ -2360,7 +2360,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-59">
+        <figure xml:id="fig-ch2-61">
           <caption>anscombequartet data</caption>
           <image source="images/ch2/image20.png" width="45%">
             <description>
@@ -2408,7 +2408,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-60">
+        <figure xml:id="fig-ch2-62">
           <caption>One Variable Graph dialog</caption>
           <image source="images/ch2/image60.png" width="45%">
             <description>
@@ -2419,7 +2419,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-61">
+        <figure xml:id="fig-ch2-63">
           <caption>The One Variable Graph</caption>
           <image source="images/ch2/image43.png" width="45%">
             <description>
@@ -2468,7 +2468,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-62">
+        <figure xml:id="fig-ch2-64">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image33.png" width="45%">
             <description>
@@ -2479,7 +2479,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-63">
+        <figure xml:id="fig-ch2-65">
           <caption>The Scatter Plot</caption>
           <image source="images/ch2/image40.png" width="45%">
             <description>
@@ -2592,7 +2592,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-64">
+        <figure xml:id="fig-ch2-66">
           <caption>Scatterplot with Line of Best Fit</caption>
           <image source="images/ch2/image26.png" width="45%">
             <description>
@@ -2603,7 +2603,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-65">
+        <figure xml:id="fig-ch2-67">
           <caption>Plot Options sub-dialog</caption>
           <image source="images/ch2/image25.png" width="45%">
             <description>
@@ -2646,7 +2646,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-66">
+        <figure xml:id="fig-ch2-68">
           <caption>Layer Options sub-dialog</caption>
           <image source="images/ch2/image30.png" width="45%">
             <description>
@@ -2657,7 +2657,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-67">
+        <figure xml:id="fig-ch2-69">
           <caption>Scatterplot with the equation</caption>
           <image source="images/ch2/image28.png" width="45%">
             <description>
@@ -2736,7 +2736,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-68">
+        <figure xml:id="fig-ch2-70">
           <caption>Plot Options sub-dialog</caption>
           <image source="images/ch2/image17.png" width="45%">
             <description>
@@ -2747,7 +2747,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-69">
+        <figure xml:id="fig-ch2-71">
           <caption>Scatterplot with additional layers</caption>
           <image source="images/ch2/image55.png" width="45%">
             <description>
@@ -2782,7 +2782,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-70">
+        <figure xml:id="fig-ch2-72">
           <caption>Plot Options sub-dialog</caption>
           <image source="images/ch2/image54.png" width="45%">
             <description>
@@ -2793,7 +2793,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-71">
+        <figure xml:id="fig-ch2-73">
           <caption>Layer Options sub-dialog</caption>
           <image source="images/ch2/image52.png" width="45%">
             <description>
@@ -2840,7 +2840,7 @@
       </exercise>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-72">
+        <figure xml:id="fig-ch2-74">
           <caption>Adding label.y</caption>
           <image source="images/ch2/image62.png" width="45%">
             <description>
@@ -2851,7 +2851,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-73">
+        <figure xml:id="fig-ch2-75">
           <caption>The Resulting graph</caption>
           <image source="images/ch2/image53.png" width="45%">
             <description>
@@ -2905,7 +2905,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-74">
+        <figure xml:id="fig-ch2-76">
           <caption>Scatterplot for y2</caption>
           <image source="images/ch2/image58.png" width="45%">
             <description>
@@ -2916,7 +2916,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-75">
+        <figure xml:id="fig-ch2-77">
           <caption>Scatterplot for y3</caption>
           <image source="images/ch2/image59.png" width="45%">
             <description>
@@ -2956,7 +2956,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-76">
+        <figure xml:id="fig-ch2-78">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image57.png" width="45%">
             <description>
@@ -2967,7 +2967,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-77">
+        <figure xml:id="fig-ch2-79">
           <caption>Scatterplot with y4 and x4</caption>
           <image source="images/ch2/image89.png" width="45%">
             <description>
@@ -3034,7 +3034,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-78">
+        <figure xml:id="fig-ch2-80">
           <caption>Stack dialog</caption>
           <image source="images/ch2/image50.png" width="45%">
             <description>
@@ -3045,7 +3045,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-79">
+        <figure xml:id="fig-ch2-81">
           <caption>The stacked data</caption>
           <image source="images/ch2/image49.png" width="45%">
             <description>
@@ -3110,7 +3110,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-80">
+        <figure xml:id="fig-ch2-82">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image41.png" width="45%">
             <description>
@@ -3121,7 +3121,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-81">
+        <figure xml:id="fig-ch2-83">
           <caption>The resulting graphs</caption>
           <image source="images/ch2/image36.png" width="45%">
             <description>
@@ -3162,7 +3162,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-82">
+        <figure xml:id="fig-ch2-84">
           <caption>The Graph without facets</caption>
           <image source="images/ch2/image47.png" width="45%">
             <description>
@@ -3173,7 +3173,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-83">
+        <figure xml:id="fig-ch2-85">
           <caption>The graph by variable and faceted</caption>
           <image source="images/ch2/image44.png" width="45%">
             <description>
@@ -3260,7 +3260,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-84">
+        <figure xml:id="fig-ch2-86">
           <caption>Point Plot dialog</caption>
           <image source="images/ch2/image63.png" width="45%">
             <description>
@@ -3271,7 +3271,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-85">
+        <figure xml:id="fig-ch2-87">
           <caption>Improved look of the graph</caption>
           <image source="images/ch2/image51.png" width="45%">
             <description>
@@ -3334,7 +3334,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-86">
+        <figure xml:id="fig-ch2-88">
           <caption>Scatter Plot dialog</caption>
           <image source="images/ch2/image46.png" width="45%">
             <description>
@@ -3345,7 +3345,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-87">
+        <figure xml:id="fig-ch2-89">
           <caption>The resulting graph</caption>
           <image source="images/ch2/image35.png" width="45%">
             <description>
@@ -3391,7 +3391,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-88">
+        <figure xml:id="fig-ch2-90">
           <caption>Scatter Plot dialog</caption>
           <image source="images/ch2/image79.png" width="45%">
             <description>
@@ -3402,7 +3402,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-89">
+        <figure xml:id="fig-ch2-91">
           <caption>Resulting graph</caption>
           <image source="images/ch2/image37.png" width="45%">
             <description>
@@ -3520,7 +3520,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-90">
+        <figure xml:id="fig-ch2-92">
           <caption>Recode Factor dialog</caption>
           <image source="images/ch2/image42.png" width="45%">
             <description>
@@ -3531,7 +3531,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-91">
+        <figure xml:id="fig-ch2-93">
           <caption>Recode Factor dialog</caption>
           <image source="images/ch2/image76.png" width="45%">
             <description>
@@ -3610,7 +3610,7 @@
       </p>
 
       <sidebyside widths="45% 45%">
-        <figure xml:id="fig-ch2-92">
+        <figure xml:id="fig-ch2-94">
           <caption>Levels/Labels dialog</caption>
           <image source="images/ch2/image82.png" width="45%">
             <description>
@@ -3621,7 +3621,7 @@
           </image>
         </figure>
 
-        <figure xml:id="fig-ch2-93">
+        <figure xml:id="fig-ch2-95">
           <caption>The Scatter Plot dialog</caption>
           <image source="images/ch2/image94.png" width="45%">
             <description>
@@ -3644,7 +3644,7 @@
         there are 9 cells in the resulting table.
       </p>
 
-      <figure xml:id="fig-ch2-94">
+      <figure xml:id="fig-ch2-96">
         <caption>The resulting graph</caption>
         <image source="images/ch2/image88.png" width="70%">
           <description>
