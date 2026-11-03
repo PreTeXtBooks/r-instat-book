@@ -2,4 +2,8 @@
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
   <document-id>tidy-text-mining</document-id>
   <math-package latex-name="cancel" mathjax-name="cancel"/>
+  <!-- Number figures on their own counter, sequentially through the whole book (1, 2, 3, ...) -->
+  <numbering>
+    <figures level="0"/>
+  </numbering>
 </docinfo>

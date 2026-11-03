@@ -73,16 +73,14 @@
           <li>
             <p>
               Go to the <alert><em>agridat</em></alert> package and choose the
-              <alert><em>cochran.bib</em></alert> data, Fig.
-              1.
+              <alert><em>cochran.bib</em></alert> data, <xref ref="fig-ch3-01"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
 
           <li>
             <p>
-              Use <alert><em>Prepare &gt; Calculator</em></alert>, Fig.
-              2.
+              Use <alert><em>Prepare &gt; Calculator</em></alert>, <xref ref="fig-ch3-02"/>.
             </p>
           </li>
         </ul>
@@ -133,8 +131,7 @@
 
           <li>
             <p>
-              Press <alert><em>Try</em></alert>, Fig.
-              2.
+              Press <alert><em>Try</em></alert>, <xref ref="fig-ch3-02"/>.
               Type <alert><em>yield1</em></alert> as the result to be stored.
               Press <alert><em>Ok</em></alert>.
             </p>
@@ -160,8 +157,7 @@
               Return to the calculator.
               Press <alert><em>Clear</em></alert>.
               Press the down arrow where it says <alert><em>Basic</em></alert>
-              and choose the <alert><em>Maths</em></alert> keyboard, Fig.
-              3.
+              and choose the <alert><em>Maths</em></alert> keyboard, <xref ref="fig-ch3-03"/>.
             </p>
           </li>
 
@@ -234,8 +230,7 @@
               This time add <alert><em>yield</em></alert>, then
               <alert><em>/ 2.2</em></alert>.
               Then change <alert><em>0 to 1</em></alert> after the comma.
-              Press <alert><em>Try</em></alert>, Fig.
-              5.
+              Press <alert><em>Try</em></alert>, <xref ref="fig-ch3-05"/>.
             </p>
           </li>
 
@@ -258,8 +253,7 @@
             <p>
               Return to the <alert><em>calculator</em></alert> and press
               <alert><em>Clear</em></alert>.
-              Move to the <alert><em>Transform keyboard</em></alert>, Fig.
-              6.
+              Move to the <alert><em>Transform keyboard</em></alert>, <xref ref="fig-ch3-06"/>.
             </p>
           </li>
 
@@ -273,8 +267,7 @@
 
           <li>
             <p>
-              Call the result <alert><em>rank</em></alert>, Fig.
-              6, then press <alert><em>Ok</em></alert>.
+              Call the result <alert><em>rank</em></alert>, <xref ref="fig-ch3-06"/>, then press <alert><em>Ok</em></alert>.
             </p>
           </li>
         </ul>
@@ -321,8 +314,7 @@
 
           <li>
             <p>
-              Call it <alert><em>rank1</em></alert>, Fig.
-              7, and press <alert><em>Ok</em></alert>.
+              Call it <alert><em>rank1</em></alert>, <xref ref="fig-ch3-07"/>, and press <alert><em>Ok</em></alert>.
             </p>
           </li>
         </ul>
@@ -384,8 +376,7 @@
             <p>
               Use the keyboard to put <alert><em>57 * 61</em></alert> into the
               expression.
-              Then press <alert><em>Try</em></alert>, Fig.
-              9.
+              Then press <alert><em>Try</em></alert>, <xref ref="fig-ch3-09"/>.
             </p>
           </li>
         </ul>
@@ -467,8 +458,7 @@
 
           <li>
             <p>
-              Hover over the <alert><em>square root</em></alert> button, Fig.
-              10.
+              Hover over the <alert><em>square root</em></alert> button, <xref ref="fig-ch3-10"/>.
             </p>
           </li>
         </ul>
@@ -501,7 +491,7 @@
               Press <alert><em>Clear</em></alert>, then the
               <alert><em>logit</em></alert> key.
               Add <alert><em>yield</em></alert> and press
-              <alert><em>Try</em></alert>, Fig 11.
+              <alert><em>Try</em></alert>, <xref ref="fig-ch3-11"/>.
             </p>
           </li>
         </ul>
@@ -549,8 +539,7 @@
         <ul>
           <li>
             <p>
-              Click the down arrow by the R Help key, Fig.
-              12.
+              Click the down arrow by the R Help key, <xref ref="fig-ch3-12"/>.
             </p>
           </li>
         </ul>
@@ -567,8 +556,7 @@
             <p>
               Click on car and you get to the whole documentation for the R car
               package.
-              Go to logit, Fig.
-              13.
+              Go to logit, <xref ref="fig-ch3-13"/>.
             </p>
           </li>
         </ul>
@@ -645,8 +633,7 @@
           <li>
             <p>
               It goes red.
-              Press the 3 little points at the end of the Try control, Fig.
-              14.
+              Press the 3 little points at the end of the Try control, <xref ref="fig-ch3-14"/>.
             </p>
           </li>
         </ul>
@@ -705,8 +692,7 @@
               Press <alert><em>Clear</em></alert>, then click (
               <alert><em>15 - - 10</em></alert> ).
               (So, minus (-) repeated twice this time.) Then press
-              <alert><em>Try</em></alert>, Fig.
-              15.
+              <alert><em>Try</em></alert>, <xref ref="fig-ch3-15"/>.
             </p>
           </li>
         </ul>
@@ -753,8 +739,7 @@
             <p>
               Back to the calculator.
               Press <alert><em>Clear</em></alert>, then choose the
-              <alert><em>Summary</em></alert> keyboard, Fig.
-              16.
+              <alert><em>Summary</em></alert> keyboard, <xref ref="fig-ch3-16"/>.
             </p>
           </li>
 
@@ -809,8 +794,7 @@
       </p>
 
       <p>
-        This produces a new column, with the mean repeated in each row, Fig.
-        17.
+        This produces a new column, with the mean repeated in each row, <xref ref="fig-ch3-17"/>.
       </p>
       <aside>
         <p>
@@ -967,8 +951,7 @@
 
       <p>
         You can see from the result in the try box that the there are 46
-        distinct values, Fig.
-        19.
+        distinct values, <xref ref="fig-ch3-19"/>.
         There are 52 rows of data, so some yields must be identical.
         In other words, there are some ties in the original data.
       </p>
@@ -1016,8 +999,7 @@
         The Try box result only shows 41 values.
         This is because rounding has made some slightly different values look
         the same.
-        Fig.
-        17 shows one example, where yield1 is 9.0 in both rows 2 and 6, while
+        <xref ref="fig-ch3-17"/> shows one example, where yield1 is 9.0 in both rows 2 and 6, while
         the original yield values are slightly different.
       </p>
 
@@ -1071,8 +1053,7 @@
 
       <p>
         We build up to this slowly.
-        The top row, Fig.
-        21, contains four ave keys.
+        The top row, <xref ref="fig-ch3-21"/>, contains four ave keys.
         The first two show what ave does; the fourth is the useful one for the
         grouped ranks.
       </p>
@@ -1083,8 +1064,7 @@
             <p>
               Use the first <alert><em>ave</em></alert> key.
               Add the <alert><em>yield</em></alert> variable, and press
-              <alert><em>Try</em></alert>, Fig.
-              21.
+              <alert><em>Try</em></alert>, <xref ref="fig-ch3-21"/>.
             </p>
           </li>
         </ul>
@@ -1112,8 +1092,7 @@
               Now use the <alert><em>ave_fun</em></alert> key.
               Press <alert><em>minus (-)</em></alert> then add the
               <alert><em>yield</em></alert>, and press
-              <alert><em>Try</em></alert>, Fig.
-              22.
+              <alert><em>Try</em></alert>, <xref ref="fig-ch3-22"/>.
             </p>
           </li>
         </ul>
@@ -1148,8 +1127,7 @@
       </p>
 
       <p>
-        Now examine the expression in Fig.
-        22.
+        Now examine the expression in <xref ref="fig-ch3-22"/>.
         It is using mean as the function inside ave.
         That function can be changed:
       </p>
@@ -1173,8 +1151,7 @@
         <ul>
           <li>
             <p>
-              Call the new column <alert><em>rank2</em></alert>, Fig.
-              23 and press <alert><em>Ok</em></alert>.
+              Call the new column <alert><em>rank2</em></alert>, <xref ref="fig-ch3-23"/> and press <alert><em>Ok</em></alert>.
             </p>
           </li>
         </ul>
@@ -1240,7 +1217,7 @@
           <li>
             <p>
               Change the mean to <alert><em>rank</em></alert>, and press
-              <alert><em>Try</em></alert>, Fig.24
+              <alert><em>Try</em></alert>, <xref ref="fig-ch3-24"/>
             </p>
           </li>
         </ul>
@@ -1337,8 +1314,7 @@
 
       <p>
         Remember that rank 1 is best, and it is shown in white.
-        In Fig.
-        26, G13 has 3 firsts and a second, while variety G01 has a mean rank of
+        In <xref ref="fig-ch3-26"/>, G13 has 3 firsts and a second, while variety G01 has a mean rank of
         1.5.
         These look like the best varieties.
         Variety G03, with a mean rank of 2, is next.
@@ -1353,8 +1329,7 @@
           <li>
             <p>
               Click the down arrow on <alert><em>rank_loc</em></alert> and
-              choose <alert><em>yield1</em></alert> (kgs) instead, Fig.
-              27.
+              choose <alert><em>yield1</em></alert> (kgs) instead, <xref ref="fig-ch3-27"/>.
             </p>
           </li>
         </ul>
@@ -1384,8 +1359,7 @@
       <p>
         The yields also permit the locations to be compared, and B03 has low
         yields.
-        The ranks in Fig.
-        17 do not, as each location has a mean of 2.5.
+        The ranks in <xref ref="fig-ch3-17"/> do not, as each location has a mean of 2.5.
         This comparison would also be possible with the ordinary ranks.
       </p>
 
@@ -1432,8 +1406,7 @@
           <li>
             <p>
               <alert><em>File &gt; Import From Library &gt; agridat package &gt; the archbold apple data</em></alert>,
-              Fig.
-              28.
+              <xref ref="fig-ch3-28"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -1445,8 +1418,7 @@
         Redspur Delicious apples.
         The trees were also at 3 different spacing levels and from 4 different
         rootstocks.
-        There were 5 blocks, making the 120 rows, Fig.
-        29.
+        There were 5 blocks, making the 120 rows, <xref ref="fig-ch3-29"/>.
       </p>
 
       <sidebyside widths="45% 45%">
@@ -1488,8 +1460,7 @@
       <p>
         Now we would like a bar chart using all the 3 treatment factors.
         This is not a trivial challenge.
-        Chapter 2, Fig.
-        47, showed 2 factors is the limit with the R-instat dialog.
+        Chapter 2, <xref ref="fig-ch2-45"/>, showed 2 factors is the limit with the R-instat dialog.
       </p>
 
       <p>
@@ -1522,8 +1493,7 @@
 
           <li>
             <p>
-              Press the <alert><em>Plot Options</em></alert> button, Fig.
-              30.
+              Press the <alert><em>Plot Options</em></alert> button, <xref ref="fig-ch3-30"/>.
               <alert><em>Tick to include</em></alert> Facets.
             </p>
           </li>
@@ -1616,8 +1586,7 @@
       </p>
 
       <p>
-        The tidied script is in Fig.
-        33.
+        The tidied script is in <xref ref="fig-ch3-33"/>.
       </p>
 
       <figure xml:id="fig-ch3-32">
@@ -1654,8 +1623,7 @@
           <li>
             <p>
               Press <alert><em>Run</em></alert> again and it should run the
-              whole command, so all 5 lines in Fig.
-              32.
+              whole command, so all 5 lines in <xref ref="fig-ch3-32"/>.
             </p>
           </li>
 
@@ -1669,9 +1637,9 @@
       </p>
 
       <p>
-        The script in Fig 32 is worth an examination.
+        The script in <xref ref="fig-ch3-32"/> is worth an examination.
         It is long, but, maybe surprisingly, easy to read at least parts.
-        So notice in Fig 32
+        So notice in <xref ref="fig-ch3-32"/>
       </p>
 
       <p>
@@ -1813,17 +1781,15 @@
       </p>
 
       <p>
-        There remain 3 small problems with the labels in Fig 35.
+        There remain 3 small problems with the labels in <xref ref="fig-ch3-35"/>.
         They are too big, they are in the wrong place, and the decimal is not
         needed.
-        Changing them are all tweaks in line 8 of Fig.
-        33.
+        Changing them are all tweaks in line 8 of <xref ref="fig-ch3-33"/>.
       </p>
 
       <p>
         The last is easy, luckily you used the <alert><em>round</em></alert>
-        function earlier in this chapter, Fig.
-        5.
+        function earlier in this chapter, <xref ref="fig-ch3-05"/>.
       </p>
 
       <p>
@@ -1853,8 +1819,7 @@
       </p>
 
       <p>
-        The results, in Fig.
-        35, are better.
+        The results, in <xref ref="fig-ch3-35"/>, are better.
       </p>
 
       <p>
@@ -1928,8 +1893,7 @@
             <p>
               Click the
               <alert><em>down arrow, by the output window icon</em></alert>, ,
-              Fig.
-              37.
+              <xref ref="fig-ch3-37"/>.
             </p>
           </li>
 
@@ -1943,8 +1907,7 @@
             <p>
               Use <alert><em>Import from Library</em></alert> choose the
               <alert><em>lsrdata</em></alert> package, then
-              <alert><em>clinicaltria</em></alert> l, Fig.
-              38.
+              <alert><em>clinicaltria</em></alert> l, <xref ref="fig-ch3-38"/>.
             </p>
           </li>
 
@@ -1995,8 +1958,7 @@
             <p>
               Use
               <alert><em>Describe &gt; One Variable &gt; Summarise</em></alert>.
-              Click to <alert><em>Add All</em></alert>, Fig.
-              39.
+              Click to <alert><em>Add All</em></alert>, <xref ref="fig-ch3-39"/>.
               Press <alert><em>Ok</em></alert>.
             </p>
           </li>
@@ -2004,8 +1966,7 @@
       </p>
 
       <p>
-        The results are quite neatly presented, Fig.
-        40.
+        The results are quite neatly presented, <xref ref="fig-ch3-40"/>.
         The R commands are now shown above the results.
       </p>
 
@@ -2071,8 +2032,7 @@
         <ul>
           <li>
             <p>
-              Return to the toolbar, Fig.
-              37 and stop showing the R commands.
+              Return to the toolbar, <xref ref="fig-ch3-37"/> and stop showing the R commands.
             </p>
           </li>
         </ul>
@@ -2136,8 +2096,7 @@
           <li>
             <p>
               <alert><em>Press New</em></alert> to give a blank script window,
-              then press the <alert><em>Insert</em></alert> button, Fig.
-              41.
+              then press the <alert><em>Insert</em></alert> button, <xref ref="fig-ch3-41"/>.
             </p>
           </li>
         </ul>
@@ -2172,15 +2131,13 @@
           <li>
             <p>
               Choose the <alert><em>Library tab</em></alert> in the Script
-              dialog and then the agridat package, Fig.
-              42.
+              dialog and then the agridat package, <xref ref="fig-ch3-42"/>.
             </p>
           </li>
 
           <li>
             <p>
-              Scroll down to select jayaram.bamboo, Fig.
-              42.
+              Scroll down to select jayaram.bamboo, <xref ref="fig-ch3-42"/>.
             </p>
           </li>
         </ul>
@@ -2190,8 +2147,7 @@
         In Chapter 2, with
         <alert><em>File &gt; Import from Library</em></alert>, you examined the
         data from this trial.
-        The Preview in Fig.
-        43, shows you can also import corresponding R script.
+        The Preview in <xref ref="fig-ch3-43"/>, shows you can also import corresponding R script.
       </p>
 
       <p>
@@ -2206,8 +2162,7 @@
       </p>
 
       <p>
-        The R script to analyse the bamboo data is in Fig.
-        43.
+        The R script to analyse the bamboo data is in <xref ref="fig-ch3-43"/>.
       </p>
 
       <sidebyside widths="45% 45%">
@@ -2288,8 +2243,7 @@
         <ul>
           <li>
             <p>
-              Delete the hash (#) from the start of lines 16 to 18, Fig.
-              44.
+              Delete the hash (#) from the start of lines 16 to 18, <xref ref="fig-ch3-44"/>.
             </p>
           </li>
         </ul>
@@ -2352,8 +2306,7 @@
             <p>
               The graph is together with the R-Instat icon in the taskbar.
               So, show it.
-              Fig.
-              46.
+              <xref ref="fig-ch3-46"/>.
             </p>
           </li>
         </ul>
@@ -2394,16 +2347,14 @@
           <li>
             <p>
               Press <alert><em>Run twice more</em></alert> to give the Analysis
-              of Variance shown in Fig.
-              47.
+              of Variance shown in <xref ref="fig-ch3-47"/>.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        In Fig.
-        44 we have marked the line that corresponds to the “surprising
+        In <xref ref="fig-ch3-44"/> we have marked the line that corresponds to the “surprising
         differences”.
         We hope you are well motivated to understand ANOVA from the forthcoming
         chapters zzz and qqq.
