@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-real-data" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Getting Started with R and R-Instat</title>
+  <title>Working with Real Data</title>
 
   <introduction>
     <p>
