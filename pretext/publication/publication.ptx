@@ -36,9 +36,9 @@
     <projects level="2"/>
     <equations level="2"/>
     <footnotes level="2"/>
-    <!-- Figures run on their own counter, numbered sequentially -->
-    <!-- through the whole book (1, 2, 3, ...)                   -->
-    <figures distinct="yes" level="0"/>
+    <!-- Figures run on their own counter, restarting in each   -->
+    <!-- chapter (1.1, 1.2, ..., 2.1, 2.2, ...)                  -->
+    <figures distinct="yes" level="1"/>
   </numbering>
 
     <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
