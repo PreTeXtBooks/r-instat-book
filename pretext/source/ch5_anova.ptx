@@ -1,0 +1,2610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Converted from "Taming_the_Analysis_of_Variance Aug 28.docx" -->
+
+<chapter xml:id="ch-taming-anova" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Taming the Analysis of Variance</title>
+
+  <introduction>
+    <p>
+      Data vary.
+      For example, rice yields differ from one field to another.
+      ANOVA helps you investigate whether some of this variation is related to
+      the characteristics you have measured.
+    </p>
+
+    <p>
+      A model is a simple description of the pattern of the data.
+      The simplest model might use one predicted yield for every field.
+      A more detailed model might allow yields to differ by variety, village,
+      fertiliser use or field size.
+    </p>
+
+    <p>
+      ANOVA helps us compare these possibilities.
+      It separates the variation explained by the model from the variation
+      left unexplained.
+      It asks whether adding a feature explains enough to improve the model.
+      This helps you find a model that explains the data well without being
+      more complicated than necessary.
+    </p>
+
+    <p>
+      Your research question and graphs suggest which features to investigate.
+      ANOVA helps you decide which of those features are worth keeping in the
+      model.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-ch5-start-with-graphs">
+    <title>Start with graphs</title>
+
+    <introduction>
+      <p>
+        Open the <alert><em>rice survey</em></alert> data.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Use <alert><em>File &gt; Open From Library</em></alert>.
+              Press the <alert><em>Instat Collection</em></alert> button, then
+              <alert><em>Browse</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Choose the <alert><em>Problem Solving</em></alert> examples, then
+              the <alert><em>rice survey</em></alert> data, <xref ref="fig-ch5-01"/>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-01">
+          <caption>Opening the rice survey data</caption>
+          <image source="images/ch5/image1.png" width="45%">
+            <description>
+              <p>
+                Open From Library dialog with the rice survey data selected
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-02">
+          <caption>Rice survey data</caption>
+          <image source="images/ch5/image2.png" width="45%">
+            <description>
+              <p>
+                The rice survey data in the data view
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        The most important variable in the data, <xref ref="fig-ch5-02"/>, is
+        the yield of rice.
+        So, examine the Yield column.
+        The smallest yield is just under 20 and the largest is just over 60.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Use <alert><em>Describe &gt; Graphs &gt; Boxplot</em></alert>.
+              Add <alert><em>Yield</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Tick the <alert><em>Add Points</em></alert> checkbox and change the
+              <alert><em>jitter</em></alert> to 0.05, <xref ref="fig-ch5-03"/>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press the down-arrow next to the <alert><em>graph icon</em></alert>
+              in the toolbar and choose <alert><em>plotly</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              In the new <alert><em>plotly</em></alert> window, hover over the
+              graph to display the summaries shown in <xref ref="fig-ch5-04"/>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-03">
+          <caption>Setting up the Yield boxplot</caption>
+          <image source="images/ch5/image3.png" width="45%">
+            <description>
+              <p>
+                Boxplot dialog with Yield added and Add Points ticked
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-04">
+          <caption>Boxplot of all rice yields</caption>
+          <image source="images/ch5/image4.png" width="45%">
+            <description>
+              <p>
+                Boxplot of all rice yields with jittered points
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        <xref ref="fig-ch5-04"/> shows the variability in the yields.
+        Each black dot is one rice yield.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              The lowest yield is <alert>19.1</alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The highest yield is <alert>62.1</alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The median is <alert>40.55</alert>: half the yields are below
+              this and half are above it.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The box contains the middle half of the yields, from
+              <alert>30.1 to 49.0</alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              One quarter of the yields are below <alert>30.1</alert>, and one
+              quarter are above <alert>49.0</alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Overall, the yields vary considerably, with a typical yield around 40.
+        The next question is: <alert>what might explain this variation?</alert>
+      </p>
+
+      <p>
+        One objective of the survey was to explore whether yields were related
+        to management practices and other farm characteristics.
+        For example:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <alert>Do different rice varieties have different yields?</alert>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Is the amount of fertiliser related to yield?</alert>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Do yields differ between villages?</alert>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Are yields different on larger and smaller fields?</alert>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+
+    <subsection xml:id="subsec-ch5-yield-by-variety">
+      <title>Yield by Variety</title>
+
+      <p>
+        Start by looking at the yields for the 3 varieties.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to the <alert><em>boxplot dialog</em></alert>.
+              Click on <alert><em>Facet By</em></alert> (so it goes turquoise).
+              Add <alert><em>Variety</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the <alert><em>down arrow</em></alert> by the
+              <alert><em>facet control</em></alert> and change to
+              <alert><em>Col + O</em></alert> (O for overall).
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <figure xml:id="fig-ch5-05">
+        <caption>Rice yields by variety</caption>
+        <image source="images/ch5/image5.png" width="60%">
+          <description>
+            <p>
+              Boxplots of rice yields for each variety, with an overall boxplot
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        This figure shows the main idea.
+        The three varieties have noticeably different yields:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              NEW yields are mostly around 60.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              OLD yields are mostly around 45.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              TRAD yields are mostly around 28.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        The combined boxplot, on the right, has a median of about 40.
+        This does not describe any of the varieties particularly well.
+        Combining all the yields hides an important pattern.
+        It is therefore more informative to summarise the yields separately for
+        each variety.
+      </p>
+
+      <p>
+        Starting with graphs helps to reveal patterns in the data.
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-yield-by-village">
+      <title>Yield by Village</title>
+
+      <p>
+        Try this again but using the Village to divide up the data.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to the <alert><em>boxplot dialog</em></alert>.
+              Click on the <alert><em>Facet control</em></alert> again.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Village</em></alert> and press
+              <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <figure xml:id="fig-ch5-06">
+        <caption>Rice yields by village</caption>
+        <image source="images/ch5/image6.png" width="60%">
+          <description>
+            <p>
+              Boxplots of rice yields for each village
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        The pattern between villages in <xref ref="fig-ch5-06"/> is less clear.
+        There are no high yields in Kesen or Niko.
+      </p>
+
+      <p>
+        Looking back at the data shows that no farmers in either village grew
+        the NEW variety, which generally had the highest yields.
+        The apparent village differences may therefore reflect the varieties
+        being grown rather than differences between the villages themselves.
+      </p>
+
+      <p>
+        This graph alone is not enough to conclude that yields should be
+        reported by village.
+        We first need to see whether Village explains any additional variation
+        after accounting for differences between varieties.
+      </p>
+
+      <p>
+        Starting with graphs helps to identify questions that need further
+        investigation.
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-yield-by-fertiliser">
+      <title>Yield by Fertiliser</title>
+
+      <p>
+        Next, consider fertiliser.
+      </p>
+
+      <p>
+        The fert column is a numeric column and with R you can also get
+        boxplots by a numeric variable.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to the <alert><em>boxplot dialog</em></alert>.
+              Click again on the facet and remove it.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Click on the <alert><em>Factor (Optional)</em></alert> and include
+              <alert><em>Fert</em></alert> (even though it isn't a factor).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Check the <alert><em>Cut width</em></alert> box and press
+              <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Cut-width groups the numeric fertiliser values into equal intervals so
+        that a boxplot can be drawn for each interval.
+        It does not change the visual width of the boxes.
+      </p>
+
+      <figure xml:id="fig-ch5-07">
+        <caption>Rice yields by fertiliser level</caption>
+        <image source="images/ch5/image7.png" width="60%">
+          <description>
+            <p>
+              Boxplots of rice yields for each fertiliser interval
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        Yields generally increase as fertiliser increases, but the highest
+        fertiliser level, 3, does not follow this pattern.
+        At first, this might suggest that yields level off or even decline when
+        too much fertiliser is applied.
+      </p>
+
+      <p>
+        However, looking back at the data shows that the NEW variety, which
+        generally has the highest yields, never received fertiliser level 3.
+        The lower yields at level 3 may therefore reflect the varieties grown
+        rather than the relationship between Fertiliser and Yield.
+      </p>
+
+      <p>
+        We will need to consider Variety and Fertiliser together to separate
+        their possible effects.
+      </p>
+
+      <p>
+        It will be useful in our future analysis to consider Fert as a factor
+        as well as numeric variable.
+        Let's have both!
+        You can duplicate a column and convert it using a single dialog.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Right-click in the <alert><em>Fert</em></alert> column and choose
+              <alert><em>Duplicate Column</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Click the <alert><em>Change type</em></alert> checkbox, where the
+              default is <alert><em>Factor</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Make <alert><em>Fert_fac</em></alert> the new name,
+              <xref ref="fig-ch5-08"/>.
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-08">
+          <caption>Creating the Fert_fac column</caption>
+          <image source="images/ch5/image8.png" width="45%">
+            <description>
+              <p>
+                Duplicate Column dialog creating Fert_fac as a factor
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-09">
+          <caption>Boxplot using Fert_fac</caption>
+          <image source="images/ch5/image9.png" width="45%">
+            <description>
+              <p>
+                Boxplots of rice yields for each level of Fert_fac
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        Because Fert and Fert_fac contain the same values, their boxplots show
+        the same pattern.
+        We will use Fert_fac later to compare separate fertiliser-level means
+        with a straight line.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch5-simple-anova-tables">
+    <title>Simple ANOVA tables</title>
+
+    <p>
+      We now use simple ANOVA tables to examine the same examples.
+      The graphs showed how Yield varied with Variety, Village and Fertiliser.
+      The ANOVA tables show these patterns as numbers.
+    </p>
+
+    <p>
+      R-Instat's simplified ANOVA option in the Describe menu provides a bridge
+      from graphs to statistical modelling.
+      Once you are familiar with the main ideas, the Model menu provides more
+      advanced modelling tools.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Use <alert><em>Describe &gt; Two/Three Variables &gt; Summarise</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      This dialog has several carefully designed features, which we will
+      explain as they arise.
+    </p>
+
+    <p>
+      First: initially the data selector displays all variables.
+      You can model a variable of any type, or several variables at once,
+      provided they are the same type.
+      Once you select your first variable, only other variables of that type
+      remain available.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Add <alert><em>Yield</em></alert> to the first receiver,
+            <xref ref="fig-ch5-10"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      On the left, below the selector the dialog notes that this variable is
+      numeric.
+      So, the selector now only permits more numeric columns.
+      (You may wish to press <alert><em>Reset</em></alert> and repeat this first
+      step with different variable types.
+      You could try a factor for example.)
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Click on the <alert><em>Second Variable</em></alert> and add
+            <alert><em>Variety</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Note that the data selector now displays all columns again.
+      You are choosing the variable by which the first variable(s) will be
+      summarised; this can be of any type.
+      Once you make your selection, the dialog tells you the type of summary it
+      will produce.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Tick the <alert><em>Means/Model</em></alert> checkbox,
+            <xref ref="fig-ch5-10"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      On the left, in <xref ref="fig-ch5-10"/>, R-Instat notes you are analysing
+      numeric by categorical.
+      The summary will therefore be an ANOVA table.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Press <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-10">
+        <caption>Setting up the Variety ANOVA</caption>
+        <image source="images/ch5/image10.png" width="45%">
+          <description>
+            <p>
+              Two/Three Variables Summarise dialog with Yield and Variety
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-11">
+        <caption>ANOVA of Yield by Variety</caption>
+        <image source="images/ch5/image11.png" width="45%">
+          <description>
+            <p>
+              ANOVA table and means for Yield by Variety
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+  </section>
+
+  <section xml:id="sec-ch5-how-to-read-an-anova-table">
+    <title>How to read an ANOVA table</title>
+
+    <p>
+      The key idea of ANOVA is to split the variation into two parts: the part
+      accounted for by the model and the residual part that the model has not
+      explained.
+    </p>
+
+    <p>
+      ANOVA tables all use the same main columns:
+      <alert>Df, Sum Sq, Mean Sq and F-value</alert>.
+      Once you can read a simple table like this, you can use the same steps to
+      read a larger one.
+      A larger model will have more rows for the additional terms.
+    </p>
+
+    <p>
+      The prediction section depends on the type of explanatory variable.
+      A factor such as Variety gives a predicted mean for each group.
+      A numerical variable such as Fertiliser gives coefficients describing the
+      fitted relationship.
+    </p>
+
+    <p>
+      <xref ref="fig-ch5-12"/> provides an overview of how to read the table.
+      <xref ref="fig-ch5-13"/> then explains how each value is calculated and
+      what it means.
+    </p>
+
+    <figure xml:id="fig-ch5-12">
+      <caption>Reading an ANOVA table in six steps</caption>
+      <image source="images/ch5/image12.png" width="95%">
+        <description>
+          <p>
+            Annotated ANOVA table showing six steps to read it
+          </p>
+        </description>
+      </image>
+    </figure>
+
+    <p>
+      The figure below explains each part in detail.
+      The computer performs the calculations but understanding how the values
+      are produced will help you interpret the results.
+    </p>
+
+    <figure xml:id="fig-ch5-13">
+      <caption>ANOVA table in detail</caption>
+
+      <sbsgroup widths="25% 70%" valign="top">
+        <sidebyside>
+          <image source="images/ch5/image13.png">
+            <description>
+              <p>
+                The Df column of the ANOVA table
+              </p>
+            </description>
+          </image>
+          <stack>
+            <p>
+              <alert>Degrees of Freedom</alert> – How much information is
+              available?
+            </p>
+            <p>
+              Variety: 3 varieties (New, Old and Trad) so 3 − 1 = 2.
+            </p>
+            <p>
+              Yields: 36 total yield values so 36 − 1 = 35.
+            </p>
+            <p>
+              Residual: total df 35 − Variety df 2 = 33.
+            </p>
+          </stack>
+        </sidebyside>
+
+        <sidebyside>
+          <image source="images/ch5/image14.png">
+            <description>
+              <p>
+                The Sum Sq column of the ANOVA table
+              </p>
+            </description>
+          </image>
+          <stack>
+            <p>
+              <alert>Sum of Squares</alert> – Calculation: (All variation =
+              explained by variety + remaining variation)
+            </p>
+            <p>
+              The Total Sum of Squares is 4955.
+              This is all the variation in the Yield values.
+              Of this, approximately 3530 is associated with Variety and
+              approximately 1430 remains as Residual variation.
+              About 71% is associated with Variety and 29% remains.
+            </p>
+          </stack>
+        </sidebyside>
+
+        <sidebyside>
+          <image source="images/ch5/image15.png">
+            <description>
+              <p>
+                The Mean Sq column of the ANOVA table
+              </p>
+            </description>
+          </image>
+          <stack>
+            <p>
+              <alert>Mean Square</alert> – Calculation: (Sum of Squares / DF)
+            </p>
+            <p>
+              Dividing each Sum of Squares by its degrees of freedom makes the
+              values comparable.
+              The displayed output is rounded, while R-Instat calculates with
+              unrounded values.
+              Calculations made from the displayed numbers may therefore differ
+              slightly.
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    3530 ÷ 2 ≈ 1760
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    1430 ÷ 33 ≈ 43.2
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </stack>
+        </sidebyside>
+
+        <sidebyside>
+          <image source="images/ch5/image16.png">
+            <description>
+              <p>
+                The F value column of the ANOVA table
+              </p>
+            </description>
+          </image>
+          <stack>
+            <p>
+              <alert>F-value</alert> – Calculation: (Mean Square for Variety /
+              Residual Mean Square)
+            </p>
+            <p>
+              1760 ÷ 43.2 ≈ 40.8
+            </p>
+            <p>
+              The F-value compares the Variety Mean Square with the Residual
+              variation.
+            </p>
+            <p>
+              <alert>If F is around 1,</alert> the differences between varieties
+              are no larger than the background variation.
+            </p>
+            <p>
+              <alert>If F is much greater than 1,</alert> allowing separate
+              variety means produces a substantial improvement.
+            </p>
+            <p>
+              So, 40.8 is strong evidence that allowing separate variety means
+              substantially improves the model.
+            </p>
+          </stack>
+        </sidebyside>
+
+        <sidebyside>
+          <image source="images/ch5/image17.png">
+            <description>
+              <p>
+                The means table from the ANOVA output
+              </p>
+            </description>
+          </image>
+          <stack>
+            <p>
+              <alert>Means Table Prediction</alert>
+            </p>
+            <p>
+              Without including Variety, the model gives every observation the
+              same predicted yield: the <alert>grand mean of 40.58</alert>.
+            </p>
+            <p>
+              With Variety: each yield receives the mean for its variety:
+            </p>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    New 59.6
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Old 45.44
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Trad 30
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              The <alert>rep</alert> row shows how many observations were used
+              to calculate each mean.
+              The NEW mean is based on only four observations, so it is less
+              precisely estimated than the OLD and TRAD means.
+            </p>
+          </stack>
+        </sidebyside>
+      </sbsgroup>
+    </figure>
+
+    <assemblage xml:id="assemblage-ch5-variety-conclusion">
+      <title>Conclusion</title>
+
+      <p>
+        This ANOVA provides strong evidence that one overall mean is not
+        enough.
+        A model with separate mean yields for NEW, OLD and TRAD describes the
+        data much better.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <alert>It tells us:</alert> the Variety explains a large part of
+              the observed variation.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>It does not tell us:</alert> that Variety caused the
+              differences, or that other factors such as fertiliser and village
+              are unimportant.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <p>
+      By the end of this section, you should understand the meaning of the
+      values and how they connect to one another.
+      If you learn better by doing it yourself, you can use the calculator to
+      make each of the terms in the
+      <xref ref="sec-ch5-appendix-first-principles" text="title"/>.
+    </p>
+  </section>
+
+  <section xml:id="sec-ch5-two-more-anova-tables">
+    <title>Two more ANOVA tables</title>
+
+    <introduction>
+      <p>
+        Next get the Village and Fertiliser ANOVA tables and use your newfound
+        knowledge to read the information and answer the following questions
+        for each.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              How much information is used to describe it? (Degrees of Freedom)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              How much of the total variation is associated with it? (Sum of
+              Squares)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              How much variation is there per degree of freedom? (Mean Square)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              How large is this variation compared with the background
+              variation? (F-value)
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Get the other two summaries.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to the <alert><em>Summarise dialog</em></alert>.
+              Change the second receiver from <alert><em>Variety</em></alert>
+              to <alert><em>Village</em></alert> and use the
+              <alert><em>down arrow</em></alert> on the
+              <alert><em>Ok</em></alert> button to choose
+              <alert><em>Ok&amp;Keep</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Then change the second receiver from
+              <alert><em>Village</em></alert> to <alert><em>Fert</em></alert>.
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+
+    <subsection xml:id="subsec-ch5-village">
+      <title>Village</title>
+
+      <figure xml:id="fig-ch5-14">
+        <caption>ANOVA of Yield by Village</caption>
+        <image source="images/ch5/image18.png" width="50%">
+          <description>
+            <p>
+              ANOVA table and means for Yield by Village
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        The F-value for the Village is 4.2.
+        This means that the variation associated with Village is 4.2 times the
+        background variation per degree of freedom.
+        This suggests that Village is associated with Yield and is worth
+        investigating further.
+      </p>
+
+      <p>
+        However, it does not yet tell us that Village should be included in the
+        final model.
+        The apparent village differences might be connected to other variables.
+        For example:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Do villages grow different varieties?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Do fertiliser amounts differ between villages?
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Before deciding whether to include Village, we need to find out whether
+        it explains additional variation after allowing for Variety and
+        Fertiliser.
+      </p>
+
+      <p>
+        Village is a factor, so the output gives the grand mean and a separate
+        predicted mean for each village.
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-fertiliser">
+      <title>Fertiliser</title>
+
+      <figure xml:id="fig-ch5-15">
+        <caption>ANOVA of Yield by Fertiliser</caption>
+        <image source="images/ch5/image19.png" width="50%">
+          <description>
+            <p>
+              ANOVA table and coefficients for Yield by Fertiliser
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        Fertiliser has 1 degree of freedom because it is being used as a
+        numerical variable with a straight-line relationship.
+      </p>
+
+      <p>
+        The F-value is 51.9, so the variation associated with Fertiliser is
+        nearly 52 times the background variation per degree of freedom.
+      </p>
+
+      <p>
+        This provides strong evidence that adding a straight-line Fertiliser
+        term substantially improves the model.
+        However, we still need to consider whether the apparent fertiliser
+        relationship might partly reflect differences in the varieties grown.
+      </p>
+
+      <p>
+        Fertiliser is numerical, so the output gives model coefficients:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <alert>Intercept = 27.655:</alert> the predicted yield when
+              Fertiliser is 0.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Fert coefficient = 8.948:</alert> the predicted increase in
+              Yield for each one-unit increase in Fertiliser.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              This model assumes that every one-unit increase in Fertiliser
+              produces the same predicted increase in Yield.
+              Later, we can examine whether this straight-line assumption
+              describes the data adequately.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch5-simple-anova-is-not-enough">
+    <title>Simple ANOVA is not enough</title>
+
+    <introduction>
+      <p>
+        These data come from a survey, so they show associations but cannot
+        establish causes.
+        Variety, Village and Fertiliser may be related; for example, farmers
+        growing NEW may also use more fertiliser.
+      </p>
+
+      <p>
+        A one-variable ANOVA cannot separate these possible explanations.
+        We therefore examine the variables together to see what each explains
+        after allowing for the others.
+      </p>
+    </introduction>
+
+    <subsection xml:id="subsec-ch5-including-multiple-terms">
+      <title>Including multiple terms in the ANOVA</title>
+
+      <p>
+        Include both Variety and Fert in the model.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Back to Summarise.
+              Press <alert><em>Reset</em></alert>.
+              Press the <alert><em>3 Variable</em></alert> button.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Yield</em></alert> to the first receiver.
+              Add <alert><em>Variety</em></alert> in the second receiver and
+              <alert><em>Fert</em></alert> in the third.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Check <alert><em>Means/Model</em></alert> and press
+              <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        The results are in <xref ref="fig-ch5-16"/>.
+      </p>
+
+      <figure xml:id="fig-ch5-16">
+        <caption>ANOVA with Variety followed by Fertiliser</caption>
+        <image source="images/ch5/image20.png" width="60%">
+          <description>
+            <p>
+              ANOVA table with Variety then Fert
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        The table now has two explanatory rows:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Variety accounts for variation in Yield.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Fertiliser accounts for additional variation after Variety.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Residuals contain the variation left after including both variety
+              and fertiliser.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        The main results are:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Variety accounts for a Sum of Squares of 3530.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Fertiliser adds a further 695.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The Residual Sum of Squares falls to 732.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Together, the two terms account for about 85% of the variation in
+              Yield.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Fertiliser has an F-value of 30.4, so it adds substantial
+              information even after Variety has been included.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        This shows that a model containing both Variety and Fertiliser describes
+        the yields better than a model containing Variety alone.
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-does-the-order-matter">
+      <title>Does the order matter?</title>
+
+      <p>
+        Yes!
+        The ANOVA table is read from top to bottom.
+        When Variety and Fertiliser explain some of the same variation, the
+        first term receives credit for this shared variation.
+        The second term receives credit only for what it adds after the first.
+      </p>
+
+      <p>
+        We therefore fit both orders as a check:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Back to Summarise.
+              Remove both <alert><em>Fert</em></alert> and
+              <alert><em>Variety</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Fert</em></alert> in the second receiver and
+              <alert><em>Variety</em></alert> in the third.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-17">
+          <caption>Variety followed by Fertiliser</caption>
+          <image source="images/ch5/image20.png" width="45%">
+            <description>
+              <p>
+                ANOVA table with Variety then Fert
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-18">
+          <caption>Fertiliser followed by Variety</caption>
+          <image source="images/ch5/image21.png" width="45%">
+            <description>
+              <p>
+                ANOVA table with Fert then Variety
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              After allowing for Variety, Fertiliser explains an additional Sum
+              of Squares of 695, with an F-value of 30.4.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              After allowing for Fertiliser, Variety explains an additional Sum
+              of Squares of 1230, with an F-value of 26.8.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        This confirms that each term explains important variation that the
+        other does not.
+        Both Variety and Fertiliser should therefore be included in the model.
+      </p>
+
+      <p>
+        We do not need to keep using both orders.
+        The fitted model is the same either way, with the same predictions,
+        coefficients and residuals.
+        Only the way the ANOVA table assigns variation to the terms changes.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch5-straight-line-or-levels">
+    <title>Should Fertiliser be a straight line or separate levels?</title>
+
+    <introduction>
+      <p>
+        So far, we have asked whether adding an explanatory variable improves
+        the model.
+        We now ask a different question:
+        <alert>What form should that variable take in the model?</alert>
+      </p>
+
+      <p>
+        The fertiliser information is available in two forms:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <alert>Fert</alert> records fertiliser as a numerical variable.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Fert_fac</alert> records the same values as seven separate
+              levels.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        These are not two different measurements.
+        They are two ways of representing the same information, and they
+        produce models with different levels of complexity.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to Summarise.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Click on the <alert><em>Two Variables</em></alert> button at the
+              top.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Yield</em></alert> as the
+              <alert><em>first Variable</em></alert> and
+              <alert><em>Fert</em></alert> as the
+              <alert><em>Second Variable</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the <alert><em>down arrow</em></alert> on the
+              <alert><em>Ok</em></alert> button to choose
+              <alert><em>Ok&amp;Keep</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Change the <alert><em>second variable</em></alert> from
+              <alert><em>Fert</em></alert> to <alert><em>Fert_fac</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+
+    <subsection xml:id="subsec-ch5-fertiliser-straight-line">
+      <title>Fertiliser as a straight line</title>
+
+      <figure xml:id="fig-ch5-19">
+        <caption>Fertiliser represented by a straight line</caption>
+        <image source="images/ch5/image19.png" width="50%">
+          <description>
+            <p>
+              ANOVA table and coefficients for Yield by Fert
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        We have already used <alert>Fert</alert> as a numerical variable.
+        Its coefficient of 8.948 means that predicted Yield increases by about
+        8.95 units for every one-unit increase in Fertiliser.
+      </p>
+
+      <p>
+        This represents a straight-line relationship: the predicted increase is
+        the same across the fertiliser range.
+        The line uses only one degree of freedom, explains about 60% of the
+        variation in Yield and has an F-value of 51.9.
+        This suggests that the straight line captures an important pattern in
+        the data.
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-fertiliser-separate-levels">
+      <title>Fertiliser as separate levels</title>
+
+      <figure xml:id="fig-ch5-20">
+        <caption>Fertiliser represented as separate levels</caption>
+        <image source="images/ch5/image22.png" width="50%">
+          <description>
+            <p>
+              ANOVA table and means for Yield by Fert_fac
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        We can instead use Fert_fac.
+        This treats the seven fertiliser levels as separate groups and gives
+        each level its own predicted mean.
+      </p>
+
+      <p>
+        This model is more flexible; it can allow yields to rise, level off,
+        fall or follow an irregular pattern.
+      </p>
+
+      <p>
+        Fert_fac accounts for about 70% of the variation in Yield.
+        This is more than the 60% accounted for by the straight line, but that
+        is not surprising: a more flexible model will usually explain more of
+        the observed data.
+      </p>
+
+      <p>
+        The important question is not simply which model explains more.
+        It is:
+      </p>
+
+      <p>
+        <alert>
+          Does the extra flexibility explain enough additional variation to
+          justify five more degrees of freedom?
+        </alert>
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ch5-comparing-directly">
+      <title>Comparing the two models directly</title>
+
+      <p>
+        Maybe you can guess the next step?
+        Use both fertiliser columns in a single ANOVA to see if Fert_fac
+        accounts for more variation after Fert.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Return to the <alert><em>Two/Three Summarise dialog</em></alert>
+              and the <alert><em>Three Variables</em></alert> view.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Put <alert><em>Fert</em></alert> as the
+              <alert><em>second variable</em></alert> and
+              <alert><em>Fert_fac</em></alert> as the third,
+              <xref ref="fig-ch5-21"/>.
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-21">
+          <caption>Setting up the direct comparison</caption>
+          <image source="images/ch5/image23.png" width="45%">
+            <description>
+              <p>
+                Summarise dialog with Fert and Fert_fac as explanatory variables
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-22">
+          <caption>Straight line compared with separate levels</caption>
+          <image source="images/ch5/image24.png" width="45%">
+            <description>
+              <p>
+                ANOVA table with Fert then Fert_fac
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        The combined ANOVA shows that these factor levels have:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              a Sum of Squares of 483;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              five degrees of freedom;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              a Mean Square of 96.5;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              an F-value of 1.9.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        After fitting the straight line, the separate levels use five additional
+        degrees of freedom and have an F-value of 1.9.
+        This is only a modest improvement, so we keep the simpler straight-line
+        model.
+      </p>
+
+      <assemblage xml:id="assemblage-ch5-simpler-model">
+        <title>Choosing the simpler model</title>
+
+        <p>
+          Allowing separate means for each fertiliser level adds little despite
+          using five extra degrees of freedom.
+          The straight-line model is therefore sufficient for these data and
+          easier to interpret.
+        </p>
+
+        <p>
+          This does not mean the relationship is perfectly straight.
+          It means the data provide no strong reason to use a more complicated
+          model.
+        </p>
+
+        <p>
+          This is an important principle in modelling: keep the simpler model
+          unless the added complexity produces a meaningful improvement.
+        </p>
+      </assemblage>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch5-does-village-add-anything">
+    <title>Does Village add anything after Fertiliser and Variety?</title>
+
+    <p>
+      We have found that Fertiliser and Variety are useful terms.
+      <alert>Should Village also be included?</alert>
+    </p>
+
+    <p>
+      The simplified ANOVA dialog allows only two explanatory variables, so we
+      now use the Model menu:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Go <alert><em>Model &gt; Fit Model &gt; Four Variables</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Add <alert><em>Yield</em></alert> as the
+            <alert><em>Response Variable</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Add <alert><em>Fert</em></alert>, <alert><em>Variety</em></alert>
+            and <alert><em>Village</em></alert> as the three explanatory
+            variables.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Then click <alert><em>Display Options</em></alert> and uncheck
+            <alert><em>Estimates</em></alert> so that only
+            <alert><em>ANOVA</em></alert> is selected.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Return to the <alert><em>main dialog</em></alert> and click
+            <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-23">
+        <caption>Adding Fertiliser, Variety and Village</caption>
+        <image source="images/ch5/image25.png" width="45%">
+          <description>
+            <p>
+              Fit Model dialog with Fert, Variety and Village
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-24">
+        <caption>Choosing the ANOVA display</caption>
+        <image source="images/ch5/image26.png" width="45%">
+          <description>
+            <p>
+              Display Options sub-dialog with only ANOVA selected
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      The resulting ANOVA table has two new features.
+      It does not include a Total row.
+      We included this on the simplified ANOVA for teaching purposes; it is not
+      a standard ANOVA row.
+      This table also includes a <alert>Pr(&gt;F)</alert> column containing the
+      p-values.
+    </p>
+
+    <p>
+      The F-value and p-value provide related information:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            <alert>F-value:</alert> How large is the variation explained by the
+            term compared with the residual variation?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <alert>Pr(&gt;F):</alert> How unusual would this F-value be if the
+            term added no real explanatory information?
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      A small p-value, commonly below 0.05, provides evidence that the term
+      improves the model.
+      A large p-value means the result could easily arise from background
+      variation.
+    </p>
+
+    <figure xml:id="fig-ch5-25">
+      <caption>ANOVA with Fertiliser, Variety and Village</caption>
+      <image source="images/ch5/image27.png" width="75%">
+        <description>
+          <p>
+            ANOVA table with Fert, Variety and Village, including p-values
+          </p>
+        </description>
+      </image>
+    </figure>
+
+    <p>
+      Village has an F-value of 0.79.
+      An F-value near 1 means that a term explains no more than the background
+      variation.
+      Village therefore adds little after Fertiliser and Variety have been
+      included, so we leave it out of the model.
+      The p-value of 0.51 supports the same conclusion.
+    </p>
+  </section>
+
+  <section xml:id="sec-ch5-interaction">
+    <title>Does Fertiliser work differently for different varieties? – Interaction</title>
+
+    <p>
+      Our current model says:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Varieties have different average yields.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Yield changes with the amount of fertiliser applied.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Fertiliser has the same effect on every variety.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The question we are asking now is:
+    </p>
+
+    <p>
+      <alert>Does Fertiliser have the same effect on Yield for every variety?</alert>
+    </p>
+
+    <p>
+      If Fertiliser has the same effect on each variety, the three lines, one
+      for each variety, will be parallel.
+      If its effect differs between varieties, the lines will have different
+      slopes.
+      An interaction allows us to test which pattern is better supported by
+      the data.
+    </p>
+
+    <p>
+      To examine this possibility:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Return to the <alert><em>Summarise dialog</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Add <alert><em>Variety</em></alert> and <alert><em>Fert</em></alert>
+            (the order doesn't matter here).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Tick the <alert><em>Interaction</em></alert> checkbox,
+            <xref ref="fig-ch5-26"/>, and press <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-26">
+        <caption>Selecting the Fertiliser × Variety interaction</caption>
+        <image source="images/ch5/image28.png" width="45%">
+          <description>
+            <p>
+              Summarise dialog with the Interaction checkbox ticked
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-27">
+        <caption>ANOVA with the Fertiliser × Variety interaction</caption>
+        <image source="images/ch5/image29.png" width="45%">
+          <description>
+            <p>
+              ANOVA table including the Variety by Fert interaction
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      The interaction has an F-value of 0.3.
+      This is below 1, so allowing different slopes explains very little
+      additional variation.
+      We therefore keep the simpler parallel-lines model.
+    </p>
+
+    <p>
+      This does not prove that the slopes are identical.
+      It means the data do not provide a reason to fit different slopes.
+    </p>
+  </section>
+
+  <section xml:id="sec-ch5-selecting-the-final-model">
+    <title>Selecting the final model</title>
+
+    <p>
+      A statistical model is a rule for predicting an outcome.
+    </p>
+
+    <p>
+      Here, the outcome is Yield and the possible explanatory variables are
+      Fertiliser, Variety and Village.
+    </p>
+
+    <p>
+      ANOVA has helped us make five decisions:
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            Include <alert>Fertiliser</alert> because Yield is related to the
+            amount of fertiliser applied after allowing for Variety.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Include <alert>Variety</alert> because varieties still differ after
+            allowing for Fertiliser.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Do not include <alert>Village</alert> because it adds little
+            information after Fertiliser and Variety are included.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Do not include separate means for every fertiliser level because
+            they do not improve the model enough to justify the additional
+            complexity.
+            A straight line is adequate for these data.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Do not include the <alert>Fertiliser × Variety interaction</alert>
+            because separate fertiliser slopes explain little additional
+            variation.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The selected model is therefore:
+    </p>
+
+    <p>
+      A <alert>parallel-lines model</alert> for Yield = Fertiliser + Variety.
+    </p>
+
+    <p>
+      This model gives each variety its own line, but all three lines have the
+      same Fertiliser slope.
+    </p>
+  </section>
+
+  <section xml:id="sec-ch5-reading-the-selected-model">
+    <title>Reading the selected model</title>
+
+    <introduction>
+      <p>
+        Once we have selected a model, the <alert>Model</alert> output becomes
+        particularly useful.
+        Its coefficients describe the model's predictions.
+      </p>
+
+      <p>
+        Let's re-create the ANOVA from <xref ref="fig-ch5-16"/> and concentrate
+        on the Model part.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Back to Summarise.
+              Press <alert><em>Reset</em></alert>.
+              Press the <alert><em>3 Variable</em></alert> button.
+              Add <alert><em>Yield</em></alert> to the first receiver.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Variety</em></alert> as the second receiver and
+              <alert><em>Fert</em></alert> as the third.
+              Remember, the order of Variety and Fert does not change the fitted
+              model, its coefficients or its predictions.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Check <alert><em>Means/Model</em></alert> and press
+              <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        The results are in <xref ref="fig-ch5-28"/>.
+      </p>
+
+      <figure xml:id="fig-ch5-28">
+        <caption>Selected-model ANOVA and coefficients</caption>
+        <image source="images/ch5/image30.png" width="60%">
+          <description>
+            <p>
+              ANOVA table and coefficients for Yield by Variety and Fert
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <p>
+        This time focus on reading the model part.
+        NEW is the reference variety, so the model uses the NEW line as its
+        starting point.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              <alert>Intercept = 47.755:</alert> When Fertiliser is zero, the
+              predicted Yield for NEW is 47.755.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>VarietyOLD = −12.069:</alert> The OLD line is 12.069 units
+              below the NEW line.
+              When Fertiliser is zero, its predicted Yield is
+              47.755 − 12.069 = 35.686.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>VarietyTRAD = −21.791:</alert> The TRAD line is 21.791
+              units below the NEW line.
+              When Fertiliser is zero, its predicted Yield is
+              47.755 − 21.791 = 25.964.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <alert>Fert = 5.264:</alert> Every one-unit increase in Fertiliser
+              adds 5.264 units to the predicted Yield for all three varieties.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        We have now read the model in numbers.
+        Next, we graph its predictions to see the pattern they describe.
+      </p>
+    </introduction>
+
+    <subsection xml:id="subsec-ch5-graphing-the-selected-model">
+      <title>Graphing the selected model</title>
+
+      <p>
+        Our selected model has one factor, Variety, and one numeric column,
+        Fert.
+        It allows each variety to have a different predicted yield but uses the
+        same Fertiliser slope for all three.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              Use <alert><em>Describe &gt; Graphs &gt; General</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Yield</em></alert> as the
+              <alert><em>Y variable</em></alert>, and
+              <alert><em>Fert</em></alert> as the <alert><em>X</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Add <alert><em>Variety</em></alert> as both the
+              <alert><em>Fill</em></alert> and <alert><em>Colour</em></alert>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press the <alert><em>Add</em></alert> down arrow and choose
+              <alert><em>geom_parallel_slopes</em></alert>.
+              This adds the lines.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press the <alert><em>Add</em></alert> down arrow again and choose
+              <alert><em>geom_point</em></alert>.
+              This adds the data points.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Press <alert><em>Ok</em></alert>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <sidebyside widths="45% 45%">
+        <figure xml:id="fig-ch5-29">
+          <caption>Parallel-lines model</caption>
+          <image source="images/ch5/image31.png" width="45%">
+            <description>
+              <p>
+                General graph dialog set up for the parallel-lines model
+              </p>
+            </description>
+          </image>
+        </figure>
+
+        <figure xml:id="fig-ch5-30">
+          <caption>Parallel-lines model with observed yields</caption>
+          <image source="images/ch5/image32.png" width="45%">
+            <description>
+              <p>
+                Parallel fitted lines for each variety with observed yields
+              </p>
+            </description>
+          </image>
+        </figure>
+      </sidebyside>
+
+      <p>
+        <xref ref="fig-ch5-30"/> shows the fitted model together with the
+        observed data.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <alert>points</alert> are the observed yields.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The <alert>lines</alert> are the yields predicted by the model.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The common upward slope shows the relationship between Fertiliser
+              and Yield.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The vertical distance between the lines shows the adjusted
+              differences between varieties.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The shaded areas show the uncertainty around each fitted line.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        The lines are parallel because the model predicts the same 5.3-unit
+        increase in Yield for every variety.
+        The differences between varieties therefore remain the same at every
+        Fertiliser level.
+        This does not prove that the true slopes are identical; the data simply
+        do not support fitting different slopes.
+      </p>
+
+      <p>
+        The graph also shows an important limitation: NEW has only four
+        observations, all within a narrow range of fertiliser values.
+        Its shaded band is therefore wider, showing that its fitted line is
+        estimated less precisely.
+        More observations across a wider range of fertiliser levels would be
+        needed to investigate the NEW fertiliser relationship properly.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ch5-reflections">
+    <title>Reflections</title>
+
+    <p>
+      Data vary.
+      ANOVA helps us investigate that variation by separating it into:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            variation accounted for by the model; and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            residual variation that the model has not explained.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      A useful model explains an important part of the variation without
+      becoming unnecessarily complicated.
+      The residual variation will not disappear completely because
+      observations also differ for reasons that were not measured or included
+      in the model.
+    </p>
+
+    <p>
+      R-Instat introduces these ideas through the
+      <alert><em>Describe &gt; Two/Three Variables &gt; Summarise</em></alert>
+      dialog.
+      The simplified ANOVA output deliberately concentrates on variation, model
+      terms and F-values rather than formal significance testing.
+      It also shows that a model can combine factor variables, such as Variety,
+      with numeric variables, such as Fertiliser.
+    </p>
+
+    <p>
+      This chapter has treated ANOVA as a way of thinking:
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            Begin with graphs to identify possible patterns.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Use simple ANOVA tables to examine one explanatory variable at a
+            time.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Combine variables to see what each explains after allowing for the
+            others.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Test whether more complicated features, such as separate slopes,
+            improve the model.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Retain the simplest model that describes the important patterns in
+            the data.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The final model included Fertiliser and Variety but not Village or their
+      interaction.
+      ANOVA is therefore more than a test of significance: it is a structured
+      way to ask which parts of the variation can be understood and how simply
+      they can be described.
+    </p>
+
+    <p>
+      The same ideas extend to other types of outcomes and more complicated
+      datasets.
+      Later chapters introduce generalised linear models and multilevel models.
+      The ANOVA ideas developed here provide a foundation for understanding
+      them.
+    </p>
+  </section>
+
+  <section xml:id="sec-ch5-appendix-first-principles">
+    <title>Optional appendix: Recreating ANOVA from first principles</title>
+
+    <p>
+      This optional activity recreates the Total, Variety and Residual Sum of
+      Squares from the data.
+      It is not needed to follow the main chapter, but it can help readers who
+      want to see where the values come from.
+    </p>
+
+    <p>
+      Begin with the one-variable ANOVA for <alert>Variety</alert> and use the
+      <alert><em>Calculator</em></alert> to reconstruct its three Sum of
+      Squares values.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Use <alert><em>Prepare &gt; Calculator</em></alert>, then the
+            <alert><em>Function keyboard</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Some keys have a star (*).
+            Click on the <alert><em>cssq*</em></alert> key.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      This stands for corrected sum of squares – just what is needed for the
+      ANOVA.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Add the <alert><em>Yield</em></alert> column and press
+            <alert><em>Try</em></alert>, <xref ref="fig-ch5-31"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      This gives 4955, in <xref ref="fig-ch5-31"/>.
+      That is (again) the total sum of squares of the yield data.
+      It is in the Total line of each ANOVA table.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Store this value in a new column called
+            <alert><em>tot_ssq</em></alert> and press
+            <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      We are trying to explain as much of the 4955 as possible using a model.
+      This can include the Variety, Fert, and other terms if needed.
+    </p>
+
+    <p>
+      To connect the Total Sum of Squares with the standard deviation:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Return to the <alert><em>calculator</em></alert>.
+            Press <alert><em>Clear</em></alert>.
+            Choose the <alert><em>Maths keyboard</em></alert> and press the
+            <alert><em>sqrt</em></alert> button, <xref ref="fig-ch5-32"/>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Add the <alert><em>tot_ssq</em></alert> column.
+            Then press <alert><em>divide (/)</em></alert> and 35.
+            (That's the total d.f., so n − 1.)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press <alert><em>Try</em></alert> to show 11.9.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Call it <alert><em>s.d.</em></alert> for standard deviation and
+            press <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-31">
+        <caption>Calculating Total Sum of Squares</caption>
+        <image source="images/ch5/image33.png" width="45%">
+          <description>
+            <p>
+              Calculator using cssq on Yield
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-32">
+        <caption>Calculating the standard deviation</caption>
+        <image source="images/ch5/image34.png" width="45%">
+          <description>
+            <p>
+              Calculator computing the square root of tot_ssq divided by 35
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      This gives the same standard deviation, 11.9, as the standard summary
+      calculation:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Back to the <alert><em>calculator</em></alert>.
+            Choose the <alert><em>Summary keyboard</em></alert>.
+            Press <alert><em>Clear</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press the <alert><em>sd</em></alert> key, and include the
+            <alert><em>Yield</em></alert> column.
+            Press <alert><em>Try</em></alert> to give the 11.9 again!
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Now to the two other lines in the Variety ANOVA table:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Back to the <alert><em>calculator</em></alert>.
+            Choose the <alert><em>Functions keyboard</em></alert>.
+            Press <alert><em>Clear</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Use the <alert><em>ave_fac</em></alert> key (third on top row).
+            Add <alert><em>Yield</em></alert>, then after the comma add
+            <alert><em>Variety</em></alert>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press <alert><em>Try</em></alert>.
+            Give the name as <alert><em>var_means</em></alert>,
+            <xref ref="fig-ch5-33"/>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-33">
+        <caption>Calculating the Variety means</caption>
+        <image source="images/ch5/image35.png" width="45%">
+          <description>
+            <p>
+              Calculator using ave_fac on Yield and Variety
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-34">
+        <caption>Calculating the Variety Sum of Squares</caption>
+        <image source="images/ch5/image36.png" width="45%">
+          <description>
+            <p>
+              Calculator using cssq on var_means
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      Now find the corrected sum of squares of the new
+      <alert>var_means</alert> column.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Return to the <alert><em>calculator</em></alert>.
+            Press <alert><em>Clear</em></alert>.
+            Press the <alert><em>cssq*</em></alert> button.
+            Add the <alert><em>var_means</em></alert> column.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Now press <alert><em>Try</em></alert>, <xref ref="fig-ch5-34"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The result is 3528, namely the Variety ssq term in the ANOVA,
+      <xref ref="fig-ch5-34"/>.
+    </p>
+
+    <p>
+      Now for the residuals:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Back to the <alert><em>calculator</em></alert>.
+            Press <alert><em>Clear</em></alert>.
+            Add <alert><em>Yield</em></alert>, then minus ( − ), then the
+            <alert><em>var_means</em></alert> column.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press <alert><em>Try</em></alert>.
+            Call the <alert><em>Stored Result</em></alert>
+            <alert><em>residuals</em></alert>, <xref ref="fig-ch5-35"/>.
+            Then press <alert><em>Ok</em></alert>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="45% 45%">
+      <figure xml:id="fig-ch5-35">
+        <caption>Calculating the residuals</caption>
+        <image source="images/ch5/image37.png" width="45%">
+          <description>
+            <p>
+              Calculator computing Yield minus var_means
+            </p>
+          </description>
+        </image>
+      </figure>
+
+      <figure xml:id="fig-ch5-36">
+        <caption>Calculating the Residual Sum of Squares</caption>
+        <image source="images/ch5/image38.png" width="45%">
+          <description>
+            <p>
+              Calculator using cssq on residuals
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      Finally the residual term in the ANOVA.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Back, one last time, to the <alert><em>calculator</em></alert>.
+            Press the <alert><em>cssq*</em></alert> key and add the
+            <alert><em>residuals</em></alert> column.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Press <alert><em>Try</em></alert>, <xref ref="fig-ch5-36"/>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The result in <xref ref="fig-ch5-36"/> is the residual ssq term, i.e.
+      1427, in the Variety ANOVA, <xref ref="fig-ch5-11"/>.
+    </p>
+  </section>
+</chapter>

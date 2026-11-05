@@ -31,6 +31,12 @@
     <!-- From dialogs to R commands and scripts -->
     <xi:include href="./ch3_scripts_and_commands.ptx" />
 
+    <!-- Chapter 4 (Taming Summaries) goes here when ready; until then the -->
+    <!-- ANOVA chapter is numbered 4 in the built book.                     -->
+
+    <!-- Taming the Analysis of Variance -->
+    <xi:include href="./ch5_anova.ptx" />
+
     <!-- Additional chapters will be added here as the book develops -->
 
     <!-- This chapter contains a wide variety of elements to  -->
