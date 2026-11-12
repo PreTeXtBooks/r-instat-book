@@ -1527,17 +1527,20 @@
       </figure>
     </sidebyside>
 
-    <exercise xml:id="ex-ch1-boxplots">
-      <title>Check your understanding: using boxplots</title>
+    <p>
+      Here are two questions on using boxplots to test your understanding on
+      interpreting and using boxplots.
+    </p>
 
-      <introduction>
-        <p>
-          Here are two questions on using boxplots to test your understanding on
-          interpreting and using boxplots
-        </p>
-      </introduction>
+    <exercise xml:id="ex-ch1-boxplots">
+      <title>Check your understanding: using boxplots (1)</title>
 
       <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Interpret-and-match-dotplots-to-respective-boxplots.xml" label="stk-ch3-match-dots"/>
+    </exercise>
+
+    <exercise xml:id="ex-ch1-boxplots-2">
+      <title>Check your understanding: using boxplots (2)</title>
+
       <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Edit-boxplot-to-match-histogram-distribution.xml" label="stk-ch3-edit-boxplot"/>
     </exercise>
   </section>

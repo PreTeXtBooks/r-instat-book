@@ -3579,21 +3579,44 @@
         <em>This has shown that the main graph dialog can handle a single faceting factor. Plot Options allows us to use two factors. This raises a further question, namely, is that the limit, or can ggplot2 extend the same table-like structure to three or more factors? The answer is yes, but it needs more than the dialogs. Chapter 3 goes beyond the standard dialogs and extends the graphs through the underlying ggplot2 commands.</em>
       </p>
 
-      <exercise xml:id="ex-ch2-visualising">
-        <title>Check your understanding: visualising with ggplot2</title>
+      <p>
+        Here are a selection of six questions that look at visualising
+        multidimensional data.
+      </p>
 
-        <introduction>
-          <p>
-            Here are a selection of six questions that look at visualising
-            multidimensional data.
-          </p>
-        </introduction>
+      <exercise xml:id="ex-ch2-visualising">
+        <title>Check your understanding: visualising with ggplot2 (1)</title>
 
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/3-1-1-Visualising-Multidimensionality-I.xml" label="stk-ch2-vd1"/>
+      </exercise>
+
+      <exercise xml:id="ex-ch2-visualising-2">
+        <title>Check your understanding: visualising with ggplot2 (2)</title>
+
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/3-1-2-Visualising-Multidimensionality-II.xml" label="stk-ch2-vd2"/>
+      </exercise>
+
+      <exercise xml:id="ex-ch2-visualising-3">
+        <title>Check your understanding: visualising with ggplot2 (3)</title>
+
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/3-1-3-Visualising-Multidimensionality-III.xml" label="stk-ch2-vd3"/>
+      </exercise>
+
+      <exercise xml:id="ex-ch2-visualising-4">
+        <title>Check your understanding: visualising with ggplot2 (4)</title>
+
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Facets-I.xml" label="stk-ch2-facets1"/>
+      </exercise>
+
+      <exercise xml:id="ex-ch2-visualising-5">
+        <title>Check your understanding: visualising with ggplot2 (5)</title>
+
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Facets-II.xml" label="stk-ch2-facets2"/>
+      </exercise>
+
+      <exercise xml:id="ex-ch2-visualising-6">
+        <title>Check your understanding: visualising with ggplot2 (6)</title>
+
         <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/Facets-III.xml" label="stk-ch2-facets3"/>
       </exercise>
     </subsection>
