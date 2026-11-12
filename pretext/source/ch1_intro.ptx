@@ -2012,7 +2012,7 @@
         </p>
       </introduction>
 
-      <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/filtering-question-1.xml" label="stk-ch1-filtering"/>
+      <stack source="stack/Statistics-and-Probability-Open-Question-Bank/top/STACK-for-Statistics-and-Probability/filter-question-1.xml" label="stk-ch1-filtering"/>
     </exercise>
   </section>
 
